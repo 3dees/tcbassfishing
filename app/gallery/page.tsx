@@ -9,17 +9,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Photo Gallery | TC Bass Destination Charters',
     description: 'View photos from our bass fishing trips on Grand Traverse Bay. See real catches from real clients.',
-    images: ['/images/gallery-preview.jpg'],
+    images: ['/images/hero/06_boat_dock_clearwater.jpg'],
   },
 };
 
 const images = [
-  { id: '1', url: 'https://images.unsplash.com/photo-1541703649641-471253e77a28?q=80&w=1974&auto=format&fit=crop', alt: 'Big Bass Catch', caption: 'Grand Traverse Smallie' },
-  { id: '2', url: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=2041&auto=format&fit=crop', alt: 'Sunrise fishing', caption: 'Early Morning Bite' },
-  { id: '3', url: 'https://images.unsplash.com/photo-1534951474654-8867a40593c4?q=80&w=2070&auto=format&fit=crop', alt: 'Lure closeup', caption: 'Top Water Action' },
-  { id: '4', url: 'https://images.unsplash.com/photo-1523585098327-1422a5786678?q=80&w=1974&auto=format&fit=crop', alt: 'Happy client', caption: 'Personal Best Catch' },
-  { id: '5', url: 'https://images.unsplash.com/photo-1559737191-443b743015b6?q=80&w=2070&auto=format&fit=crop', alt: 'Boat running', caption: 'Heading Out' },
-  { id: '6', url: 'https://images.unsplash.com/photo-1621360841012-6eb5264ba359?q=80&w=1974&auto=format&fit=crop', alt: 'Bass closeup', caption: 'Release' },
+  { id: '1', url: '/images/gallery/01_captain_kid_fish.jpg', alt: 'Captain with young angler and catch', caption: 'Young Angler Success' },
+  { id: '2', url: '/images/gallery/02_couple_michigan.jpg', alt: 'Couple fishing in Michigan', caption: 'Michigan Memories' },
+  { id: '3', url: '/images/gallery/03_woman_catch_calmwater.jpg', alt: 'Woman with bass catch on calm water', caption: 'Calm Water Catch' },
+  { id: '4', url: '/images/gallery/04_cmu_angler.jpg', alt: 'CMU angler with bass', caption: 'Fire Up Chips!' },
+  { id: '5', url: '/images/gallery/05_customer_rod_lowrance.jpg', alt: 'Customer fishing with Lowrance electronics', caption: 'Dialed In' },
+  { id: '6', url: '/images/gallery/06_woman_bass.jpg', alt: 'Woman holding bass', caption: 'Personal Best' },
+  { id: '7', url: '/images/gallery/07_captain_fullboat_sky.jpg', alt: 'Captain on the boat with beautiful sky', caption: 'Perfect Day on the Bay' },
+  { id: '8', url: '/images/gallery/08_three_boys_bigbass.jpg', alt: 'Three boys with big bass catches', caption: 'Triple Threat' },
+  { id: '9', url: '/images/gallery/09_teen_dad_catch.jpg', alt: 'Teen and dad with catch', caption: 'Father & Son Trip' },
+  { id: '10', url: '/images/gallery/10_teen_bass_yamaha.jpg', alt: 'Teen with bass by Yamaha motor', caption: 'Next Generation Angler' },
 ];
 
 export default function GalleryPage() {
@@ -29,8 +33,8 @@ export default function GalleryPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1541703649641-471253e77a28?q=80&w=1974&auto=format&fit=crop"
-            alt="Bass fishing catch"
+            src="/images/hero/06_boat_dock_clearwater.jpg"
+            alt="Boat at dock on clear water"
             fill
             className="object-cover"
             priority
@@ -58,13 +62,14 @@ export default function GalleryPage() {
             {images.map((img, idx) => (
               <div
                 key={img.id}
-                className={`relative group overflow-hidden rounded-xl bg-gray-800 ${idx === 0 || idx === 3 ? 'md:col-span-2' : ''} h-64 md:h-80`}
+                className={`relative group overflow-hidden rounded-xl bg-gray-800 ${idx === 0 || idx === 4 || idx === 7 ? 'md:col-span-2 lg:col-span-1' : ''} aspect-[4/3]`}
               >
                 <Image
                   src={img.url}
                   alt={img.alt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <p className="text-white font-medium">{img.caption}</p>
