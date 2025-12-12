@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Anchor, Facebook, Instagram, Twitter } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -6,7 +7,7 @@ export const Footer: React.FC = () => {
     <footer className="bg-navy-900 text-white border-t border-navy-800">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
-          
+
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <Anchor className="h-6 w-6 text-cyan-500" />
@@ -20,10 +21,10 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#home" className="hover:text-cyan-500 transition-colors">Home</a></li>
-              <li><a href="#rates" className="hover:text-cyan-500 transition-colors">Trips & Rates</a></li>
-              <li><a href="#gallery" className="hover:text-cyan-500 transition-colors">Gallery</a></li>
-              <li><a href="#contact" className="hover:text-cyan-500 transition-colors">Contact</a></li>
+              <li><Link href="/" className="hover:text-cyan-500 transition-colors">Home</Link></li>
+              <li><Link href="/services" className="hover:text-cyan-500 transition-colors">Trips & Rates</Link></li>
+              <li><Link href="/gallery" className="hover:text-cyan-500 transition-colors">Gallery</Link></li>
+              <li><Link href="/contact" className="hover:text-cyan-500 transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -42,7 +43,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-navy-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-600 text-sm">
             &copy; 2025 TC Bass Destination Charters. All rights reserved.
