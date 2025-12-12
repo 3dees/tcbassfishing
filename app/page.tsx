@@ -68,7 +68,7 @@ export default function HomePage() {
             <div className="lg:w-1/2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/hero/captain_butch.jpg"
+                  src="/images/hero/captain-butch.jpg"
                   alt="Captain Butch holding a large smallmouth bass"
                   width={600}
                   height={500}
