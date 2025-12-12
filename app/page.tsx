@@ -10,7 +10,7 @@ export default function HomePage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1476673160081-cf065607f39d?q=80&w=2070&auto=format&fit=crop"
+            src="/images/hero/header-bg.jpg"
             alt="Sunset over Grand Traverse Bay"
             fill
             className="object-cover"
@@ -68,7 +68,7 @@ export default function HomePage() {
             <div className="lg:w-1/2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1520967824495-241369527016?q=80&w=2070&auto=format&fit=crop"
+                  src="/images/hero/captain_butch.jpg"
                   alt="Captain Butch holding a large smallmouth bass"
                   width={600}
                   height={500}

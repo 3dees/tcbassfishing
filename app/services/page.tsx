@@ -21,7 +21,7 @@ const packages = [
     duration: '4 Hours',
     description: 'A great option for the morning bite or a family outing. We hit the prime spots quickly to maximize your fishing time.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
-    image: 'https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2071&auto=format&fit=crop'
+    image: '/images/hero/04_kid_huge_bass.jpg'
   },
   {
     id: '2',
@@ -30,7 +30,7 @@ const packages = [
     duration: '6 Hours',
     description: 'Our most popular option. Gives us more time to try different techniques and locations across Grand Traverse Bay.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
-    image: 'https://images.unsplash.com/photo-1559737191-443b743015b6?q=80&w=2070&auto=format&fit=crop'
+    image: '/images/hero/03_customer_bigfish_captain.jpg'
   },
   {
     id: '3',
@@ -39,7 +39,7 @@ const packages = [
     duration: '8 Hours',
     description: 'The full day experience. Perfect for serious anglers hunting for that trophy smallmouth or personal best.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
-    image: 'https://images.unsplash.com/photo-1447069387593-a5de0862481e?q=80&w=2069&auto=format&fit=crop'
+    image: '/images/hero/05_sunset_bay.jpg'
   }
 ];
 
@@ -50,7 +50,7 @@ export default function ServicesPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1559737191-443b743015b6?q=80&w=2070&auto=format&fit=crop"
+            src="/images/hero/03_customer_bigfish_captain.jpg"
             alt="Bass fishing on Grand Traverse Bay"
             fill
             className="object-cover"

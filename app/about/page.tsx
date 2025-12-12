@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Captain Butch Derickson | TC Bass Destination Charters',
     description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 20+ years experience on Grand Traverse Bay.',
-    images: ['/images/captain-butch.jpg'],
+    images: ['/images/hero/captain_butch.jpg'],
   },
 };
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1476673160081-cf065607f39d?q=80&w=2070&auto=format&fit=crop"
+            src="/images/hero/header-bg.jpg"
             alt="Grand Traverse Bay at sunset"
             fill
             className="object-cover"
@@ -43,7 +43,7 @@ export default function AboutPage() {
             <div className="lg:w-1/2 relative lg:sticky lg:top-24">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1520967824495-241369527016?q=80&w=2070&auto=format&fit=crop"
+                  src="/images/hero/captain_butch.jpg"
                   alt="Captain Butch holding a large smallmouth bass"
                   width={600}
                   height={600}
