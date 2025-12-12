@@ -58,30 +58,26 @@ export default function GalleryPage() {
             <p className="mt-4 text-gray-400">Real clients, real memories on Grand Traverse Bay.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {images.map((img, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {images.map((img) => (
               <div
                 key={img.id}
-                className={`relative group overflow-hidden rounded-xl bg-gray-800 ${idx === 0 || idx === 4 || idx === 7 ? 'md:col-span-2 lg:col-span-1' : ''} aspect-[4/3]`}
+                className="relative group rounded-xl bg-gray-800 overflow-hidden"
               >
-                <Image
-                  src={img.url}
-                  alt={img.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <p className="text-white font-medium">{img.caption}</p>
+                <div className="relative w-full" style={{ paddingBottom: '75%' }}>
+                  <Image
+                    src={img.url}
+                    alt={img.alt}
+                    fill
+                    className="object-contain transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
+                  <p className="text-white font-medium text-center">{img.caption}</p>
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-white transition-colors border-b border-cyan-400/50 hover:border-white pb-1">
-              Follow our daily catches on Instagram
-            </a>
           </div>
         </div>
       </section>
