@@ -136,23 +136,33 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { name: '4-Hour Trip', price: 440, desc: 'Perfect for the morning bite or a family outing.' },
-              { name: '6-Hour Trip', price: 560, desc: 'Our most popular option with more time to explore.' },
-              { name: '8-Hour Trip', price: 660, desc: 'The full day experience for serious anglers.' },
+              { name: '4-Hour Trip', price: 440, desc: 'Perfect for the morning bite or a family outing.', image: '/images/hero/04_kid_huge_bass.jpg' },
+              { name: '6-Hour Trip', price: 560, desc: 'Our most popular option with more time to explore.', image: '/images/hero/03_customer_bigfish_captain.jpg' },
+              { name: '8-Hour Trip', price: 660, desc: 'The full day experience for serious anglers.', image: '/images/hero/05_sunset_bay.jpg' },
             ].map((pkg) => (
-              <div key={pkg.name} className="bg-white rounded-2xl shadow-xl p-8 text-center hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
-                <h3 className="font-serif text-2xl font-bold text-navy-900 mb-2">{pkg.name}</h3>
-                <div className="flex items-baseline justify-center mb-4">
-                  <span className="text-4xl font-bold text-cyan-600">${pkg.price}</span>
-                  <span className="text-gray-400 ml-2 text-sm">/ per group</span>
+              <div key={pkg.name} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={pkg.image}
+                    alt={pkg.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <p className="text-gray-500 text-sm mb-6">{pkg.desc}</p>
-                <Link
-                  href="/contact"
-                  className="block w-full bg-navy-900 hover:bg-navy-800 text-white py-3 rounded-lg font-medium transition-colors"
-                >
-                  Book Now
-                </Link>
+                <div className="p-8 text-center">
+                  <h3 className="font-serif text-2xl font-bold text-navy-900 mb-2">{pkg.name}</h3>
+                  <div className="flex items-baseline justify-center mb-4">
+                    <span className="text-4xl font-bold text-cyan-600">${pkg.price}</span>
+                    <span className="text-gray-400 ml-2 text-sm">/ per group</span>
+                  </div>
+                  <p className="text-gray-500 text-sm mb-6">{pkg.desc}</p>
+                  <Link
+                    href="/contact"
+                    className="block w-full bg-navy-900 hover:bg-navy-800 text-white py-3 rounded-lg font-medium transition-colors"
+                  >
+                    Book Now
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
