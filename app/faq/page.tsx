@@ -61,8 +61,8 @@ export default function FAQPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1476673160081-cf065607f39d?q=80&w=2070&auto=format&fit=crop"
-            alt="Grand Traverse Bay"
+            src="/images/hero/05_sunset_bay.jpg"
+            alt="Sunset on Grand Traverse Bay"
             fill
             className="object-cover"
             priority
