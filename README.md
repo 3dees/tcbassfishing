@@ -45,12 +45,6 @@ Premier bass fishing charters in Traverse City, Michigan. Built with Next.js 14 
 
 Upload your images to the `public/images/` folder. Reference them in your code as `/images/filename.jpg`.
 
-Recommended images to add:
-- `hero-sunset.jpg` - Hero background
-- `captain-butch.jpg` - Captain photo
-- `og-image.jpg` - Social sharing preview (1200x630px)
-- Gallery images
-
 ## Tech Stack
 
 - Next.js 14
