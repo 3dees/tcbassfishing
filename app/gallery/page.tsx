@@ -33,8 +33,8 @@ export default function GalleryPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/06_boat_dock_clearwater.jpg"
-            alt="Boat at dock on clear water"
+            src="/images/hero/collage_hero.png"
+            alt="Photo collage of fishing catches"
             fill
             className="object-cover"
             priority
