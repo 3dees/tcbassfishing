@@ -17,7 +17,7 @@ const images = [
   { id: '1', url: '/images/gallery/01_captain_kid_fish.jpg', alt: 'Captain with young angler and catch', caption: 'Young Angler Success' },
   { id: '2', url: '/images/gallery/02_couple_michigan.jpg', alt: 'Couple fishing in Michigan', caption: 'Michigan Memories' },
   { id: '3', url: '/images/gallery/03_woman_catch_calmwater.jpg', alt: 'Woman with bass catch on calm water', caption: 'Calm Water Catch' },
-  { id: '4', url: '/images/gallery/04_cmu_angler.jpg', alt: 'CMU angler with bass', caption: 'Fire Up Chips!' },
+  { id: '4', url: '/images/gallery/04_cmu_angler.jpg', alt: 'CMU angler with bass', caption: 'Fire Up The Grill!' },
   { id: '5', url: '/images/gallery/05_customer_rod_lowrance.jpg', alt: 'Customer fishing with Lowrance electronics', caption: 'Dialed In' },
   { id: '6', url: '/images/gallery/06_woman_bass.jpg', alt: 'Woman holding bass', caption: 'Personal Best' },
   { id: '7', url: '/images/gallery/07_captain_fullboat_sky.jpg', alt: 'Captain on the boat with beautiful sky', caption: 'Perfect Day on the Bay' },
