@@ -2,16 +2,43 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Phone, MapPin, Calendar, User, MessageSquare } from 'lucide-react';
+import { Phone, MapPin, Calendar, User, Loader2 } from 'lucide-react';
+
+const FORMSPREE_ID = 'mvgelvlp';
 
 export default function ContactPage() {
-  const [formStatus, setFormStatus] = useState<'idle' | 'success'>('idle');
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // In a real app, this would send data to an API
-    setFormStatus('success');
-    setTimeout(() => setFormStatus('idle'), 5000);
+    setFormStatus('submitting');
+    setErrorMessage('');
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        form.reset();
+      } else {
+        const data = await response.json();
+        setErrorMessage(data.error || 'Something went wrong. Please try again.');
+        setFormStatus('error');
+      }
+    } catch {
+      setErrorMessage('Network error. Please check your connection and try again.');
+      setFormStatus('error');
+    }
   };
 
   return (
@@ -98,99 +125,133 @@ export default function ContactPage() {
               <p className="text-gray-500 text-sm mb-6">
                 Please fill out the form below to check availability. Booking is scheduled via email or phone confirmation.
               </p>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                    <div className="relative">
-                      <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                      <input
-                        type="text"
-                        id="name"
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
-                        placeholder="Your Name"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                    <div className="relative">
-                      <Phone className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                      <input
-                        type="tel"
-                        id="phone"
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
-                        placeholder="(231) 883-2200"
-                      />
-                    </div>
-                  </div>
+
+              {formStatus === 'success' ? (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+                  <div className="text-green-600 text-xl font-semibold mb-2">Request Sent!</div>
+                  <p className="text-green-700">Thank you for your inquiry. Captain Butch will contact you shortly to confirm your trip.</p>
+                  <button
+                    onClick={() => setFormStatus('idle')}
+                    className="mt-4 text-cyan-600 hover:text-cyan-500 font-medium"
+                  >
+                    Submit another request
+                  </button>
                 </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
-                    <div className="relative">
-                      <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                      <input
-                        type="date"
-                        id="date"
-                        className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
-                      />
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                      <div className="relative">
+                        <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                          placeholder="Your Name"
+                        />
+                      </div>
                     </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="trip" className="block text-sm font-medium text-gray-700 mb-1">Trip Duration</label>
-                    <div className="relative">
-                      <select
-                        id="trip"
-                        className="w-full pl-4 pr-10 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all appearance-none"
-                      >
-                        <option>4-Hour Trip ($440)</option>
-                        <option>6-Hour Trip ($560)</option>
-                        <option>8-Hour Trip ($660)</option>
-                        <option>Not Sure Yet</option>
-                      </select>
-                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
-                        <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                      <div className="relative">
+                        <Phone className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          required
+                          className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                          placeholder="(231) 883-2200"
+                        />
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message (Optional)</label>
-                  <div className="relative">
-                    <textarea
-                      id="message"
-                      rows={3}
-                      className="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all resize-none"
-                      placeholder="Tell us about your group or fishing experience..."
-                    ></textarea>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                      <div className="relative">
+                        <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                        <input
+                          type="date"
+                          id="date"
+                          name="preferred_date"
+                          className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="trip" className="block text-sm font-medium text-gray-700 mb-1">Trip Duration</label>
+                      <div className="relative">
+                        <select
+                          id="trip"
+                          name="trip_duration"
+                          className="w-full pl-4 pr-10 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all appearance-none"
+                        >
+                          <option value="4-Hour Trip ($440)">4-Hour Trip ($440)</option>
+                          <option value="6-Hour Trip ($560)">6-Hour Trip ($560)</option>
+                          <option value="8-Hour Trip ($660)">8-Hour Trip ($660)</option>
+                          <option value="Not Sure Yet">Not Sure Yet</option>
+                        </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                          <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                {/* SMS Opt-in Compliance */}
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    id="sms-opt-in"
-                    className="mt-1 h-4 w-4 text-cyan-600 focus:ring-cyan-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="sms-opt-in" className="text-xs text-gray-500">
-                    By checking this box, I agree to receive text messages from TC Bass Destination Charters regarding my inquiry. Message and data rates may apply. Reply STOP to opt out.
-                  </label>
-                </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message (Optional)</label>
+                    <div className="relative">
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows={3}
+                        className="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all resize-none"
+                        placeholder="Tell us about your group or fishing experience..."
+                      ></textarea>
+                    </div>
+                  </div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-cyan-500/30 transition-all transform active:scale-95"
-                >
-                  {formStatus === 'success' ? 'Request Sent! We will contact you shortly.' : 'Check Availability'}
-                </button>
-              </form>
+                  {/* SMS Opt-in Compliance */}
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="sms-opt-in"
+                      name="sms_opt_in"
+                      className="mt-1 h-4 w-4 text-cyan-600 focus:ring-cyan-500 border-gray-300 rounded"
+                    />
+                    <label htmlFor="sms-opt-in" className="text-xs text-gray-500">
+                      By checking this box, I agree to receive text messages from TC Bass Destination Charters regarding my inquiry. Message and data rates may apply. Reply STOP to opt out.
+                    </label>
+                  </div>
+
+                  {formStatus === 'error' && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">
+                      {errorMessage}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={formStatus === 'submitting'}
+                    className="w-full bg-cyan-600 hover:bg-cyan-500 disabled:bg-cyan-400 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-cyan-500/30 transition-all transform active:scale-95 disabled:transform-none flex items-center justify-center gap-2"
+                  >
+                    {formStatus === 'submitting' ? (
+                      <>
+                        <Loader2 className="h-5 w-5 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      'Check Availability'
+                    )}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>
