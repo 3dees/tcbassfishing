@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Photo Gallery | TC Bass Destination Charters',
     description: 'View photos from our bass fishing trips on Grand Traverse Bay. See real catches from real clients.',
-    images: ['/images/hero/06_boat_dock_clearwater.jpg'],
+    images: ['/images/hero/collage_hero.png'],
   },
 };
 
