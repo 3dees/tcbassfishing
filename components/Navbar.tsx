@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Anchor, Menu, X, Phone } from 'lucide-react';
+import { Anchor, Menu, X } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -55,11 +55,10 @@ export const Navbar: React.FC = () => {
             </Link>
           ))}
           <Link
-            href="/contact"
-            className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-cyan-900/50"
+            href="/contact#calendar"
+            className="bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-cyan-900/50"
           >
-            <Phone className="h-4 w-4" />
-            <span>Book Now</span>
+            Book Now
           </Link>
         </div>
 
@@ -86,11 +85,11 @@ export const Navbar: React.FC = () => {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/contact#calendar"
             className="w-full text-center bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-3 rounded-md font-medium"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Book Your Trip
+            Book Now
           </Link>
         </div>
       )}
