@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Script from 'next/script';
 import { Phone, MapPin, Calendar, User, Loader2 } from 'lucide-react';
 
 const FORMSPREE_ID = 'mvgelvlp';
+const CALENDLY_URL = 'https://calendly.com/dh-meet/4-hours-clone?hide_event_type_details=1&hide_gdpr_banner=1';
 
 export default function ContactPage() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -43,6 +45,9 @@ export default function ContactPage() {
 
   return (
     <>
+      {/* Calendly Script */}
+      <Script src="https://assets.calendly.com/assets/external/widget.js" />
+
       {/* Hero Banner */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -247,12 +252,33 @@ export default function ContactPage() {
                         Sending...
                       </>
                     ) : (
-                      'Check Availability'
+                      'Contact Us'
                     )}
                   </button>
                 </form>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Embedded Calendly Calendar */}
+      <section id="calendar" className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <div className="text-cyan-600 font-bold uppercase tracking-widest text-sm mb-2">Book Online</div>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900">Schedule Your Trip</h2>
+            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+              Select an available date and time below to book your fishing charter.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl p-4 shadow-lg">
+            <div
+              className="calendly-inline-widget"
+              data-url={CALENDLY_URL}
+              style={{ minWidth: '320px', height: '700px' }}
+            />
           </div>
         </div>
       </section>

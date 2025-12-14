@@ -1,11 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Check, Clock, Anchor, Users, X, Calendar } from 'lucide-react';
+import Script from 'next/script';
 
 const GOOGLE_CALENDAR_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0DYywrEA1sV9GbnJDx2LpIFd5XWL8uvkrcYaOq88TDmEdgQhizOkLn2N0TdkDFoy9lp46onSmV?gv=true';
+const CALENDLY_URL = 'https://calendly.com/dh-meet/4-hours-clone?hide_event_type_details=1&hide_gdpr_banner=1';
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: { url: string }) => void;
+    };
+  }
+}
 
 const packages = [
   {
@@ -15,7 +25,8 @@ const packages = [
     duration: '4 Hours',
     description: 'A great option for the morning bite or a family outing. We hit the prime spots quickly to maximize your fishing time.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
-    image: '/images/hero/04_kid_huge_bass.jpg'
+    image: '/images/hero/04_kid_huge_bass.jpg',
+    bookingType: 'google' as const
   },
   {
     id: '2',
@@ -24,7 +35,8 @@ const packages = [
     duration: '6 Hours',
     description: 'Our most popular option. Gives us more time to try different techniques and locations across Grand Traverse Bay.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
-    image: '/images/hero/03_customer_bigfish_captain.jpg'
+    image: '/images/hero/03_customer_bigfish_captain.jpg',
+    bookingType: 'calendly' as const
   },
   {
     id: '3',
@@ -33,7 +45,8 @@ const packages = [
     duration: '8 Hours',
     description: 'The full day experience. Perfect for serious anglers hunting for that trophy smallmouth or personal best.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
-    image: '/images/hero/05_sunset_bay.jpg'
+    image: '/images/hero/05_sunset_bay.jpg',
+    bookingType: 'google' as const
   }
 ];
 
@@ -119,14 +132,26 @@ function BookingModal({ isOpen, onClose, packageName, packagePrice, packageDurat
 export default function ServicesPage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<typeof packages[0] | null>(null);
+  const [calendlyLoaded, setCalendlyLoaded] = useState(false);
 
   const openBookingModal = (pkg: typeof packages[0]) => {
-    setSelectedPackage(pkg);
-    setModalOpen(true);
+    if (pkg.bookingType === 'calendly' && calendlyLoaded && window.Calendly) {
+      window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+    } else {
+      setSelectedPackage(pkg);
+      setModalOpen(true);
+    }
   };
 
   return (
     <>
+      {/* Calendly Scripts */}
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        onLoad={() => setCalendlyLoaded(true)}
+      />
+
       {/* Hero Banner */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
