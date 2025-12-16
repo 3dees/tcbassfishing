@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Check, Clock, Anchor, Users, X, Calendar } from 'lucide-react';
+import { Check, Clock, Anchor, Users, X, ArrowLeft } from 'lucide-react';
 import Script from 'next/script';
 
 declare global {
@@ -62,68 +62,55 @@ interface BookingModalProps {
 function BookingModal({ isOpen, onClose, packageName, packagePrice, packageDuration, bookingUrl }: BookingModalProps) {
   if (!isOpen) return null;
 
-  const handleBooking = () => {
-    window.open(bookingUrl, '_blank');
-    onClose();
-  };
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
         onClick={onClose}
       />
 
-      {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
-        {/* Header */}
-        <div className="bg-navy-900 text-white p-6">
+      {/* Modal - Full height with embedded calendar */}
+      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col">
+        {/* Header with back button */}
+        <div className="bg-navy-900 text-white p-4 flex items-center justify-between shrink-0">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+          >
+            <ArrowLeft className="h-5 w-5" />
+            <span className="font-medium">Back to Packages</span>
+          </button>
+          <button
+            onClick={onClose}
+            className="text-white/70 hover:text-white transition-colors p-1"
           >
             <X className="h-6 w-6" />
           </button>
-          <div className="flex items-center gap-3 mb-2">
-            <Calendar className="h-6 w-6 text-cyan-400" />
-            <span className="text-cyan-400 font-semibold uppercase text-sm tracking-wide">Book Your Trip</span>
-          </div>
-          <h3 className="font-serif text-2xl font-bold">{packageName}</h3>
         </div>
 
-        {/* Content */}
-        <div className="p-6">
-          <div className="flex items-baseline gap-2 mb-4">
-            <span className="text-3xl font-bold text-cyan-600">${packagePrice}</span>
-            <span className="text-gray-500">/ per group</span>
+        {/* Package info bar */}
+        <div className="bg-slate-100 px-4 py-3 flex items-center justify-between border-b shrink-0">
+          <div className="flex items-center gap-3">
+            <h3 className="font-serif text-lg font-bold text-navy-900">{packageName}</h3>
+            <span className="text-gray-400">•</span>
+            <span className="text-gray-600 flex items-center gap-1">
+              <Clock className="h-4 w-4" /> {packageDuration}
+            </span>
           </div>
+          <div className="text-xl font-bold text-cyan-600">${packagePrice}</div>
+        </div>
 
-          <div className="flex items-center gap-2 text-gray-600 mb-6">
-            <Clock className="h-5 w-5 text-cyan-500" />
-            <span>{packageDuration}</span>
-          </div>
-
-          <p className="text-gray-600 text-sm mb-6">
-            You&apos;ll be redirected to Google Calendar to select an available date and time for your trip.
-          </p>
-
-          <div className="space-y-3">
-            <button
-              onClick={handleBooking}
-              className="w-full bg-cyan-600 hover:bg-cyan-500 text-white py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
-            >
-              <Calendar className="h-5 w-5" />
-              Select Date & Time
-            </button>
-
-            <button
-              onClick={onClose}
-              className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-lg font-medium transition-colors"
-            >
-              Cancel
-            </button>
-          </div>
+        {/* Embedded Google Calendar */}
+        <div className="flex-1 min-h-0">
+          <iframe
+            src={bookingUrl}
+            style={{ border: 0 }}
+            width="100%"
+            height="100%"
+            className="min-h-[500px]"
+            title={`Book ${packageName}`}
+          />
         </div>
       </div>
     </div>
