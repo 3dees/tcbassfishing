@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { FileText, DollarSign, XCircle, Users, AlertTriangle, Fish, Camera, Scale, Phone } from 'lucide-react';
 
 export default function TermsPage() {
   return (
@@ -24,146 +25,314 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Terms Content */}
+      {/* Introduction */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-navy-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-navy-900">
-
-            <p className="text-sm text-gray-500 mb-8"><strong>Last Updated:</strong> December 2025</p>
-
-            <h2>1. Agreement to Terms</h2>
-            <p>By booking a fishing charter with TC Bass Destination Charters, LLC (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), you (&quot;Customer,&quot; &quot;you,&quot; or &quot;your&quot;) agree to be bound by these Terms and Conditions. If you do not agree, do not book a trip.</p>
-
-            <h2>2. Company Information</h2>
-            <p>
-              TC Bass Destination Charters, LLC<br />
-              Traverse City, Michigan<br />
-              Phone: 231-883-2200<br />
-              Email: derick881@gmail.com
+          <div className="text-center mb-8">
+            <p className="text-sm text-gray-500 mb-4">Last Updated: December 2025</p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              By booking a fishing charter with TC Bass Destination Charters, LLC, you agree to be bound by these Terms and Conditions. If you do not agree, do not book a trip.
             </p>
-
-            <h2>3. Booking and Payment</h2>
-
-            <h3>3.1 Reservations</h3>
-            <p>All reservations are subject to availability and confirmation. A booking is not confirmed until you receive written confirmation from us.</p>
-
-            <h3>3.2 Pricing</h3>
-            <ul>
-              <li>4-Hour Trip: $440</li>
-              <li>6-Hour Trip: $560</li>
-              <li>8-Hour Trip: $660</li>
-            </ul>
-            <p>Prices are per group (up to 2 anglers) and include all gear, tackle, snacks, and drinks. Prices are subject to change without notice; however, confirmed bookings will be honored at the quoted price.</p>
-
-            <h3>3.3 Deposit and Payment</h3>
-            <p>A deposit may be required to secure your booking. The remaining balance is due on the day of the trip. We accept payment via Square, Venmo, and PayPal.</p>
-
-            <h3>3.4 Gratuities</h3>
-            <p>Gratuities are not included in the trip price and are at the customer&apos;s discretion.</p>
-
-            <h2>4. Cancellation and Refund Policy</h2>
-
-            <h3>4.1 Customer Cancellations</h3>
-            <ul>
-              <li>Cancellations made more than 7 days before the trip: Full refund of deposit</li>
-              <li>Cancellations made 3-7 days before the trip: 50% refund of deposit</li>
-              <li>Cancellations made less than 3 days before the trip: No refund</li>
-              <li>No-shows: No refund</li>
-            </ul>
-
-            <h3>4.2 Weather Cancellations</h3>
-            <p>Safety is our priority. If we cancel due to unsafe weather conditions (high winds, lightning, severe storms), you may reschedule for any available date at no additional cost, or receive a full refund.</p>
-
-            <h3>4.3 Captain&apos;s Discretion</h3>
-            <p>The Captain reserves the right to cancel, shorten, or modify any trip due to weather, water conditions, mechanical issues, or safety concerns. In such cases, a prorated refund or reschedule will be offered.</p>
-
-            <h2>5. Customer Responsibilities</h2>
-
-            <h3>5.1 Fishing License</h3>
-            <p>All anglers 17 years and older are required to have a valid Michigan fishing license. You are responsible for obtaining your own license prior to the trip. Licenses can be purchased at Michigan.gov/DNR or local sporting goods stores.</p>
-
-            <h3>5.2 What to Bring</h3>
-            <ul>
-              <li>Valid Michigan fishing license</li>
-              <li>Sunscreen and sunglasses</li>
-              <li>Weather-appropriate clothing (layers recommended)</li>
-              <li>Any personal medications</li>
-              <li>Camera (optional)</li>
-            </ul>
-
-            <h3>5.3 What&apos;s Provided</h3>
-            <ul>
-              <li>All rods, reels, and tackle</li>
-              <li>Lures and bait</li>
-              <li>Snacks and bottled water</li>
-              <li>Safety equipment</li>
-            </ul>
-
-            <h3>5.4 Conduct</h3>
-            <p>Customers must follow all instructions from the Captain. The Captain may terminate a trip without refund if a customer engages in unsafe behavior, is intoxicated, or acts in a manner that endangers themselves, others, or the vessel.</p>
-
-            <h3>5.5 Alcohol and Drugs</h3>
-            <p>Alcohol is NOT permitted on board. Customers who appear intoxicated will not be allowed to board, and no refund will be issued.</p>
-
-            <h2>6. Liability Waiver and Assumption of Risk</h2>
-
-            <h3>6.1 Assumption of Risk</h3>
-            <p>Fishing and boating involve inherent risks including but not limited to: drowning, slips and falls, cuts from hooks or fish, sunburn, seasickness, and exposure to weather. By booking a trip, you acknowledge these risks and voluntarily assume them.</p>
-
-            <h3>6.2 Waiver and Release</h3>
-            <p>Prior to boarding, all customers must sign a Liability Waiver and Release form. Customers who refuse to sign will not be permitted to board, and no refund will be issued.</p>
-
-            <h3>6.3 Limitation of Liability</h3>
-            <p>To the fullest extent permitted by law, TC Bass Destination Charters, LLC, its owner, captain, and agents shall not be liable for any injury, death, loss, or damage to personal property arising from participation in a fishing charter, except in cases of gross negligence or willful misconduct.</p>
-
-            <h3>6.4 Indemnification</h3>
-            <p>You agree to indemnify and hold harmless TC Bass Destination Charters, LLC from any claims, damages, or expenses arising from your actions or negligence during a trip.</p>
-
-            <h2>7. Catch and Release</h2>
-            <p>Per local regulations, certain fish may be required to be released. The Captain will inform you of current regulations. We practice responsible catch and release to preserve the fishery for future generations.</p>
-
-            <h2>8. Children</h2>
-            <p>Children are welcome on board. Children under 16 must be accompanied by a parent or legal guardian who assumes full responsibility for the child&apos;s safety and conduct.</p>
-
-            <h2>9. Trip Modifications</h2>
-
-            <h3>9.1 Date/Time Changes</h3>
-            <p>Requests to change your trip date or time are subject to availability. Please contact us as soon as possible if you need to reschedule.</p>
-
-            <h3>9.2 Group Size</h3>
-            <p>Our boat accommodates a maximum of 2 anglers plus the Captain. Additional guests beyond this limit cannot be accommodated.</p>
-
-            <h2>10. Photos and Media</h2>
-            <p>We may take photos during your trip for promotional purposes on our website and social media. If you do not wish to be photographed, please inform the Captain at the start of the trip.</p>
-
-            <h2>11. Intellectual Property</h2>
-            <p>All content on our website, including text, images, logos, and graphics, is the property of TC Bass Destination Charters, LLC and is protected by copyright law. You may not reproduce, distribute, or use our content without written permission.</p>
-
-            <h2>12. Dispute Resolution</h2>
-            <p>Any disputes arising from these Terms shall be resolved through good-faith negotiation. If unresolved, disputes shall be subject to binding arbitration in Grand Traverse County, Michigan, under the rules of the American Arbitration Association.</p>
-
-            <h2>13. Governing Law</h2>
-            <p>These Terms are governed by the laws of the State of Michigan, without regard to conflict of law principles.</p>
-
-            <h2>14. Severability</h2>
-            <p>If any provision of these Terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.</p>
-
-            <h2>15. Changes to Terms</h2>
-            <p>We reserve the right to modify these Terms at any time. Changes will be posted on our website with an updated &quot;Last Updated&quot; date. Your continued use of our services constitutes acceptance of any changes.</p>
-
-            <h2>16. Contact Us</h2>
-            <p>For questions about these Terms, contact us at:</p>
-            <p>
-              TC Bass Destination Charters, LLC<br />
-              Phone: 231-883-2200<br />
-              Email: derick881@gmail.com
-            </p>
-
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/privacy" className="text-cyan-600 hover:text-cyan-700 font-medium">
-              View Privacy Policy →
+          {/* Company Info Card */}
+          <div className="bg-slate-50 rounded-2xl p-8 text-center">
+            <h3 className="font-serif text-xl font-bold text-navy-900 mb-4">Company Information</h3>
+            <p className="text-gray-600">
+              TC Bass Destination Charters, LLC<br />
+              Traverse City, Michigan<br />
+              Phone: <a href="tel:231-883-2200" className="text-cyan-600 hover:text-cyan-700">231-883-2200</a><br />
+              Email: <a href="mailto:derick881@gmail.com" className="text-cyan-600 hover:text-cyan-700">derick881@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Booking and Payment */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-3 bg-cyan-100 rounded-lg">
+              <DollarSign className="h-6 w-6 text-cyan-600" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-navy-900">Booking & Payment</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-navy-900 mb-3">Reservations</h3>
+              <p className="text-gray-600 text-sm">
+                All reservations are subject to availability and confirmation. A booking is not confirmed until you receive written confirmation from us.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-navy-900 mb-3">Payment Methods</h3>
+              <p className="text-gray-600 text-sm">
+                A deposit may be required to secure your booking. The remaining balance is due on the day of the trip. We accept Square, Venmo, and PayPal.
+              </p>
+            </div>
+          </div>
+
+          {/* Pricing Table */}
+          <div className="mt-8 bg-white rounded-xl overflow-hidden shadow-sm">
+            <div className="bg-navy-900 text-white px-6 py-4">
+              <h3 className="font-bold">Trip Pricing</h3>
+            </div>
+            <div className="divide-y divide-gray-100">
+              <div className="flex justify-between items-center px-6 py-4">
+                <span className="text-gray-700">4-Hour Trip</span>
+                <span className="font-bold text-navy-900">$440</span>
+              </div>
+              <div className="flex justify-between items-center px-6 py-4">
+                <span className="text-gray-700">6-Hour Trip</span>
+                <span className="font-bold text-navy-900">$560</span>
+              </div>
+              <div className="flex justify-between items-center px-6 py-4">
+                <span className="text-gray-700">8-Hour Trip</span>
+                <span className="font-bold text-navy-900">$660</span>
+              </div>
+            </div>
+            <div className="px-6 py-4 bg-slate-50 text-sm text-gray-500">
+              Prices are per group (up to 2 anglers) and include all gear, tackle, snacks, and drinks. Gratuities are not included and are at the customer&apos;s discretion.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cancellation Policy */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-3 bg-red-100 rounded-lg">
+              <XCircle className="h-6 w-6 text-red-600" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-navy-900">Cancellation & Refund Policy</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-slate-50 rounded-xl p-6">
+              <h3 className="font-bold text-navy-900 mb-4">Customer Cancellations</h3>
+              <ul className="space-y-3 text-sm text-gray-600">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 font-bold">✓</span>
+                  <span><strong>7+ days before:</strong> Full refund of deposit</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-500 font-bold">!</span>
+                  <span><strong>3-7 days before:</strong> 50% refund of deposit</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold">✗</span>
+                  <span><strong>Less than 3 days:</strong> No refund</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold">✗</span>
+                  <span><strong>No-shows:</strong> No refund</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-50 rounded-xl p-6">
+              <h3 className="font-bold text-navy-900 mb-4">Weather & Captain Cancellations</h3>
+              <p className="text-sm text-gray-600 mb-3">
+                <strong>Weather:</strong> If we cancel due to unsafe conditions (high winds, lightning, severe storms), you may reschedule at no cost or receive a full refund.
+              </p>
+              <p className="text-sm text-gray-600">
+                <strong>Captain&apos;s Discretion:</strong> The Captain may cancel, shorten, or modify any trip due to safety concerns. A prorated refund or reschedule will be offered.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Responsibilities */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-3 bg-cyan-100 rounded-lg">
+              <Users className="h-6 w-6 text-cyan-600" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-navy-900">Customer Responsibilities</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-navy-900 mb-3">What to Bring</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Valid Michigan fishing license (required for 17+)</li>
+                <li>• Sunscreen and sunglasses</li>
+                <li>• Weather-appropriate clothing (layers recommended)</li>
+                <li>• Any personal medications</li>
+                <li>• Camera (optional)</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-navy-900 mb-3">What&apos;s Provided</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• All rods, reels, and tackle</li>
+                <li>• Lures and bait</li>
+                <li>• Snacks and bottled water</li>
+                <li>• Safety equipment</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-navy-900 mb-3">Conduct</h3>
+              <p className="text-sm text-gray-600">
+                Customers must follow all instructions from the Captain. The Captain may terminate a trip without refund if a customer engages in unsafe behavior or acts in a manner that endangers themselves, others, or the vessel.
+              </p>
+            </div>
+
+            <div className="bg-red-50 rounded-xl p-6 border border-red-200">
+              <h3 className="font-bold text-red-700 mb-3">Alcohol & Drugs Policy</h3>
+              <p className="text-sm text-red-600">
+                Alcohol is NOT permitted on board. Customers who appear intoxicated will not be allowed to board, and no refund will be issued.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Liability */}
+      <section className="py-16 bg-navy-900 text-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-3 bg-white/10 rounded-lg">
+              <AlertTriangle className="h-6 w-6 text-cyan-400" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold">Liability & Assumption of Risk</h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-cyan-400 mb-3">Assumption of Risk</h3>
+              <p className="text-gray-300 text-sm">
+                Fishing and boating involve inherent risks including but not limited to: drowning, slips and falls, cuts from hooks or fish, sunburn, seasickness, and exposure to weather. By booking a trip, you acknowledge these risks and voluntarily assume them.
+              </p>
+            </div>
+
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-cyan-400 mb-3">Waiver and Release</h3>
+              <p className="text-gray-300 text-sm">
+                Prior to boarding, all customers must sign a Liability Waiver and Release form. Customers who refuse to sign will not be permitted to board, and no refund will be issued.
+              </p>
+            </div>
+
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-cyan-400 mb-3">Limitation of Liability</h3>
+              <p className="text-gray-300 text-sm">
+                To the fullest extent permitted by law, TC Bass Destination Charters, LLC, its owner, captain, and agents shall not be liable for any injury, death, loss, or damage to personal property arising from participation in a fishing charter, except in cases of gross negligence or willful misconduct.
+              </p>
+            </div>
+
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-cyan-400 mb-3">Indemnification</h3>
+              <p className="text-gray-300 text-sm">
+                You agree to indemnify and hold harmless TC Bass Destination Charters, LLC from any claims, damages, or expenses arising from your actions or negligence during a trip.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Policies */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-8 text-center">Additional Policies</h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-slate-50 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <Fish className="h-5 w-5 text-cyan-600" />
+                <h3 className="font-bold text-navy-900">Catch and Release</h3>
+              </div>
+              <p className="text-sm text-gray-600">
+                Per local regulations, certain fish may be required to be released. The Captain will inform you of current regulations. We practice responsible catch and release to preserve the fishery.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <Users className="h-5 w-5 text-cyan-600" />
+                <h3 className="font-bold text-navy-900">Children</h3>
+              </div>
+              <p className="text-sm text-gray-600">
+                Children are welcome on board. Children under 16 must be accompanied by a parent or legal guardian who assumes full responsibility for the child&apos;s safety and conduct.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <Camera className="h-5 w-5 text-cyan-600" />
+                <h3 className="font-bold text-navy-900">Photos and Media</h3>
+              </div>
+              <p className="text-sm text-gray-600">
+                We may take photos during your trip for promotional purposes on our website and social media. If you do not wish to be photographed, please inform the Captain at the start of the trip.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <FileText className="h-5 w-5 text-cyan-600" />
+                <h3 className="font-bold text-navy-900">Trip Modifications</h3>
+              </div>
+              <p className="text-sm text-gray-600">
+                Requests to change your trip date/time are subject to availability. Our boat accommodates a maximum of 2 anglers plus the Captain.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-3 bg-cyan-100 rounded-lg">
+              <Scale className="h-6 w-6 text-cyan-600" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-navy-900">Legal</h2>
+          </div>
+
+          <div className="bg-white rounded-xl p-6 shadow-sm space-y-4 text-sm text-gray-600">
+            <p>
+              <strong className="text-navy-900">Intellectual Property:</strong> All content on our website is the property of TC Bass Destination Charters, LLC and is protected by copyright law.
+            </p>
+            <p>
+              <strong className="text-navy-900">Dispute Resolution:</strong> Any disputes shall be resolved through good-faith negotiation. If unresolved, disputes shall be subject to binding arbitration in Grand Traverse County, Michigan.
+            </p>
+            <p>
+              <strong className="text-navy-900">Governing Law:</strong> These Terms are governed by the laws of the State of Michigan.
+            </p>
+            <p>
+              <strong className="text-navy-900">Severability:</strong> If any provision is found unenforceable, the remaining provisions shall continue in full force.
+            </p>
+            <p>
+              <strong className="text-navy-900">Changes to Terms:</strong> We reserve the right to modify these Terms at any time. Changes will be posted with an updated date.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="bg-navy-900 rounded-2xl p-8 md:p-12 text-center text-white">
+            <div className="inline-flex items-center justify-center p-3 bg-white/10 rounded-full mb-4">
+              <Phone className="h-6 w-6 text-cyan-400" />
+            </div>
+            <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">Questions About These Terms?</h2>
+            <p className="text-gray-300 mb-6">
+              Contact us at <a href="tel:231-883-2200" className="text-cyan-400 hover:text-cyan-300">231-883-2200</a> or{' '}
+              <a href="mailto:derick881@gmail.com" className="text-cyan-400 hover:text-cyan-300">derick881@gmail.com</a>
+            </p>
+            <Link
+              href="/privacy"
+              className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
+            >
+              View Privacy Policy
             </Link>
           </div>
         </div>
