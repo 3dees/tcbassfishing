@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Check, Clock, Anchor, Users } from 'lucide-react';
+import { Check, Clock, Anchor, Users, X, Calendar } from 'lucide-react';
 import Script from 'next/script';
 
 declare global {
@@ -23,8 +23,8 @@ const packages = [
     description: 'A great option for the morning bite or a family outing. We hit the prime spots quickly to maximize your fishing time.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/04_kid_huge_bass.jpg',
-    bookingType: 'google' as const,
-    bookingUrl: 'https://calendar.app.google/LcvsnQtMWRk3bdBw7'
+    bookingType: 'google-modal' as const,
+    bookingUrl: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ22pOy74jn-M1Bsd12LB-MY4sAAoo5Q3qyn5BEuJOkkB6ogMPE7b6aVvB1CXCyeFZMoopO3eMWo?gv=true'
   },
   {
     id: '2',
@@ -34,8 +34,8 @@ const packages = [
     description: 'Our most popular option. Gives us more time to try different techniques and locations across Grand Traverse Bay.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/03_customer_bigfish_captain.jpg',
-    bookingType: 'google' as const,
-    bookingUrl: 'https://calendar.app.google/Wj2ZJPZiaZ8dhKLQ6'
+    bookingType: 'google-modal' as const,
+    bookingUrl: 'https://calendar.google.com/calendar/appointments/AcZssZ0MkXl5pyo2RFIWwiIwZljySpHdViRnY0UKRGs=?gv=true'
   },
   {
     id: '3',
@@ -50,14 +50,99 @@ const packages = [
   }
 ];
 
+interface BookingModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  packageName: string;
+  packagePrice: number;
+  packageDuration: string;
+  bookingUrl: string;
+}
+
+function BookingModal({ isOpen, onClose, packageName, packagePrice, packageDuration, bookingUrl }: BookingModalProps) {
+  if (!isOpen) return null;
+
+  const handleBooking = () => {
+    window.open(bookingUrl, '_blank');
+    onClose();
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Backdrop */}
+      <div
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        onClick={onClose}
+      />
+
+      {/* Modal */}
+      <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+        {/* Header */}
+        <div className="bg-navy-900 text-white p-6">
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+          >
+            <X className="h-6 w-6" />
+          </button>
+          <div className="flex items-center gap-3 mb-2">
+            <Calendar className="h-6 w-6 text-cyan-400" />
+            <span className="text-cyan-400 font-semibold uppercase text-sm tracking-wide">Book Your Trip</span>
+          </div>
+          <h3 className="font-serif text-2xl font-bold">{packageName}</h3>
+        </div>
+
+        {/* Content */}
+        <div className="p-6">
+          <div className="flex items-baseline gap-2 mb-4">
+            <span className="text-3xl font-bold text-cyan-600">${packagePrice}</span>
+            <span className="text-gray-500">/ per group</span>
+          </div>
+
+          <div className="flex items-center gap-2 text-gray-600 mb-6">
+            <Clock className="h-5 w-5 text-cyan-500" />
+            <span>{packageDuration}</span>
+          </div>
+
+          <p className="text-gray-600 text-sm mb-6">
+            You&apos;ll be redirected to Google Calendar to select an available date and time for your trip.
+          </p>
+
+          <div className="space-y-3">
+            <button
+              onClick={handleBooking}
+              className="w-full bg-cyan-600 hover:bg-cyan-500 text-white py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+            >
+              <Calendar className="h-5 w-5" />
+              Select Date & Time
+            </button>
+
+            <button
+              onClick={onClose}
+              className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-lg font-medium transition-colors"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ServicesPage() {
   const [calendlyLoaded, setCalendlyLoaded] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<typeof packages[0] | null>(null);
 
   const openBookingModal = (pkg: typeof packages[0]) => {
     if (pkg.bookingType === 'calendly' && calendlyLoaded && window.Calendly) {
       window.Calendly.initPopupWidget({ url: pkg.bookingUrl });
+    } else if (pkg.bookingType === 'google-modal') {
+      setSelectedPackage(pkg);
+      setModalOpen(true);
     } else {
-      // Google Calendar links open directly in new tab
+      // Fallback: open directly in new tab
       window.open(pkg.bookingUrl, '_blank');
     }
   };
@@ -217,6 +302,41 @@ export default function ServicesPage() {
           </Link>
         </div>
       </section>
+
+      {/* Inline Google Calendar Preview */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <div className="text-cyan-600 font-bold uppercase tracking-widest text-sm mb-2">Book Online</div>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900">Schedule Your Trip</h2>
+            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+              Select an available date and time below to book your fishing charter.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl p-4 shadow-lg">
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/AcZssZ0MkXl5pyo2RFIWwiIwZljySpHdViRnY0UKRGs=?gv=true"
+              style={{ border: 0 }}
+              width="100%"
+              height="600"
+              title="Google Calendar Appointment Scheduling"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Booking Modal */}
+      {selectedPackage && (
+        <BookingModal
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+          packageName={selectedPackage.name}
+          packagePrice={selectedPackage.price}
+          packageDuration={selectedPackage.duration}
+          bookingUrl={selectedPackage.bookingUrl}
+        />
+      )}
     </>
   );
 }
