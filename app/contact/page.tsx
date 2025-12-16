@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Phone, MapPin, Calendar, User, Loader2, Mail } from 'lucide-react';
 
 const FORMSPREE_ID = 'mvgelvlp';
@@ -246,18 +247,26 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  {/* SMS Opt-in Compliance */}
+                  {/* Marketing Opt-in Compliance */}
                   <div className="flex items-start gap-3">
                     <input
                       type="checkbox"
-                      id="sms-opt-in"
-                      name="sms_opt_in"
+                      id="marketing-opt-in"
+                      name="marketing_opt_in"
                       className="mt-1 h-4 w-4 text-cyan-600 focus:ring-cyan-500 border-gray-300 rounded"
                     />
-                    <label htmlFor="sms-opt-in" className="text-xs text-gray-500">
-                      By checking this box, I agree to receive text messages from TC Bass Destination Charters regarding my inquiry. Message and data rates may apply. Reply STOP to opt out.
+                    <label htmlFor="marketing-opt-in" className="text-xs text-gray-500">
+                      By checking this box, I agree to receive marketing text messages and/or emails from TC Bass Destination Charters regarding my inquiry. Message and data rates may apply. Reply STOP to opt out.
                     </label>
                   </div>
+
+                  {/* Terms and Privacy Agreement */}
+                  <p className="text-xs text-gray-500">
+                    By submitting this form, I agree to the{' '}
+                    <Link href="/terms" className="text-cyan-600 hover:text-cyan-700 underline">Terms and Conditions</Link>
+                    {' '}and{' '}
+                    <Link href="/privacy" className="text-cyan-600 hover:text-cyan-700 underline">Privacy Policy</Link>.
+                  </p>
 
                   {formStatus === 'error' && (
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">

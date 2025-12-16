@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Anchor, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Anchor, Facebook, Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -31,14 +31,11 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold mb-4 text-white">Connect</h4>
             <div className="flex gap-4">
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-cyan-600 transition-colors">
+              <a href="https://www.facebook.com/captain.butch.derickson/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-cyan-600 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-cyan-600 transition-colors">
+              <a href="https://www.instagram.com/tcbassdestinationcharters/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-cyan-600 transition-colors">
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-cyan-600 transition-colors">
-                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -48,9 +45,14 @@ export const Footer: React.FC = () => {
           <p className="text-gray-600 text-sm">
             &copy; 2025 TC Bass Destination Charters. All rights reserved.
           </p>
-          <a href="http://tcbassdestinationcharters.com" className="text-gray-600 hover:text-cyan-500 text-sm transition-colors">
-            tcbassdestinationcharters.com
-          </a>
+          <div className="flex items-center gap-4 text-sm">
+            <Link href="/terms" className="text-gray-600 hover:text-cyan-500 transition-colors">
+              Terms & Conditions
+            </Link>
+            <Link href="/privacy" className="text-gray-600 hover:text-cyan-500 transition-colors">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
