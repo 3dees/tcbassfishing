@@ -2,18 +2,26 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Script from 'next/script';
-import { Phone, MapPin, Calendar, User, Loader2 } from 'lucide-react';
+import { Phone, MapPin, Calendar, User, Loader2, Mail } from 'lucide-react';
 
 const FORMSPREE_ID = 'mvgelvlp';
-const CALENDLY_URL = 'https://calendly.com/dh-meet/4-hours-clone?hide_event_type_details=1&hide_gdpr_banner=1';
 
 export default function ContactPage() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Validate that at least phone or email is provided
+    if (!phone.trim() && !email.trim()) {
+      setErrorMessage('Please provide either a phone number or email address.');
+      setFormStatus('error');
+      return;
+    }
+
     setFormStatus('submitting');
     setErrorMessage('');
 
@@ -32,6 +40,8 @@ export default function ContactPage() {
       if (response.ok) {
         setFormStatus('success');
         form.reset();
+        setPhone('');
+        setEmail('');
       } else {
         const data = await response.json();
         setErrorMessage(data.error || 'Something went wrong. Please try again.');
@@ -45,9 +55,6 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Calendly Script */}
-      <Script src="https://assets.calendly.com/assets/external/widget.js" />
-
       {/* Hero Banner */}
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -126,9 +133,9 @@ export default function ContactPage() {
 
             {/* Right Panel: Form */}
             <div className="lg:w-3/5 p-10 md:p-14">
-              <h3 className="text-2xl font-bold text-navy-900 mb-6">Request a Trip</h3>
+              <h3 className="text-2xl font-bold text-navy-900 mb-6">Contact Us</h3>
               <p className="text-gray-500 text-sm mb-6">
-                Please fill out the form below to check availability. Booking is scheduled via email or phone confirmation.
+                Got questions or have a special request? We&apos;d love to hear from you.
               </p>
 
               {formStatus === 'success' ? (
@@ -144,32 +151,49 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                    <div className="relative">
+                      <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                        placeholder="Your Name"
+                      />
+                    </div>
+                  </div>
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                      <div className="relative">
-                        <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          required
-                          className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
-                          placeholder="Your Name"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone <span className="text-gray-400 font-normal">(or email below)</span></label>
                       <div className="relative">
                         <Phone className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                         <input
                           type="tel"
                           id="phone"
                           name="phone"
-                          required
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
                           className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
                           placeholder="(231) 883-2200"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email <span className="text-gray-400 font-normal">(or phone above)</span></label>
+                      <div className="relative">
+                        <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                          placeholder="you@example.com"
                         />
                       </div>
                     </div>
@@ -258,27 +282,6 @@ export default function ContactPage() {
                 </form>
               )}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Embedded Calendly Calendar */}
-      <section id="calendar" className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <div className="text-cyan-600 font-bold uppercase tracking-widest text-sm mb-2">Book Online</div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900">Schedule Your Trip</h2>
-            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-              Select an available date and time below to book your fishing charter.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl p-4 shadow-lg">
-            <div
-              className="calendly-inline-widget"
-              data-url={CALENDLY_URL}
-              style={{ minWidth: '320px', height: '700px' }}
-            />
           </div>
         </div>
       </section>

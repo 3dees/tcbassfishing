@@ -279,8 +279,8 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-16 bg-navy-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-4">Ready to Book Your Trip?</h2>
-          <p className="text-gray-300 mb-8">Contact us today to check availability and secure your spot.</p>
+          <h2 className="font-serif text-3xl font-bold mb-4">Got Questions?</h2>
+          <p className="text-gray-300 mb-8">We&apos;d love to hear from you.</p>
           <Link
             href="/contact"
             className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
