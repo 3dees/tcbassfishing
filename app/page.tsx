@@ -38,7 +38,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/services"
               className="bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-cyan-500/30"
             >
               Book Your Trip
@@ -219,7 +219,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/services"
               className="bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:-translate-y-1 shadow-lg"
             >
               Book Your Trip
