@@ -86,7 +86,7 @@ export default function TermsPage() {
               </div>
               <div className="flex justify-between items-center px-6 py-4">
                 <span className="text-gray-700">6-Hour Trip</span>
-                <span className="font-bold text-navy-900">$560</span>
+                <span className="font-bold text-navy-900">$550</span>
               </div>
               <div className="flex justify-between items-center px-6 py-4">
                 <span className="text-gray-700">8-Hour Trip</span>
