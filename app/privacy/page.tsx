@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           <div className="text-center mb-8">
             <p className="text-sm text-gray-500 mb-4">Last Updated: December 2024</p>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              TC Bass Destination Charters, LLC respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you visit our website or book our services.
+              Traverse City Bass Destination Charters, LLC respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you visit our website or book our services.
             </p>
           </div>
 

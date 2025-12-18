@@ -1,4 +1,4 @@
-# TC Bass Destination Charters
+# Traverse City Bass Destination Charters
 
 Premier bass fishing charters in Traverse City, Michigan. Built with Next.js 14 and optimized for Vercel deployment.
 
@@ -14,7 +14,7 @@ Premier bass fishing charters in Traverse City, Michigan. Built with Next.js 14 
 
 - **Home** (`/`) - Landing page with hero, about preview, and services preview
 - **About** (`/about`) - Captain Butch bio and boat specs
-- **Services** (`/services`) - Trip packages and rates
+- **Trips** (`/trips`) - Trip packages and rates
 - **Gallery** (`/gallery`) - Photo gallery of catches
 - **FAQ** (`/faq`) - Frequently asked questions
 - **Contact** (`/contact`) - Booking form and contact info

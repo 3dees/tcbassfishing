@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'About Captain Butch Derickson',
   description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 10+ years experience on Grand Traverse Bay. Learn about our boat and fishing expertise.',
   openGraph: {
-    title: 'About Captain Butch Derickson | TC Bass Destination Charters',
+    title: 'About Captain Butch Derickson | Traverse City Bass Destination Charters',
     description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 10+ years experience on Grand Traverse Bay.',
     images: ['/images/hero/captain-butch.jpg'],
   },
@@ -64,7 +64,7 @@ export default function AboutPage() {
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-6">Captain Butch Derickson</h2>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                After retiring as a mechanical engineer in the power industry, I turned my lifelong passion for bass fishing into TC Bass Destination Charters. With over 10 years on these waters, I know every contour, ledge, and hiding spot in Grand Traverse Bay and the surrounding inland lakes.
+                After retiring as a mechanical engineer in the power industry, I turned my lifelong passion for bass fishing into Traverse City Bass Destination Charters. With over 10 years on these waters, I know every contour, ledge, and hiding spot in Grand Traverse Bay and the surrounding inland lakes.
               </p>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
