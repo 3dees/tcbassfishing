@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Jumping Bass Fish -->
+  <path fill="#2BA3AE" d="
+    M75 25
+    C85 30 90 45 88 55
+    C86 65 80 75 70 82
+    L65 95
+    C63 98 58 96 60 92
+    L62 82
+    C55 85 45 85 38 82
+    L36 75
+    L42 72
+    C35 68 28 60 25 50
+    L15 55
+    L5 45
+    L20 42
+    C18 35 20 28 25 22
+    C30 16 38 12 48 12
+    C58 12 68 18 75 25
+    Z
+  "/>
+  <!-- Eye -->
+  <circle fill="#FFFFFF" cx="60" cy="28" r="5"/>
+  <circle fill="#2BA3AE" cx="61" cy="27" r="2"/>
+  <!-- Gill lines -->
+  <path fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" d="
+    M45 35 Q40 42 42 50
+    M50 38 Q46 45 48 52
+  "/>
+  <!-- Fin detail -->
+  <path fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" d="
+    M55 55 L52 62
+    M60 58 L58 65
+  "/>
+  <!-- Dorsal fin spines -->
+  <path fill="#2BA3AE" d="
+    M65 18 L68 12 L70 18
+    M70 16 L73 10 L75 17
+    M75 18 L78 13 L79 20
+  "/>
+</svg>
