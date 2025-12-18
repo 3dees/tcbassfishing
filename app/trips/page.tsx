@@ -290,6 +290,22 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Square Appointments Booking */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <div className="text-cyan-600 font-bold uppercase tracking-widest text-sm mb-2">Book Online</div>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900">Schedule Your Trip</h2>
+            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+              Select an available date and time below to book your fishing charter.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <Script src="https://square.site/appointments/buyer/widget/c8oe2ys8dwnxqg/L9PHEH55RWTNH.js" />
+          </div>
+        </div>
+      </section>
+
       {/* Booking Modal */}
       {selectedPackage && (
         <BookingModal
