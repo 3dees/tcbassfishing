@@ -290,29 +290,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Inline Google Calendar Preview */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <div className="text-cyan-600 font-bold uppercase tracking-widest text-sm mb-2">Book Online</div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900">Schedule Your Trip</h2>
-            <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-              Select an available date and time below to book your fishing charter.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl p-4 shadow-lg">
-            <iframe
-              src="https://calendar.google.com/calendar/appointments/AcZssZ0MkXl5pyo2RFIWwiIwZljySpHdViRnY0UKRGs=?gv=true"
-              style={{ border: 0 }}
-              width="100%"
-              height="600"
-              title="Google Calendar Appointment Scheduling"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Booking Modal */}
       {selectedPackage && (
         <BookingModal
