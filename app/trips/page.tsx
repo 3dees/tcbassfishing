@@ -209,12 +209,23 @@ export default function ServicesPage() {
                     ))}
                   </ul>
 
-                  <button
-                    onClick={() => openBookingModal(pkg)}
-                    className="w-full block text-center bg-navy-900 hover:bg-navy-800 text-white py-4 rounded-lg font-medium transition-colors"
-                  >
-                    Book Now
-                  </button>
+                  {pkg.bookingType === 'external' ? (
+                    <a
+                      href={pkg.bookingUrl}
+                      target="_top"
+                      rel="nofollow"
+                      className="w-full block text-center bg-navy-900 hover:bg-navy-800 text-white py-4 rounded-lg font-medium transition-colors"
+                    >
+                      Book Now
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => openBookingModal(pkg)}
+                      className="w-full block text-center bg-navy-900 hover:bg-navy-800 text-white py-4 rounded-lg font-medium transition-colors"
+                    >
+                      Book Now
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
@@ -301,6 +312,12 @@ export default function ServicesPage() {
           bookingUrl={selectedPackage.bookingUrl}
         />
       )}
+
+      {/* Square Appointments Widget */}
+      <Script
+        src="https://square.site/appointments/buyer/widget/c8oe2ys8dwnxqg/L9PHEH55RWTNH.js"
+        strategy="lazyOnload"
+      />
     </>
   );
 }
