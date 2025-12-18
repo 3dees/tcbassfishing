@@ -37,7 +37,7 @@ const packages = [
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/05_sunset_bay.jpg',
     bookingType: 'square-modal' as const,
-    bookingUrl: 'https://book.squareup.com/appointments/c8oe2ys8dwnxqg/location/L9PHEH55RWTNH/services/EXCGBTPZAQVO63V5QERKZWZI'
+    bookingUrl: 'https://book.squareup.com/appointments/c8oe2ys8dwnxqg/location/L9PHEH55RWTNH/availability'
   }
 ];
 
