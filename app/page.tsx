@@ -137,7 +137,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
               { name: '4-Hour Trip', price: 440, desc: 'Perfect for the morning bite or a family outing.', image: '/images/hero/04_kid_huge_bass.jpg' },
-              { name: '6-Hour Trip', price: 560, desc: 'Our most popular option with more time to explore.', image: '/images/hero/03_customer_bigfish_captain.jpg' },
+              { name: '6-Hour Trip', price: 550, desc: 'Our most popular option with more time to explore.', image: '/images/hero/03_customer_bigfish_captain.jpg' },
               { name: '8-Hour Trip', price: 660, desc: 'The full day experience for serious anglers.', image: '/images/hero/05_sunset_bay.jpg' },
             ].map((pkg) => (
               <div key={pkg.name} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 border border-gray-100">

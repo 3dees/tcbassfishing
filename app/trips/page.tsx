@@ -29,7 +29,7 @@ const packages = [
   {
     id: '2',
     name: '6-Hour Trip',
-    price: 560,
+    price: 550,
     duration: '6 Hours',
     description: 'Our most popular option. Gives us more time to try different techniques and locations across Grand Traverse Bay.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],

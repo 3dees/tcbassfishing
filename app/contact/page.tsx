@@ -223,7 +223,7 @@ export default function ContactPage() {
                           className="w-full pl-4 pr-10 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all appearance-none"
                         >
                           <option value="4-Hour Trip ($440)">4-Hour Trip ($440)</option>
-                          <option value="6-Hour Trip ($560)">6-Hour Trip ($560)</option>
+                          <option value="6-Hour Trip ($550)">6-Hour Trip ($550)</option>
                           <option value="8-Hour Trip ($660)">8-Hour Trip ($660)</option>
                           <option value="Not Sure Yet">Not Sure Yet</option>
                         </select>

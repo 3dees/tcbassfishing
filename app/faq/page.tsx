@@ -8,7 +8,7 @@ import { Plus, Minus, HelpCircle } from 'lucide-react';
 const faqs = [
   {
     question: "What are your rates?",
-    answer: "We offer three packages: 4-Hour Trip ($440), 6-Hour Trip ($560), and 8-Hour Trip ($660). All prices are per group (up to 2 anglers)."
+    answer: "We offer three packages: 4-Hour Trip ($440), 6-Hour Trip ($550), and 8-Hour Trip ($660). All prices are per group (up to 2 anglers)."
   },
   {
     question: "What is included in the trip?",

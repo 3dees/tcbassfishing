@@ -130,7 +130,7 @@ const jsonLd = {
       },
       "offers": {
         "@type": "Offer",
-        "price": "560",
+        "price": "550",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "validFrom": "2025-04-01",
@@ -163,7 +163,7 @@ const jsonLd = {
           "name": "What are your fishing charter rates?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We offer three trip options: 4-hour trips for $440, 6-hour trips for $560, and 8-hour trips for $660. All prices are per group (up to 2 anglers) and include all gear, tackle, snacks, and drinks."
+            "text": "We offer three trip options: 4-hour trips for $440, 6-hour trips for $550, and 8-hour trips for $660. All prices are per group (up to 2 anglers) and include all gear, tackle, snacks, and drinks."
           }
         },
         {
