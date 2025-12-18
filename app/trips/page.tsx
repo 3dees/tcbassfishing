@@ -4,15 +4,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Check, Clock, Anchor, Users, X, ArrowLeft } from 'lucide-react';
-import Script from 'next/script';
-
-declare global {
-  interface Window {
-    Calendly?: {
-      initPopupWidget: (options: { url: string }) => void;
-    };
-  }
-}
 
 const packages = [
   {
@@ -45,8 +36,8 @@ const packages = [
     description: 'The full day experience. Perfect for serious anglers hunting for that trophy smallmouth or personal best.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/05_sunset_bay.jpg',
-    bookingType: 'calendly' as const,
-    bookingUrl: 'https://calendly.com/dh-meet/6hours'
+    bookingType: 'square-modal' as const,
+    bookingUrl: 'https://app.squareup.com/appointments/book/c8oe2ys8dwnxqg/EXCGBTPZAQVO63V5QERKZWZI/start'
   }
 ];
 
@@ -118,14 +109,11 @@ function BookingModal({ isOpen, onClose, packageName, packagePrice, packageDurat
 }
 
 export default function ServicesPage() {
-  const [calendlyLoaded, setCalendlyLoaded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<typeof packages[0] | null>(null);
 
   const openBookingModal = (pkg: typeof packages[0]) => {
-    if (pkg.bookingType === 'calendly' && calendlyLoaded && window.Calendly) {
-      window.Calendly.initPopupWidget({ url: pkg.bookingUrl });
-    } else if (pkg.bookingType === 'google-modal') {
+    if (pkg.bookingType === 'google-modal' || pkg.bookingType === 'square-modal') {
       setSelectedPackage(pkg);
       setModalOpen(true);
     } else {
@@ -136,12 +124,6 @@ export default function ServicesPage() {
 
   return (
     <>
-      {/* Calendly Scripts */}
-      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        onLoad={() => setCalendlyLoaded(true)}
-      />
 
       {/* Hero Banner */}
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
@@ -312,12 +294,6 @@ export default function ServicesPage() {
           bookingUrl={selectedPackage.bookingUrl}
         />
       )}
-
-      {/* Square Appointments Widget */}
-      <Script
-        src="https://square.site/appointments/buyer/widget/c8oe2ys8dwnxqg/L9PHEH55RWTNH.js"
-        strategy="lazyOnload"
-      />
     </>
   );
 }
