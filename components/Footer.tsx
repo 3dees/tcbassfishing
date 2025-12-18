@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Anchor, Facebook, Instagram } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
+import { BassIcon } from './BassIcon';
 
 export const Footer: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ export const Footer: React.FC = () => {
 
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Anchor className="h-6 w-6 text-cyan-500" />
+              <BassIcon className="h-6 w-6 text-cyan-500" />
               <span className="font-serif font-bold text-xl">TC BASS CHARTERS</span>
             </div>
             <p className="text-gray-400 text-sm max-w-sm leading-relaxed">

@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Anchor, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { BassIcon } from './BassIcon';
 
 export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ export const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center text-white">
         {/* Logo Area */}
         <Link href="/" className="flex items-center gap-2 group">
-          <Anchor className="h-8 w-8 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
+          <BassIcon className="h-8 w-8 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
           <div className="flex flex-col">
             <span className="font-serif font-bold text-xl leading-none tracking-wide">TC BASS</span>
             <span className="text-[10px] uppercase tracking-[0.2em] text-cyan-500">Destination Charters</span>
