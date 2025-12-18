@@ -31,7 +31,7 @@ export default function TermsPage() {
           <div className="text-center mb-8">
             <p className="text-sm text-gray-500 mb-4">Last Updated: December 2025</p>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              By booking a fishing charter with TC Bass Destination Charters, LLC, you agree to be bound by these Terms and Conditions. If you do not agree, do not book a trip.
+              By booking a fishing charter with Traverse City Bass Destination Charters, LLC, you agree to be bound by these Terms and Conditions. If you do not agree, do not book a trip.
             </p>
           </div>
 
@@ -39,7 +39,7 @@ export default function TermsPage() {
           <div className="bg-slate-50 rounded-2xl p-8 text-center">
             <h3 className="font-serif text-xl font-bold text-navy-900 mb-4">Company Information</h3>
             <p className="text-gray-600">
-              TC Bass Destination Charters, LLC<br />
+              Traverse City Bass Destination Charters, LLC<br />
               Traverse City, Michigan<br />
               Phone: <a href="tel:231-883-2200" className="text-cyan-600 hover:text-cyan-700">231-883-2200</a><br />
               Email: <a href="mailto:derick881@gmail.com" className="text-cyan-600 hover:text-cyan-700">derick881@gmail.com</a>
@@ -223,14 +223,14 @@ export default function TermsPage() {
             <div className="bg-white/5 rounded-xl p-6 border border-white/10">
               <h3 className="font-bold text-cyan-400 mb-3">Limitation of Liability</h3>
               <p className="text-gray-300 text-sm">
-                To the fullest extent permitted by law, TC Bass Destination Charters, LLC, its owner, captain, and agents shall not be liable for any injury, death, loss, or damage to personal property arising from participation in a fishing charter, except in cases of gross negligence or willful misconduct.
+                To the fullest extent permitted by law, Traverse City Bass Destination Charters, LLC, its owner, captain, and agents shall not be liable for any injury, death, loss, or damage to personal property arising from participation in a fishing charter, except in cases of gross negligence or willful misconduct.
               </p>
             </div>
 
             <div className="bg-white/5 rounded-xl p-6 border border-white/10">
               <h3 className="font-bold text-cyan-400 mb-3">Indemnification</h3>
               <p className="text-gray-300 text-sm">
-                You agree to indemnify and hold harmless TC Bass Destination Charters, LLC from any claims, damages, or expenses arising from your actions or negligence during a trip.
+                You agree to indemnify and hold harmless Traverse City Bass Destination Charters, LLC from any claims, damages, or expenses arising from your actions or negligence during a trip.
               </p>
             </div>
           </div>
@@ -298,7 +298,7 @@ export default function TermsPage() {
 
           <div className="bg-white rounded-xl p-6 shadow-sm space-y-4 text-sm text-gray-600">
             <p>
-              <strong className="text-navy-900">Intellectual Property:</strong> All content on our website is the property of TC Bass Destination Charters, LLC and is protected by copyright law.
+              <strong className="text-navy-900">Intellectual Property:</strong> All content on our website is the property of Traverse City Bass Destination Charters, LLC and is protected by copyright law.
             </p>
             <p>
               <strong className="text-navy-900">Dispute Resolution:</strong> Any disputes shall be resolved through good-faith negotiation. If unresolved, disputes shall be subject to binding arbitration in Grand Traverse County, Michigan.

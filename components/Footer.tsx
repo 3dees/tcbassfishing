@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
 
         <div className="pt-8 border-t border-navy-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-600 text-sm">
-            &copy; 2025 TC Bass Destination Charters. All rights reserved.
+            &copy; 2025 Traverse City Bass Destination Charters. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-sm">
             <Link href="/terms" className="text-gray-600 hover:text-cyan-500 transition-colors">

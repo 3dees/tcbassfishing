@@ -127,7 +127,7 @@ export default function ContactPage() {
 
               <div className="mt-12 lg:mt-0">
                 <p className="text-gray-500 text-sm">
-                  &copy; 2025 TC Bass Destination Charters.
+                  &copy; 2025 Traverse City Bass Destination Charters.
                 </p>
               </div>
             </div>
@@ -256,7 +256,7 @@ export default function ContactPage() {
                       className="mt-1 h-4 w-4 text-cyan-600 focus:ring-cyan-500 border-gray-300 rounded"
                     />
                     <label htmlFor="marketing-opt-in" className="text-xs text-gray-500">
-                      By checking this box, I agree to receive marketing text messages and/or emails from TC Bass Destination Charters regarding my inquiry. Message and data rates may apply. Reply STOP to opt out.
+                      By checking this box, I agree to receive marketing text messages and/or emails from Traverse City Bass Destination Charters regarding my inquiry. Message and data rates may apply. Reply STOP to opt out.
                     </label>
                   </div>
 
