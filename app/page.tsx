@@ -38,13 +38,13 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services"
+              href="/trips"
               className="bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-cyan-500/30"
             >
               Book Your Trip
             </Link>
             <Link
-              href="/services"
+              href="/trips"
               className="bg-transparent border-2 border-white/50 hover:border-white text-white px-8 py-4 rounded-full font-semibold transition-all backdrop-blur-sm hover:bg-white/10"
             >
               View Rates
@@ -169,7 +169,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              href="/services"
+              href="/trips"
               className="inline-block text-cyan-600 hover:text-cyan-700 font-medium border-b-2 border-cyan-600 hover:border-cyan-700 transition-colors"
             >
               View Full Package Details
@@ -219,7 +219,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services"
+              href="/trips"
               className="bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:-translate-y-1 shadow-lg"
             >
               Book Your Trip

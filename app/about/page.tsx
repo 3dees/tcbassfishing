@@ -147,7 +147,7 @@ export default function AboutPage() {
           <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Ready to Fish with Captain Butch?</h2>
           <p className="text-gray-600 mb-8">Book your trip today and experience world-class bass fishing on Grand Traverse Bay.</p>
           <Link
-            href="/services"
+            href="/trips"
             className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
           >
             Book Your Trip

@@ -18,7 +18,7 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Trips & Rates', href: '/services' },
+    { name: 'Trips & Rates', href: '/trips' },
     { name: 'About Captain', href: '/about' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'FAQ', href: '/faq' },
@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
             </Link>
           ))}
           <Link
-            href="/services"
+            href="/trips"
             className="bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-cyan-900/50"
           >
             Book Now
@@ -85,7 +85,7 @@ export const Navbar: React.FC = () => {
             </Link>
           ))}
           <Link
-            href="/services"
+            href="/trips"
             className="w-full text-center bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-3 rounded-md font-medium"
             onClick={() => setIsMobileMenuOpen(false)}
           >
