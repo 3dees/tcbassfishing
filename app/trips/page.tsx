@@ -117,62 +117,10 @@ function BookingModal({ isOpen, onClose, packageName, packagePrice, packageDurat
   );
 }
 
-interface SquareBookingModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-function SquareBookingModal({ isOpen, onClose }: SquareBookingModalProps) {
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop */}
-      <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
-        onClick={onClose}
-      />
-
-      {/* Modal - Full height with embedded Square booking */}
-      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl h-[90vh] overflow-hidden flex flex-col">
-        {/* Header */}
-        <div className="bg-navy-900 text-white p-4 flex items-center justify-between shrink-0">
-          <button
-            onClick={onClose}
-            className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5" />
-            <span className="font-medium">Back to Trips</span>
-          </button>
-          <button
-            onClick={onClose}
-            className="text-white/70 hover:text-white transition-colors p-1"
-          >
-            <X className="h-6 w-6" />
-          </button>
-        </div>
-
-        {/* Embedded Square Appointments */}
-        <div className="flex-1 min-h-0">
-          <iframe
-            src="https://app.squareup.com/appointments/book/c8oe2ys8dwnxqg/L9PHEH55RWTNH/start"
-            style={{ border: 0 }}
-            width="100%"
-            height="100%"
-            className="min-h-[500px]"
-            title="Book Your Fishing Charter"
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function ServicesPage() {
   const [calendlyLoaded, setCalendlyLoaded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<typeof packages[0] | null>(null);
-  const [squareModalOpen, setSquareModalOpen] = useState(false);
 
   const openBookingModal = (pkg: typeof packages[0]) => {
     if (pkg.bookingType === 'calendly' && calendlyLoaded && window.Calendly) {
@@ -353,12 +301,11 @@ export default function ServicesPage() {
             </p>
           </div>
           <div className="text-center">
-            <button
-              onClick={() => setSquareModalOpen(true)}
-              className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-lg font-medium uppercase tracking-wider transition-colors"
-            >
-              Book Now
-            </button>
+            {/* Square Appointments Widget - loads its own booking UI */}
+            <Script
+              src="https://square.site/appointments/buyer/widget/c8oe2ys8dwnxqg/L9PHEH55RWTNH.js"
+              strategy="lazyOnload"
+            />
           </div>
         </div>
       </section>
@@ -374,12 +321,6 @@ export default function ServicesPage() {
           bookingUrl={selectedPackage.bookingUrl}
         />
       )}
-
-      {/* Square Booking Modal */}
-      <SquareBookingModal
-        isOpen={squareModalOpen}
-        onClose={() => setSquareModalOpen(false)}
-      />
     </>
   );
 }
