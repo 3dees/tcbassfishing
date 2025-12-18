@@ -300,8 +300,15 @@ export default function ServicesPage() {
               Select an available date and time below to book your fishing charter.
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
-            <Script src="https://square.site/appointments/buyer/widget/c8oe2ys8dwnxqg/L9PHEH55RWTNH.js" />
+          <div className="text-center">
+            <a
+              href="https://app.squareup.com/appointments/book/c8oe2ys8dwnxqg/L9PHEH55RWTNH/start"
+              target="_top"
+              rel="nofollow"
+              className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-lg font-medium uppercase tracking-wider transition-colors"
+            >
+              Book Now
+            </a>
           </div>
         </div>
       </section>
