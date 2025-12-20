@@ -15,7 +15,7 @@ const packages = [
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/04_kid_huge_bass.jpg',
     bookingType: 'external' as const,
-    bookingUrl: 'https://app.squareup.com/appointments/book/c8oe2ys8dwnxqg/L9PHEH55RWTNH/start'
+    bookingUrl: 'https://book.squareup.com/appointments/kail56qwlafeks/location/0TNHNKTQN1A13/services/WSDBLHSRWD4OKFHROZSXWT2O'
   },
   {
     id: '2',
@@ -25,8 +25,8 @@ const packages = [
     description: 'Our most popular option. Gives us more time to try different techniques and locations across Grand Traverse Bay.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/03_customer_bigfish_captain.jpg',
-    bookingType: 'google-modal' as const,
-    bookingUrl: 'https://calendar.google.com/calendar/appointments/AcZssZ0MkXl5pyo2RFIWwiIwZljySpHdViRnY0UKRGs=?gv=true'
+    bookingType: 'external' as const,
+    bookingUrl: 'https://book.squareup.com/appointments/kail56qwlafeks/location/0TNHNKTQN1A13/services/V2GSA4JTLSWHJISB45GNPCO2'
   },
   {
     id: '3',
@@ -37,7 +37,7 @@ const packages = [
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/05_sunset_bay.jpg',
     bookingType: 'external' as const,
-    bookingUrl: 'https://book.squareup.com/appointments/c8oe2ys8dwnxqg/location/L9PHEH55RWTNH/services/EXCGBTPZAQVO63V5QERKZWZI'
+    bookingUrl: 'https://book.squareup.com/appointments/kail56qwlafeks/location/0TNHNKTQN1A13/services/6DWDTS642AFG73VTGIPECDPP'
   }
 ];
 
