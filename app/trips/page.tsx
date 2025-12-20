@@ -1,9 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Check, Clock, Anchor, Users, X, ArrowLeft } from 'lucide-react';
+import { Check, Clock, Anchor, Users } from 'lucide-react';
 
 const packages = [
   {
@@ -14,8 +13,7 @@ const packages = [
     description: 'A great option for the morning bite or a family outing. We hit the prime spots quickly to maximize your fishing time.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/04_kid_huge_bass.jpg',
-    bookingType: 'external' as const,
-    bookingUrl: 'https://app.squareup.com/appointments/book/c8oe2ys8dwnxqg/L9PHEH55RWTNH/start'
+    bookingUrl: 'https://book.squareup.com/appointments/kail56qwlafeks/location/0TNHNKTQN1A13/services/WSDBLHSRWD4OKFHROZSXWT2O'
   },
   {
     id: '2',
@@ -25,8 +23,7 @@ const packages = [
     description: 'Our most popular option. Gives us more time to try different techniques and locations across Grand Traverse Bay.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/03_customer_bigfish_captain.jpg',
-    bookingType: 'google-modal' as const,
-    bookingUrl: 'https://calendar.google.com/calendar/appointments/AcZssZ0MkXl5pyo2RFIWwiIwZljySpHdViRnY0UKRGs=?gv=true'
+    bookingUrl: 'https://book.squareup.com/appointments/kail56qwlafeks/location/0TNHNKTQN1A13/services/V2GSA4JTLSWHJISB45GNPCO2'
   },
   {
     id: '3',
@@ -36,92 +33,11 @@ const packages = [
     description: 'The full day experience. Perfect for serious anglers hunting for that trophy smallmouth or personal best.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/05_sunset_bay.jpg',
-    bookingType: 'external' as const,
-    bookingUrl: 'https://book.squareup.com/appointments/c8oe2ys8dwnxqg/location/L9PHEH55RWTNH/services/EXCGBTPZAQVO63V5QERKZWZI'
+    bookingUrl: 'https://book.squareup.com/appointments/kail56qwlafeks/location/0TNHNKTQN1A13/services/6DWDTS642AFG73VTGIPECDPP'
   }
 ];
 
-interface BookingModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  packageName: string;
-  packagePrice: number;
-  packageDuration: string;
-  bookingUrl: string;
-}
-
-function BookingModal({ isOpen, onClose, packageName, packagePrice, packageDuration, bookingUrl }: BookingModalProps) {
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop */}
-      <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
-        onClick={onClose}
-      />
-
-      {/* Modal - Full height with embedded calendar */}
-      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col">
-        {/* Header with back button */}
-        <div className="bg-navy-900 text-white p-4 flex items-center justify-between shrink-0">
-          <button
-            onClick={onClose}
-            className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5" />
-            <span className="font-medium">Back to Packages</span>
-          </button>
-          <button
-            onClick={onClose}
-            className="text-white/70 hover:text-white transition-colors p-1"
-          >
-            <X className="h-6 w-6" />
-          </button>
-        </div>
-
-        {/* Package info bar */}
-        <div className="bg-slate-100 px-4 py-3 flex items-center justify-between border-b shrink-0">
-          <div className="flex items-center gap-3">
-            <h3 className="font-serif text-lg font-bold text-navy-900">{packageName}</h3>
-            <span className="text-gray-400">•</span>
-            <span className="text-gray-600 flex items-center gap-1">
-              <Clock className="h-4 w-4" /> {packageDuration}
-            </span>
-          </div>
-          <div className="text-xl font-bold text-cyan-600">${packagePrice}</div>
-        </div>
-
-        {/* Embedded Google Calendar */}
-        <div className="flex-1 min-h-0">
-          <iframe
-            src={bookingUrl}
-            style={{ border: 0 }}
-            width="100%"
-            height="100%"
-            className="min-h-[500px]"
-            title={`Book ${packageName}`}
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function ServicesPage() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState<typeof packages[0] | null>(null);
-
-  const openBookingModal = (pkg: typeof packages[0]) => {
-    if (pkg.bookingType === 'google-modal' || pkg.bookingType === 'square-modal') {
-      setSelectedPackage(pkg);
-      setModalOpen(true);
-    } else {
-      // Fallback: open directly in new tab
-      window.open(pkg.bookingUrl, '_blank');
-    }
-  };
-
   return (
     <>
 
@@ -191,23 +107,14 @@ export default function ServicesPage() {
                     ))}
                   </ul>
 
-                  {pkg.bookingType === 'external' ? (
-                    <a
-                      href={pkg.bookingUrl}
-                      target="_top"
-                      rel="nofollow"
-                      className="w-full block text-center bg-navy-900 hover:bg-navy-800 text-white py-4 rounded-lg font-medium transition-colors"
-                    >
-                      Book Now
-                    </a>
-                  ) : (
-                    <button
-                      onClick={() => openBookingModal(pkg)}
-                      className="w-full block text-center bg-navy-900 hover:bg-navy-800 text-white py-4 rounded-lg font-medium transition-colors"
-                    >
-                      Book Now
-                    </button>
-                  )}
+                  <a
+                    href={pkg.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full block text-center bg-navy-900 hover:bg-navy-800 text-white py-4 rounded-lg font-medium transition-colors"
+                  >
+                    Book Now
+                  </a>
                 </div>
               </div>
             ))}
@@ -283,17 +190,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Booking Modal */}
-      {selectedPackage && (
-        <BookingModal
-          isOpen={modalOpen}
-          onClose={() => setModalOpen(false)}
-          packageName={selectedPackage.name}
-          packagePrice={selectedPackage.price}
-          packageDuration={selectedPackage.duration}
-          bookingUrl={selectedPackage.bookingUrl}
-        />
-      )}
     </>
   );
 }
