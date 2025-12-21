@@ -4,6 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Check, Clock, Anchor, Users } from 'lucide-react';
 
+// Fallback booking URL if service-specific links fail
+const FALLBACK_BOOKING_URL = 'https://app.squareup.com/appointments/book/pebgn714i2rt4n/CQ9KNFFD22GG7/start';
+
 const packages = [
   {
     id: '1',
@@ -13,7 +16,7 @@ const packages = [
     description: 'A great option for the morning bite or a family outing. We hit the prime spots quickly to maximize your fishing time.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/04_kid_huge_bass.jpg',
-    bookingUrl: 'https://book.squareup.com/appointments/kail56qwlafeks/location/0TNHNKTQN1A13/services?item=WSDBLHSRWD4OKFHROZSXWT2O'
+    bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/DMH2VM6ZW7OXDHILXA6RUHGE'
   },
   {
     id: '2',
@@ -23,7 +26,7 @@ const packages = [
     description: 'Our most popular option. Gives us more time to try different techniques and locations across Grand Traverse Bay.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/03_customer_bigfish_captain.jpg',
-    bookingUrl: 'https://book.squareup.com/appointments/kail56qwlafeks/location/0TNHNKTQN1A13/services?item=V2GSA4JTLSWHJISB45GNPCO2'
+    bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/PZN2WNKIXHYPNSVVZTLJPVNU'
   },
   {
     id: '3',
@@ -33,7 +36,7 @@ const packages = [
     description: 'The full day experience. Perfect for serious anglers hunting for that trophy smallmouth or personal best.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/05_sunset_bay.jpg',
-    bookingUrl: 'https://book.squareup.com/appointments/kail56qwlafeks/location/0TNHNKTQN1A13/services?item=6DWDTS642AFG73VTGIPECDPP'
+    bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/GFESJPUGAOBRTWUWGDSAR7BP'
   }
 ];
 
