@@ -4,6 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import './globals.css';
+import './silktide-consent-manager.css';
 
 export const metadata: Metadata = {
   title: {
@@ -311,6 +312,74 @@ export default function RootLayout({
         <Footer />
         <SpeedInsights />
 
+        {/* Silktide Cookie Consent Manager */}
+        <Script src="/silktide-consent-manager.js" strategy="afterInteractive" />
+        <Script id="silktide-config" strategy="afterInteractive">
+          {`
+            if (typeof silktideCookieBannerManager !== 'undefined') {
+              silktideCookieBannerManager.updateCookieBannerConfig({
+                background: {
+                  showBackground: true
+                },
+                cookieIcon: {
+                  position: "bottomLeft"
+                },
+                cookieTypes: [
+                  {
+                    id: "necessary",
+                    name: "Necessary",
+                    description: "<p>These cookies are necessary for the website to function properly and cannot be switched off.</p>",
+                    required: true,
+                    onAccept: function() {}
+                  },
+                  {
+                    id: "analytics",
+                    name: "Analytics",
+                    description: "<p>These cookies help us improve the site by tracking which pages are most popular.</p>",
+                    defaultValue: true,
+                    onAccept: function() {
+                      if (typeof gtag !== 'undefined') {
+                        gtag('consent', 'update', { analytics_storage: 'granted' });
+                      }
+                    },
+                    onReject: function() {
+                      if (typeof gtag !== 'undefined') {
+                        gtag('consent', 'update', { analytics_storage: 'denied' });
+                      }
+                    }
+                  },
+                  {
+                    id: "advertising",
+                    name: "Advertising",
+                    description: "<p>These cookies provide extra features and personalization.</p>",
+                    onAccept: function() {
+                      if (typeof gtag !== 'undefined') {
+                        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+                      }
+                    },
+                    onReject: function() {
+                      if (typeof gtag !== 'undefined') {
+                        gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+                      }
+                    }
+                  }
+                ],
+                text: {
+                  banner: {
+                    description: "<p>We use cookies to enhance your experience and analyze traffic. <a href='/privacy' target='_blank'>Cookie Policy.</a></p>",
+                    acceptAllButtonText: "Accept all",
+                    rejectNonEssentialButtonText: "Reject non-essential",
+                    preferencesButtonText: "Preferences"
+                  },
+                  preferences: {
+                    title: "Customize your cookie preferences",
+                    description: "<p>You can choose not to allow some types of cookies.</p>"
+                  }
+                }
+              });
+            }
+          `}
+        </Script>
       </body>
     </html>
   );
