@@ -136,9 +136,9 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { name: '4-Hour Trip', price: 440, desc: 'Perfect for the morning bite or a family outing.', image: '/images/hero/04_kid_huge_bass.jpg' },
-              { name: '6-Hour Trip', price: 550, desc: 'Our most popular option with more time to explore.', image: '/images/hero/03_customer_bigfish_captain.jpg' },
-              { name: '8-Hour Trip', price: 660, desc: 'The full day experience for serious anglers.', image: '/images/hero/05_sunset_bay.jpg' },
+              { name: '4-Hour Trip', price: 440, desc: 'Perfect for the morning bite or a family outing.', image: '/images/hero/04_kid_huge_bass.jpg', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/DMH2VM6ZW7OXDHILXA6RUHGE' },
+              { name: '6-Hour Trip', price: 550, desc: 'Our most popular option with more time to explore.', image: '/images/hero/03_customer_bigfish_captain.jpg', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/PZN2WNKIXHYPNSVVZTLJPVNU' },
+              { name: '8-Hour Trip', price: 660, desc: 'The full day experience for serious anglers.', image: '/images/hero/05_sunset_bay.jpg', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/GFESJPUGAOBRTWUWGDSAR7BP' },
             ].map((pkg) => (
               <div key={pkg.name} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
                 <div className="relative h-48 overflow-hidden">
@@ -156,12 +156,14 @@ export default function HomePage() {
                     <span className="text-gray-400 ml-2 text-sm">/ per group</span>
                   </div>
                   <p className="text-gray-500 text-sm mb-6">{pkg.desc}</p>
-                  <Link
-                    href="/contact"
+                  <a
+                    href={pkg.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block w-full bg-navy-900 hover:bg-navy-800 text-white py-3 rounded-lg font-medium transition-colors"
                   >
                     Book Now
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
