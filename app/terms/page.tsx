@@ -69,7 +69,7 @@ export default function TermsPage() {
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="font-bold text-navy-900 mb-3">Payment Methods</h3>
               <p className="text-gray-600 text-sm">
-                A deposit may be required to secure your booking. The remaining balance is due on the day of the trip. We accept Square, Venmo, and PayPal.
+                A deposit is required to secure your booking. <strong>All deposits are non-refundable.</strong> The remaining balance is due on the day of the trip. We accept Square, Venmo, and PayPal.
               </p>
             </div>
           </div>
@@ -113,22 +113,21 @@ export default function TermsPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-slate-50 rounded-xl p-6">
               <h3 className="font-bold text-navy-900 mb-4">Customer Cancellations</h3>
+              <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4">
+                <p className="text-sm text-red-700 font-medium">All deposits are non-refundable.</p>
+              </div>
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 font-bold">✓</span>
-                  <span><strong>7+ days before:</strong> Full refund of deposit</span>
-                </li>
-                <li className="flex items-start gap-2">
                   <span className="text-yellow-500 font-bold">!</span>
-                  <span><strong>3-7 days before:</strong> 50% refund of deposit</span>
+                  <span><strong>7+ days before:</strong> May reschedule (subject to availability)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 font-bold">✗</span>
-                  <span><strong>Less than 3 days:</strong> No refund</span>
+                  <span><strong>Less than 7 days:</strong> No reschedule, deposit forfeited</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-red-500 font-bold">✗</span>
-                  <span><strong>No-shows:</strong> No refund</span>
+                  <span><strong>No-shows:</strong> No refund, deposit forfeited</span>
                 </li>
               </ul>
             </div>
