@@ -293,10 +293,10 @@ export default function RootLayout({
         {/* Silktide Cookie Consent Manager */}
         <link
           rel="stylesheet"
-          href="https://consent.silktide.com/silktide-consent-manager.min.css"
+          href="/css/silktide-consent-manager.css"
         />
         <Script
-          src="https://consent.silktide.com/silktide-consent-manager.min.js"
+          src="/js/silktide-consent-manager.js"
           strategy="afterInteractive"
         />
         <Script id="silktide-config" strategy="afterInteractive">
