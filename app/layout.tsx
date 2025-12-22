@@ -106,12 +106,17 @@ const jsonLd = {
       }
     },
     {
-      "@type": "Product",
+      "@type": "Service",
       "@id": "https://tcbassdestinationcharters.com/#4hour",
       "name": "4-Hour Bass Fishing Trip",
       "description": "4-hour smallmouth bass fishing charter on Grand Traverse Bay. Includes rods, reels, tackle, lures, snacks, and drinks. Up to 2 anglers.",
-      "brand": {
+      "image": "https://tcbassdestinationcharters.com/images/hero/04_kid_huge_bass.jpg",
+      "provider": {
         "@id": "https://tcbassdestinationcharters.com/#business"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Grand Traverse Bay, Traverse City, Michigan"
       },
       "offers": {
         "@type": "Offer",
@@ -123,12 +128,17 @@ const jsonLd = {
       }
     },
     {
-      "@type": "Product",
+      "@type": "Service",
       "@id": "https://tcbassdestinationcharters.com/#6hour",
       "name": "6-Hour Bass Fishing Trip",
       "description": "6-hour smallmouth bass fishing charter on Grand Traverse Bay. Includes rods, reels, tackle, lures, snacks, and drinks. Up to 2 anglers.",
-      "brand": {
+      "image": "https://tcbassdestinationcharters.com/images/hero/03_customer_bigfish_captain.jpg",
+      "provider": {
         "@id": "https://tcbassdestinationcharters.com/#business"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Grand Traverse Bay, Traverse City, Michigan"
       },
       "offers": {
         "@type": "Offer",
@@ -140,12 +150,17 @@ const jsonLd = {
       }
     },
     {
-      "@type": "Product",
+      "@type": "Service",
       "@id": "https://tcbassdestinationcharters.com/#8hour",
       "name": "8-Hour Bass Fishing Trip",
       "description": "Full-day smallmouth bass fishing charter on Grand Traverse Bay. Includes rods, reels, tackle, lures, snacks, and drinks. Up to 2 anglers. Best chance at trophy fish.",
-      "brand": {
+      "image": "https://tcbassdestinationcharters.com/images/hero/05_sunset_bay.jpg",
+      "provider": {
         "@id": "https://tcbassdestinationcharters.com/#business"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Grand Traverse Bay, Traverse City, Michigan"
       },
       "offers": {
         "@type": "Offer",
