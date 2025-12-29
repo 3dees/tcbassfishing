@@ -166,12 +166,6 @@ const jsonLd = {
         "@type": "Place",
         "name": "Grand Traverse Bay, Traverse City, Michigan"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "33",
-        "bestRating": "5"
-      },
       "offers": {
         "@type": "Offer",
         "price": "440",
@@ -179,22 +173,7 @@ const jsonLd = {
         "availability": "https://schema.org/InStock",
         "validFrom": "2025-04-01",
         "priceValidUntil": "2025-10-31"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Scott M."
-          },
-          "reviewBody": "Captain Butch put us on fish right away. Great experience for my son's first bass fishing trip!"
-        }
-      ]
+      }
     },
     {
       "@type": "Service",
@@ -209,12 +188,6 @@ const jsonLd = {
         "@type": "Place",
         "name": "Grand Traverse Bay, Traverse City, Michigan"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "33",
-        "bestRating": "5"
-      },
       "offers": {
         "@type": "Offer",
         "price": "550",
@@ -222,22 +195,7 @@ const jsonLd = {
         "availability": "https://schema.org/InStock",
         "validFrom": "2025-04-01",
         "priceValidUntil": "2025-10-31"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Mike R."
-          },
-          "reviewBody": "Incredible day on the water. We caught over 30 smallmouth bass. Butch knows this bay like the back of his hand."
-        }
-      ]
+      }
     },
     {
       "@type": "Service",
@@ -252,12 +210,6 @@ const jsonLd = {
         "@type": "Place",
         "name": "Grand Traverse Bay, Traverse City, Michigan"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "33",
-        "bestRating": "5"
-      },
       "offers": {
         "@type": "Offer",
         "price": "660",
@@ -265,22 +217,7 @@ const jsonLd = {
         "availability": "https://schema.org/InStock",
         "validFrom": "2025-04-01",
         "priceValidUntil": "2025-10-31"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "David K."
-          },
-          "reviewBody": "The full day trip was worth every penny. Multiple trophy smallmouth over 4 lbs. Captain Butch is a true pro."
-        }
-      ]
+      }
     },
     {
       "@type": "FAQPage",
