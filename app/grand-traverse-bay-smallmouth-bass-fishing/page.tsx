@@ -1,6 +1,18 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FAQSection } from '@/components/FAQSection';
+
+const faqs = [
+  {
+    question: "What makes Grand Traverse Bay special for fishing?",
+    answer: "Grand Traverse Bay is one of the clearest and deepest bays in the Great Lakes region. Its cold, clean waters and abundant rocky structure create ideal habitat for smallmouth bass, resulting in healthy, aggressive fish that provide exceptional sport fishing opportunities."
+  },
+  {
+    question: "How deep is Grand Traverse Bay?",
+    answer: "Grand Traverse Bay reaches depths of over 600 feet in some areas. The East Arm averages around 100 feet deep while the West Arm is shallower. These varying depths create diverse structure and temperature zones that support excellent smallmouth bass populations throughout the season."
+  }
+];
 
 export const metadata: Metadata = {
   title: 'Grand Traverse Bay Smallmouth Bass Fishing | Traverse City, MI',
@@ -99,18 +111,21 @@ export default function GrandTraverseBaySmallmouthPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FAQSection faqs={faqs} title="Grand Traverse Bay Fishing FAQs" />
+
       {/* CTA Section */}
-      <section className="py-16 bg-navy-900 text-white">
+      <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-4">Fish Grand Traverse Bay</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Fish Grand Traverse Bay</h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Ready to experience world-class smallmouth bass fishing on Grand Traverse Bay?
           </p>
           <Link
-            href="/contact"
+            href="/trips"
             className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
           >
-            Book Your Trip
+            Book Now
           </Link>
         </div>
       </section>

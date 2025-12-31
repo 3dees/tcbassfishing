@@ -1,6 +1,26 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FAQSection } from '@/components/FAQSection';
+
+const faqs = [
+  {
+    question: "How much does a fishing charter cost?",
+    answer: "Our charters are priced per group (up to 2 anglers): 4-hour trips are $440, 6-hour trips are $550, and 8-hour trips are $660. All trips include quality rods, reels, tackle, snacks, and bottled water."
+  },
+  {
+    question: "How do I get to Traverse City?",
+    answer: "Traverse City is served by Cherry Capital Airport (TVC) with direct flights from several major cities. It's also accessible by car, approximately 4 hours from Detroit and 5 hours from Chicago via US-31 or US-131."
+  },
+  {
+    question: "Where should I stay in Traverse City?",
+    answer: "Traverse City offers accommodations ranging from downtown hotels to lakefront resorts and vacation rentals. The downtown area and East Bay shore provide convenient access to the boat launch locations we use."
+  },
+  {
+    question: "What else can I do in Traverse City?",
+    answer: "Beyond fishing, Traverse City is known for its wineries along the Leelanau and Old Mission peninsulas, Sleeping Bear Dunes National Lakeshore, downtown shopping and dining, and beautiful beaches along Grand Traverse Bay."
+  }
+];
 
 export const metadata: Metadata = {
   title: 'Traverse City Smallmouth Bass Fishing Guide | Grand Traverse Bay',
@@ -90,18 +110,21 @@ export default function TraverseCityFishingGuidePage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FAQSection faqs={faqs} title="Traverse City Fishing Guide FAQs" />
+
       {/* CTA Section */}
-      <section className="py-16 bg-navy-900 text-white">
+      <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-4">Book Your Guided Trip</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Book Your Guided Trip</h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Ready to fish with a dedicated Traverse City smallmouth bass guide?
           </p>
           <Link
-            href="/contact"
+            href="/trips"
             className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
           >
-            Contact Us to Book
+            Book Now
           </Link>
         </div>
       </section>
