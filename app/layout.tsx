@@ -244,7 +244,7 @@ const jsonLd = {
           "name": "Do I need a fishing license?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, all anglers 17 and older need a valid Michigan fishing license. You can purchase one online at Michigan.gov/DNR or at local sporting goods stores."
+            "text": "Yes, all anglers 17 and older need a valid Michigan fishing license. You can purchase one online at mdnr-elicense.com or at local sporting goods stores."
           }
         },
         {
@@ -361,7 +361,7 @@ const jsonLd = {
           "@type": "HowToStep",
           "position": 4,
           "name": "Get Your Michigan Fishing License",
-          "text": "All anglers 17 and older need a valid Michigan fishing license. Purchase online at Michigan.gov/DNR before your trip."
+          "text": "All anglers 17 and older need a valid Michigan fishing license. Purchase online at mdnr-elicense.com before your trip."
         },
         {
           "@type": "HowToStep",

@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "Do I need a fishing license?",
-    answer: "Yes, all anglers 17 years of age and older must have a valid Michigan fishing license. These can be purchased online from the Michigan DNR."
+    answer: "Yes, all anglers 17 years of age and older must have a valid Michigan fishing license. Purchase online at mdnr-elicense.com."
   },
   {
     question: "Is this good for beginners or kids?",
@@ -146,7 +146,7 @@ export default function FAQPage() {
               {
                 step: 4,
                 title: "Get Your Fishing License",
-                desc: "All anglers 17+ need a valid Michigan license. Purchase online at Michigan.gov/DNR."
+                desc: "All anglers 17+ need a valid Michigan license. Purchase online at mdnr-elicense.com."
               },
               {
                 step: 5,
