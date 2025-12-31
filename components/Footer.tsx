@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
 
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <BassIcon className="h-6 w-6 text-cyan-500" />
               <span className="font-serif font-bold text-xl">TC BASS CHARTERS</span>
@@ -26,6 +26,18 @@ export const Footer: React.FC = () => {
               <li><Link href="/trips" className="hover:text-cyan-500 transition-colors">Trips & Rates</Link></li>
               <li><Link href="/gallery" className="hover:text-cyan-500 transition-colors">Gallery</Link></li>
               <li><Link href="/contact" className="hover:text-cyan-500 transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Smallmouth Bass Fishing Link Cluster */}
+          <div>
+            <h4 className="font-bold mb-4 text-white">Smallmouth Bass Fishing</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li><Link href="/smallmouth-bass-charters-traverse-city" className="hover:text-cyan-500 transition-colors">Smallmouth Bass Charters</Link></li>
+              <li><Link href="/grand-traverse-bay-smallmouth-bass-fishing" className="hover:text-cyan-500 transition-colors">Grand Traverse Bay Fishing</Link></li>
+              <li><Link href="/traverse-city-smallmouth-bass-fishing-guide" className="hover:text-cyan-500 transition-colors">Traverse City Guide</Link></li>
+              <li><Link href="/grand-traverse-bay-fishing-species" className="hover:text-cyan-500 transition-colors">Species Overview</Link></li>
+              <li><Link href="/why-smallmouth-only" className="hover:text-cyan-500 transition-colors">Why Smallmouth Only</Link></li>
             </ul>
           </div>
 
