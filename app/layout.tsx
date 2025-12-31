@@ -327,6 +327,68 @@ const jsonLd = {
       }
     },
     {
+      "@type": "TouristTrip",
+      "@id": "https://tcbassdestinationcharters.com/#touristtrip",
+      "name": "Smallmouth Bass Fishing Charter in Traverse City",
+      "description": "Guided smallmouth bass fishing trip on Grand Traverse Bay with Captain Butch Derickson. Experience world-class bass fishing in Northern Michigan's clearest waters.",
+      "touristType": ["Fishing Enthusiasts", "Anglers", "Families", "Outdoor Adventurers"],
+      "provider": {
+        "@id": "https://tcbassdestinationcharters.com/#business"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "4-Hour Fishing Charter",
+          "price": "440",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "6-Hour Fishing Charter",
+          "price": "550",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "8-Hour Fishing Charter",
+          "price": "660",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Meet at Grand Traverse Bay boat launch"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Target smallmouth bass on rocky structure and drop-offs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Learn techniques from an experienced local guide"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Return to dock with photos and memories"
+          }
+        ]
+      },
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "abstract": "Catch trophy smallmouth bass on Grand Traverse Bay, one of Michigan's premier bass fishing destinations."
+      }
+    },
+    {
       "@type": "HowTo",
       "@id": "https://tcbassdestinationcharters.com/#howtobook",
       "name": "How to Book a Smallmouth Bass Fishing Charter in Traverse City",
