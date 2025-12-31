@@ -5,6 +5,95 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
 
+// JSON-LD FAQPage schema matching visible content
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://tcbassdestinationcharters.com/faq#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are your rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer three packages: 4-Hour Trip ($440), 6-Hour Trip ($550), and 8-Hour Trip ($660). All prices are per group (up to 2 anglers)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in the trip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide premium rods, reels, tackle, and all lures. We also supply Kind snack bars and bottled water on ice. You are welcome to bring additional food."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I bring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You must bring a valid Michigan fishing license. We also recommend sunscreen, sunglasses, and dressing in layers as weather on the bay can change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a fishing license?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all anglers 17 years of age and older must have a valid Michigan fishing license. Purchase online at mdnr-elicense.com."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this good for beginners or kids?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! We are 100% child-friendly and love teaching beginners. Captain Butch will help with everything from casting to landing the fish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What fish will we catch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our primary target is Smallmouth Bass, which Grand Traverse Bay is famous for. We may also encounter other species, but we gear up for Bass."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your cancellation policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deposits are non-refundable. However, if the Captain cancels due to unsafe weather conditions, we will reschedule your trip for free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do we meet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The pickup location will be agreed upon during reservation confirmation, typically at a convenient boat launch on Grand Traverse Bay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best time of year to fish?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our season runs from April 1 to October 31. May and June are excellent for pre-spawn/spawn action, while summer and fall offer great deep-water fishing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many people can go on a trip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For safety and comfort on the bass boat, we limit trips to a maximum of 2 anglers plus the Captain."
+      }
+    }
+  ]
+};
+
 const faqs = [
   {
     question: "What are your rates?",
@@ -57,6 +146,12 @@ export default function FAQPage() {
 
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Hero Banner */}
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
