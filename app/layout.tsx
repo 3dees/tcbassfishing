@@ -244,7 +244,7 @@ const jsonLd = {
           "name": "Do I need a fishing license?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, all anglers 17 and older need a valid Michigan fishing license. You can purchase one online at Michigan.gov/DNR or at local sporting goods stores."
+            "text": "Yes, all anglers 17 and older need a valid Michigan fishing license. You can purchase one online at mdnr-elicense.com or at local sporting goods stores."
           }
         },
         {
@@ -325,6 +325,57 @@ const jsonLd = {
           }
         ]
       }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://tcbassdestinationcharters.com/#howtobook",
+      "name": "How to Book a Smallmouth Bass Fishing Charter in Traverse City",
+      "description": "Step-by-step guide to booking a guided smallmouth bass fishing trip on Grand Traverse Bay with Captain Butch Derickson.",
+      "totalTime": "PT10M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "minValue": "440",
+        "maxValue": "660"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Choose Your Trip Length",
+          "text": "Select from 4-hour ($440), 6-hour ($550), or 8-hour ($660) fishing charters. All trips include gear, tackle, snacks, and drinks for up to 2 anglers."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Check Availability",
+          "text": "Visit our Trips & Rates page or contact Captain Butch directly at (231) 883-2200 to check available dates. Peak season is April through October."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Book and Pay Deposit",
+          "text": "Reserve your date through our online booking system. A non-refundable deposit secures your trip."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Get Your Michigan Fishing License",
+          "text": "All anglers 17 and older need a valid Michigan fishing license. Purchase online at mdnr-elicense.com before your trip."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Prepare for Your Trip",
+          "text": "Bring sunscreen, sunglasses, layered clothing, and your fishing license. We provide all rods, reels, tackle, snacks, and bottled water."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Meet at the Boat Launch",
+          "text": "Arrive at the designated Grand Traverse Bay boat launch at your scheduled time. Captain Butch will confirm the exact location when you book."
+        }
+      ]
     }
   ]
 };

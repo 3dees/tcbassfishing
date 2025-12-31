@@ -102,10 +102,10 @@ export const Navbar: React.FC = () => {
             About
           </Link>
           <Link
-            href="/contact"
+            href="/trips"
             className="bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-cyan-900/50"
           >
-            Contact / Book
+            Book Now
           </Link>
         </div>
 
@@ -162,11 +162,11 @@ export const Navbar: React.FC = () => {
           </div>
 
           <Link
-            href="/contact"
+            href="/trips"
             className="w-full text-center bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-3 rounded-md font-medium mt-4"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Contact / Book
+            Book Now
           </Link>
         </div>
       )}
