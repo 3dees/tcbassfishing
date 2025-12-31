@@ -118,6 +118,70 @@ export default function FAQPage() {
         </div>
       </section>
 
+      {/* How to Book Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy-900">How to Book Your Fishing Charter</h2>
+            <p className="mt-4 text-gray-600">Simple steps to get you on the water</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                step: 1,
+                title: "Choose Your Trip Length",
+                desc: "Select from 4-hour ($440), 6-hour ($550), or 8-hour ($660) charters. All include gear, tackle, snacks, and drinks."
+              },
+              {
+                step: 2,
+                title: "Check Availability",
+                desc: "Visit our Trips & Rates page or call (231) 883-2200. Peak season runs April through October."
+              },
+              {
+                step: 3,
+                title: "Book and Pay Deposit",
+                desc: "Reserve your date through our online booking system. A non-refundable deposit secures your trip."
+              },
+              {
+                step: 4,
+                title: "Get Your Fishing License",
+                desc: "All anglers 17+ need a valid Michigan license. Purchase online at Michigan.gov/DNR."
+              },
+              {
+                step: 5,
+                title: "Prepare for Your Trip",
+                desc: "Bring sunscreen, sunglasses, layered clothing, and your license. We provide everything else."
+              },
+              {
+                step: 6,
+                title: "Meet at the Boat Launch",
+                desc: "Arrive at the designated Grand Traverse Bay location. Captain Butch confirms the spot when you book."
+              }
+            ].map((item) => (
+              <div key={item.step} className="bg-slate-50 rounded-xl p-6 border border-gray-100">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="flex items-center justify-center w-8 h-8 bg-cyan-600 text-white rounded-full font-bold text-sm">
+                    {item.step}
+                  </span>
+                  <h3 className="font-bold text-navy-900">{item.title}</h3>
+                </div>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/trips"
+              className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
+            >
+              View Trips & Book Now
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
@@ -125,7 +189,7 @@ export default function FAQPage() {
           <p className="text-gray-600 mb-8">Contact us directly and we&apos;ll be happy to help.</p>
           <Link
             href="/contact"
-            className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
+            className="inline-block bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-full font-semibold transition-all"
           >
             Contact Us
           </Link>
