@@ -102,12 +102,6 @@ export const Navbar: React.FC = () => {
             About
           </Link>
           <Link
-            href="/faq"
-            className="text-sm font-medium hover:text-cyan-500 transition-colors uppercase tracking-wider"
-          >
-            FAQ
-          </Link>
-          <Link
             href="/trips"
             className="bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-cyan-900/50"
           >
@@ -164,13 +158,6 @@ export const Navbar: React.FC = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
-            </Link>
-            <Link
-              href="/faq"
-              className="block text-lg font-medium text-gray-300 hover:text-cyan-500 py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              FAQ
             </Link>
           </div>
 
