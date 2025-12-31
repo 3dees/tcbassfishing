@@ -28,6 +28,7 @@ const packages = [
     description: 'A great option for the morning bite or a family outing. We hit the prime spots quickly to maximize your fishing time.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/04_kid_huge_bass.jpg',
+    imageAlt: 'Young angler holding a trophy smallmouth bass caught on a 4-hour fishing charter',
     bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/DMH2VM6ZW7OXDHILXA6RUHGE'
   },
   {
@@ -38,6 +39,7 @@ const packages = [
     description: 'Our most popular option. Gives us more time to try different techniques and locations across Grand Traverse Bay.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/03_customer_bigfish_captain.jpg',
+    imageAlt: 'Customer and Captain Butch with a large smallmouth bass on Grand Traverse Bay',
     bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/PZN2WNKIXHYPNSVVZTLJPVNU'
   },
   {
@@ -48,6 +50,7 @@ const packages = [
     description: 'The full day experience. Perfect for serious anglers hunting for that trophy smallmouth or personal best.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/05_sunset_bay.jpg',
+    imageAlt: 'Sunset over Grand Traverse Bay after a full-day smallmouth bass fishing charter',
     bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/GFESJPUGAOBRTWUWGDSAR7BP'
   }
 ];
@@ -91,7 +94,7 @@ export default function ServicesPage() {
                 <div className="relative h-64 overflow-hidden group">
                   <Image
                     src={pkg.image}
-                    alt={pkg.name}
+                    alt={pkg.imageAlt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />

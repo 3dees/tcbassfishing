@@ -136,15 +136,15 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { name: '4-Hour Trip', price: 440, desc: 'Perfect for the morning bite or a family outing.', image: '/images/hero/04_kid_huge_bass.jpg', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/DMH2VM6ZW7OXDHILXA6RUHGE' },
-              { name: '6-Hour Trip', price: 550, desc: 'Our most popular option with more time to explore.', image: '/images/hero/03_customer_bigfish_captain.jpg', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/PZN2WNKIXHYPNSVVZTLJPVNU' },
-              { name: '8-Hour Trip', price: 660, desc: 'The full day experience for serious anglers.', image: '/images/hero/05_sunset_bay.jpg', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/GFESJPUGAOBRTWUWGDSAR7BP' },
+              { name: '4-Hour Trip', price: 440, desc: 'Perfect for the morning bite or a family outing.', image: '/images/hero/04_kid_huge_bass.jpg', imageAlt: 'Young angler holding a trophy smallmouth bass caught on a 4-hour fishing charter', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/DMH2VM6ZW7OXDHILXA6RUHGE' },
+              { name: '6-Hour Trip', price: 550, desc: 'Our most popular option with more time to explore.', image: '/images/hero/03_customer_bigfish_captain.jpg', imageAlt: 'Customer and Captain Butch with a large smallmouth bass on Grand Traverse Bay', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/PZN2WNKIXHYPNSVVZTLJPVNU' },
+              { name: '8-Hour Trip', price: 660, desc: 'The full day experience for serious anglers.', image: '/images/hero/05_sunset_bay.jpg', imageAlt: 'Sunset over Grand Traverse Bay after a full-day smallmouth bass fishing charter', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/GFESJPUGAOBRTWUWGDSAR7BP' },
             ].map((pkg) => (
               <div key={pkg.name} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={pkg.image}
-                    alt={pkg.name}
+                    alt={pkg.imageAlt}
                     fill
                     className="object-cover"
                   />
