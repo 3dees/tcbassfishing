@@ -1,6 +1,22 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FAQSection } from '@/components/FAQSection';
+
+const faqs = [
+  {
+    question: "Why is Grand Traverse Bay good for smallmouth bass?",
+    answer: "Grand Traverse Bay offers ideal conditions for smallmouth bass: cold, clear water, abundant rocky structure and drop-offs, and healthy forage populations. These factors produce aggressive, hard-fighting bass that grow to impressive sizes."
+  },
+  {
+    question: "Is it catch and release only?",
+    answer: "Yes, all smallmouth bass caught on our charters are released. This practice is required by local regulations and helps maintain the exceptional quality of the Grand Traverse Bay fishery for future anglers."
+  },
+  {
+    question: "How big are the smallmouth bass here?",
+    answer: "Grand Traverse Bay regularly produces smallmouth bass in the 2-4 pound range, with fish over 5 pounds caught each season. The clear, cold waters of the bay support healthy fish that fight above their weight class."
+  }
+];
 
 export const metadata: Metadata = {
   title: 'Smallmouth Bass Fishing Charters in Traverse City, MI | Grand Traverse Bay',
@@ -138,18 +154,21 @@ export default function SmallmouthBassChartersPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FAQSection faqs={faqs} title="Smallmouth Bass Fishing FAQs" />
+
       {/* CTA Section */}
-      <section className="py-16 bg-navy-900 text-white">
+      <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-4">Book Your Smallmouth Bass Fishing Charter</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Book Your Smallmouth Bass Fishing Charter</h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             If you&apos;re looking for a dedicated smallmouth bass fishing charter in Traverse City, contact us to plan your trip on Grand Traverse Bay.
           </p>
           <Link
-            href="/contact"
+            href="/trips"
             className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
           >
-            Contact Us to Book
+            Book Now
           </Link>
         </div>
       </section>
