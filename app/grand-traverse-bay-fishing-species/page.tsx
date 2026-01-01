@@ -81,11 +81,29 @@ export default function GrandTraverseBaySpeciesPage() {
             <p className="text-gray-600 mb-4">
               Learn more about our dedicated smallmouth bass charters on Grand Traverse Bay.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/smallmouth-bass-charters-traverse-city"
+                className="text-cyan-600 hover:text-cyan-700 font-medium"
+              >
+                View Smallmouth Bass Charters →
+              </Link>
+              <Link
+                href="/why-smallmouth-only"
+                className="text-cyan-600 hover:text-cyan-700 font-medium"
+              >
+                Why We Specialize in Smallmouth →
+              </Link>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-8 text-center">
             <Link
-              href="/smallmouth-bass-charters-traverse-city"
-              className="text-cyan-600 hover:text-cyan-700 font-medium"
+              href="/trips"
+              className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
             >
-              View Smallmouth Bass Charters →
+              View Trips & Rates
             </Link>
           </div>
         </div>

@@ -87,7 +87,11 @@ export default function HomePage() {
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-6">Captain Butch Derickson</h2>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                With over 10 years on these waters, Captain Butch knows every contour, ledge, and hiding spot in Grand Traverse Bay. Whether you&apos;re chasing numbers or hunting a trophy, your next personal best could be one cast away.
+                With over 10 years on these waters, Captain Butch knows every contour, ledge, and hiding spot in Grand Traverse Bay. As a dedicated{' '}
+                <Link href="/smallmouth-bass-charters-traverse-city" className="text-cyan-600 hover:text-cyan-700 font-medium">
+                  smallmouth bass fishing guide
+                </Link>
+                , whether you&apos;re chasing numbers or hunting a trophy, your next personal best could be one cast away.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">

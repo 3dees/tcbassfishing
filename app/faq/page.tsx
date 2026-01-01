@@ -216,14 +216,22 @@ export default function FAQPage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Still Have Questions?</h2>
-          <p className="text-gray-600 mb-8">Contact us directly and we&apos;ll be happy to help.</p>
-          <Link
-            href="/contact"
-            className="inline-block bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-full font-semibold transition-all"
-          >
-            Contact Us
-          </Link>
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Ready to Book?</h2>
+          <p className="text-gray-600 mb-8">Check out our trips and rates, or contact us with any other questions.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/trips"
+              className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
+            >
+              View Trips & Rates
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-block bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-full font-semibold transition-all"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
     </>
