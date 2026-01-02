@@ -15,6 +15,7 @@ export default function HomePage() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           {/* Gradient Overlay for text readability */}
           <div className="absolute inset-0 bg-navy-900/60 mix-blend-multiply"></div>
@@ -151,6 +152,7 @@ export default function HomePage() {
                     alt={pkg.imageAlt}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="p-8 text-center">
