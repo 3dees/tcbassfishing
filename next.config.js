@@ -15,6 +15,20 @@ const nextConfig = {
       },
     ],
   },
+  // Add preconnect hints via HTTP headers
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Link',
+            value: '<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://www.googletagmanager.com>; rel=preconnect',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
