@@ -408,6 +408,50 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+
+        {/* Google Consent Mode v2 - MUST load before GTM */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+
+              // Set default consent - denied until user makes a choice
+              // This is required for GDPR/CCPA compliance with Google
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'functionality_storage': 'denied',
+                'personalization_storage': 'denied',
+                'security_storage': 'granted'
+              });
+
+              // Check if user has already made consent choices
+              if (typeof localStorage !== 'undefined') {
+                var analyticsConsent = localStorage.getItem('silktideCookieChoice_analytics');
+                var advertisingConsent = localStorage.getItem('silktideCookieChoice_advertising');
+
+                if (analyticsConsent === 'true') {
+                  gtag('consent', 'update', {
+                    'analytics_storage': 'granted',
+                    'functionality_storage': 'granted',
+                    'personalization_storage': 'granted'
+                  });
+                }
+
+                if (advertisingConsent === 'true') {
+                  gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted'
+                  });
+                }
+              }
+            `,
+          }}
+        />
       </head>
       <body className="font-sans antialiased">
         {/* Google Tag Manager */}
