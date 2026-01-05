@@ -113,6 +113,8 @@ export const Navbar: React.FC = () => {
         <button
           className="md:hidden text-white hover:text-cyan-500"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
