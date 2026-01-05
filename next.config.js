@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Optimize package imports to reduce bundle size
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
   images: {
     // Enable modern image formats for better compression
     formats: ['image/avif', 'image/webp'],
