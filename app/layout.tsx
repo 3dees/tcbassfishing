@@ -391,7 +391,10 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Preconnect to Google Fonts for faster loading */}
+        {/* DNS prefetch and preconnect for faster resource loading */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
