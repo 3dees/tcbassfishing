@@ -68,7 +68,9 @@ export default function ServicesPage() {
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
             sizes="100vw"
+            quality={85}
           />
           <div className="absolute inset-0 bg-navy-900/70"></div>
         </div>
@@ -98,6 +100,9 @@ export default function ServicesPage() {
                     alt={pkg.imageAlt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    loading="lazy"
+                    quality={80}
                   />
                   <div className="absolute top-4 right-4 bg-navy-900/90 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
                     <Clock className="h-3 w-3 text-cyan-400" /> {pkg.duration}

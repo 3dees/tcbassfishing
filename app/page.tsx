@@ -15,7 +15,9 @@ export default function HomePage() {
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
             sizes="100vw"
+            quality={85}
           />
           {/* Gradient Overlay for text readability */}
           <div className="absolute inset-0 bg-navy-900/60 mix-blend-multiply"></div>
@@ -74,6 +76,8 @@ export default function HomePage() {
                   width={600}
                   height={500}
                   className="w-full h-[500px] object-cover object-center"
+                  loading="lazy"
+                  quality={80}
                 />
                 <div className="absolute bottom-0 left-0 bg-navy-900/90 p-8 backdrop-blur-md text-white w-full">
                   <p className="font-serif text-3xl font-bold">Captain Butch</p>
@@ -153,6 +157,8 @@ export default function HomePage() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
+                    loading="lazy"
+                    quality={80}
                   />
                 </div>
                 <div className="p-8 text-center">
