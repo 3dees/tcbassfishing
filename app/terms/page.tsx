@@ -16,6 +16,7 @@ export default function TermsPage() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-navy-900/70"></div>
         </div>

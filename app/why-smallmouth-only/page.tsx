@@ -19,6 +19,7 @@ export default function WhySmallmouthOnlyPage() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-navy-900/70"></div>
         </div>
@@ -74,11 +75,29 @@ export default function WhySmallmouthOnlyPage() {
             <p className="text-gray-600 mb-4">
               Book a dedicated smallmouth bass charter on Grand Traverse Bay.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/smallmouth-bass-charters-traverse-city"
+                className="text-cyan-600 hover:text-cyan-700 font-medium"
+              >
+                View Smallmouth Bass Charters →
+              </Link>
+              <Link
+                href="/grand-traverse-bay-fishing-species"
+                className="text-cyan-600 hover:text-cyan-700 font-medium"
+              >
+                Grand Traverse Bay Species Overview →
+              </Link>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-8 text-center">
             <Link
-              href="/smallmouth-bass-charters-traverse-city"
-              className="text-cyan-600 hover:text-cyan-700 font-medium"
+              href="/trips"
+              className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
             >
-              View Smallmouth Bass Charters →
+              View Trips & Rates
             </Link>
           </div>
         </div>
