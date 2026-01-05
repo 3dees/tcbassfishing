@@ -34,7 +34,7 @@ export default function TraverseCityFishingGuidePage() {
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/captain-butch.jpg"
+            src="/images/hero/header-bg.jpg"
             alt="Captain Butch - Traverse City fishing guide"
             fill
             className="object-cover"

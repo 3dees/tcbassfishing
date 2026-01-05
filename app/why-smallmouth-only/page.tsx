@@ -14,7 +14,7 @@ export default function WhySmallmouthOnlyPage() {
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/04_kid_huge_bass.jpg"
+            src="/images/hero/header-bg.jpg"
             alt="Smallmouth bass catch"
             fill
             className="object-cover"
