@@ -414,7 +414,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
+              window.gtag = function(){dataLayer.push(arguments);}
 
               // Set default consent - denied until user makes a choice
               // This is required for GDPR/CCPA compliance with Google
@@ -506,13 +506,21 @@ export default function RootLayout({
                     description: "<p>These cookies help us improve the site by tracking which pages are most popular.</p>",
                     defaultValue: true,
                     onAccept: function() {
-                      if (typeof gtag !== 'undefined') {
-                        gtag('consent', 'update', { analytics_storage: 'granted' });
+                      if (typeof window.gtag !== 'undefined') {
+                        window.gtag('consent', 'update', {
+                          analytics_storage: 'granted',
+                          functionality_storage: 'granted',
+                          personalization_storage: 'granted'
+                        });
                       }
                     },
                     onReject: function() {
-                      if (typeof gtag !== 'undefined') {
-                        gtag('consent', 'update', { analytics_storage: 'denied' });
+                      if (typeof window.gtag !== 'undefined') {
+                        window.gtag('consent', 'update', {
+                          analytics_storage: 'denied',
+                          functionality_storage: 'denied',
+                          personalization_storage: 'denied'
+                        });
                       }
                     }
                   },
@@ -521,13 +529,21 @@ export default function RootLayout({
                     name: "Advertising",
                     description: "<p>These cookies provide extra features and personalization.</p>",
                     onAccept: function() {
-                      if (typeof gtag !== 'undefined') {
-                        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+                      if (typeof window.gtag !== 'undefined') {
+                        window.gtag('consent', 'update', {
+                          ad_storage: 'granted',
+                          ad_user_data: 'granted',
+                          ad_personalization: 'granted'
+                        });
                       }
                     },
                     onReject: function() {
-                      if (typeof gtag !== 'undefined') {
-                        gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+                      if (typeof window.gtag !== 'undefined') {
+                        window.gtag('consent', 'update', {
+                          ad_storage: 'denied',
+                          ad_user_data: 'denied',
+                          ad_personalization: 'denied'
+                        });
                       }
                     }
                   }
