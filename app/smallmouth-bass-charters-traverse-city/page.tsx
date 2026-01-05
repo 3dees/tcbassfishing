@@ -30,7 +30,7 @@ export default function SmallmouthBassChartersPage() {
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/03_customer_bigfish_captain.jpg"
+            src="/images/hero/header-bg.jpg"
             alt="Smallmouth bass fishing on Grand Traverse Bay"
             fill
             className="object-cover"
