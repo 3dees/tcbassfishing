@@ -57,7 +57,7 @@ export default function HomePage() {
 
         <Link
           href="#about-preview"
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-colors animate-bounce"
+          className="absolute bottom-10 left-1/2 text-white/50 hover:text-white transition-colors animate-bounce-gpu"
         >
           <ArrowDown className="h-8 w-8" />
         </Link>
