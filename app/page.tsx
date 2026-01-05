@@ -58,8 +58,9 @@ export default function HomePage() {
         <Link
           href="#about-preview"
           className="absolute bottom-10 left-1/2 text-white/50 hover:text-white transition-colors animate-bounce-gpu"
+          aria-label="Scroll to about section"
         >
-          <ArrowDown className="h-8 w-8" />
+          <ArrowDown className="h-8 w-8" aria-hidden="true" />
         </Link>
       </section>
 
@@ -105,7 +106,7 @@ export default function HomePage() {
                     <ShieldCheck className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-navy-900">Safety First</h4>
+                    <h3 className="font-bold text-navy-900">Safety First</h3>
                     <p className="text-sm text-gray-500">USCG Licensed & Fully Insured.</p>
                   </div>
                 </div>
@@ -115,7 +116,7 @@ export default function HomePage() {
                     <Map className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-navy-900">Local Expert</h4>
+                    <h3 className="font-bold text-navy-900">Local Expert</h3>
                     <p className="text-sm text-gray-500">Specializing in Grand Traverse Bay.</p>
                   </div>
                 </div>
