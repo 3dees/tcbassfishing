@@ -8,9 +8,6 @@ import './silktide-consent-manager.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tcbassdestinationcharters.com'),
-  alternates: {
-    canonical: '/',
-  },
   title: {
     default: 'Traverse City Bass Destination Charters | Traverse City Bass Fishing',
     template: '%s | Traverse City Bass Destination Charters',
