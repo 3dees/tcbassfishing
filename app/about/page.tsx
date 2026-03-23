@@ -65,7 +65,7 @@ export default function AboutPage() {
             {/* Text Side */}
             <div className="lg:w-1/2">
               <div className="mb-2 text-cyan-600 font-bold uppercase tracking-widest text-sm">Meet Your Guide</div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-6">Captain Butch Derickson</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-6">About Butch Derickson</h2>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 After retiring as a mechanical engineer in the power industry, I turned my lifelong passion for bass fishing into Traverse City Bass Destination Charters. With over 10 years on these waters, I know every contour, ledge, and hiding spot in Grand Traverse Bay and the surrounding inland lakes.

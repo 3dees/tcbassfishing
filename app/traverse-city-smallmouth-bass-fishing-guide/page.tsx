@@ -23,7 +23,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Traverse City Smallmouth Bass Fishing Guide',
+  title: { absolute: 'Traverse City Bass Fishing Guide' },
   description: 'Hire a Traverse City smallmouth bass fishing guide with local knowledge of Grand Traverse Bay. Focused trips designed for anglers of all skill levels.',
   alternates: {
     canonical: '/traverse-city-smallmouth-bass-fishing-guide',
