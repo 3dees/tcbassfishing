@@ -71,8 +71,12 @@ export default function AboutPage() {
                 After retiring as a mechanical engineer in the power industry, I turned my lifelong passion for bass fishing into Traverse City Bass Destination Charters. With over 10 years on these waters, I know every contour, ledge, and hiding spot in Grand Traverse Bay and the surrounding inland lakes.
               </p>
 
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Northwestern Michigan has earned a national reputation for exceptional smallmouth bass fishing—and I am ready to put you on the fish. Whether you&apos;re chasing numbers or hunting a trophy, your next personal best could be one cast away.
+              </p>
+
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                Grand Traverse Bay offers over 30 miles of shoreline and a mix of rocky points, gravel flats, and deep structure that holds smallmouth from ice-out through late fall. I fish the bay year-round and stay on the fish as conditions change — so when you step onto the boat, you&apos;re getting current, local knowledge that no app or chart can replace. All equipment is provided, all fish are catch-and-release, and every trip is tailored to your group&apos;s experience level.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">

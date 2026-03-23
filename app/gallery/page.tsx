@@ -61,8 +61,11 @@ export default function GalleryPage() {
           <p className="text-gray-600 leading-relaxed mb-4">
             Our guests range from first-time anglers trying bass fishing for the first time to experienced fishermen chasing a personal best. Families, couples, father-and-son duos, and solo anglers all find their way onto the boat — and most leave with a photo they&apos;re proud of.
           </p>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed mb-4">
             The images below are real catches from real clients. No staged photos — just honest fishing results from a day on the bay with a dedicated smallmouth specialist.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            Grand Traverse Bay smallmouth bass are known for their size and fight. The clear, cold water and rocky structure of both the East and West Arms hold healthy populations of fish throughout the season — April through October. Whether you&apos;re visiting Traverse City for the weekend or making a dedicated fishing trip, the bite on the bay gives you a real shot at double-digit fish counts and bass pushing 20 inches. Every photo in this gallery represents a day that was worth the trip.
           </p>
         </div>
       </section>
