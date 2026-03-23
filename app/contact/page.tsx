@@ -84,7 +84,7 @@ export default function ContactPage() {
             <div className="lg:w-2/5 bg-navy-900 text-white p-10 md:p-14 flex flex-col justify-between">
               <div>
                 <div className="text-cyan-400 font-bold uppercase tracking-widest text-sm mb-2">Get in Touch</div>
-                <h2 className="font-serif text-4xl font-bold mb-6">Ready to Cast Off?</h2>
+                <h2 className="font-serif text-4xl font-bold mb-6">Book Your Trip Today</h2>
                 <p className="text-gray-300 mb-10 leading-relaxed">
                   Dates fill up fast, especially during the spring spawn (May/June). Reach out today to secure your spot on the boat.
                 </p>
