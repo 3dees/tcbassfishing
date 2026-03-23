@@ -68,6 +68,7 @@ export default function HomePage() {
           aria-label="Scroll to about section"
         >
           <ArrowDown className="h-8 w-8" aria-hidden="true" />
+          <span className="sr-only">Scroll to about section</span>
         </Link>
       </section>
 
