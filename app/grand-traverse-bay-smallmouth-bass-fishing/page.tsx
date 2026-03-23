@@ -40,7 +40,7 @@ export default function GrandTraverseBaySmallmouthPage() {
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Smallmouth Bass Fishing on Grand Traverse Bay
+            Fish Grand Traverse Bay
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             One of Northern Michigan&apos;s most respected smallmouth bass fisheries
