@@ -44,7 +44,7 @@ export default function SmallmouthBassChartersPage() {
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Smallmouth Bass Fishing Charters in Traverse City, MI
+            Bass Fishing Charters in Traverse City
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Dedicated smallmouth bass charters on Grand Traverse Bay

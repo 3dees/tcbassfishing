@@ -48,7 +48,7 @@ export default function TraverseCityFishingGuidePage() {
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Traverse City Smallmouth Bass Fishing Guide
+            Your Traverse City Bass Fishing Guide
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Local expertise on Grand Traverse Bay
