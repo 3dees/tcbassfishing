@@ -75,6 +75,18 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Intro */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
+          <p className="text-gray-600 text-lg leading-relaxed mb-4">
+            Ready to book a smallmouth bass fishing charter on Grand Traverse Bay? Captain Butch runs trips April through October, with the hottest bite during the spring spawn in May and June. Slots are limited — most dates book weeks in advance, especially on weekends.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            Whether you&apos;re planning a solo trip, a father-son outing, a couple&apos;s getaway, or a group adventure, we&apos;ll get you on the water and put you on the fish. Fill out the form below or call or text Captain Butch directly at <a href="tel:231-883-2200" className="text-cyan-600 hover:text-cyan-500 font-medium">(231) 883-2200</a> between 8am and 8pm. We typically respond within one business day.
+          </p>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-24 bg-slate-50 relative">
         <div className="container mx-auto px-4 md:px-6">
