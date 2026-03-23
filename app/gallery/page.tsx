@@ -6,6 +6,9 @@ import { Camera } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Photo Gallery',
   description: 'View photos from our bass fishing trips on Grand Traverse Bay. See real catches from real clients fishing with Captain Butch.',
+  alternates: {
+    canonical: '/gallery',
+  },
   openGraph: {
     title: 'Photo Gallery | Traverse City Bass Destination Charters',
     description: 'View photos from our bass fishing trips on Grand Traverse Bay. See real catches from real clients.',

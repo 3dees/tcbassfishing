@@ -5,6 +5,9 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Fishing in Grand Traverse Bay | Species Overview',
   description: 'Learn about the fish species found in Grand Traverse Bay, including smallmouth bass. Informational overview of the bay\'s diverse fishery.',
+  alternates: {
+    canonical: '/grand-traverse-bay-fishing-species',
+  },
 };
 
 export default function GrandTraverseBaySpeciesPage() {

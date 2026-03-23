@@ -25,6 +25,9 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Traverse City Smallmouth Bass Fishing Guide | Grand Traverse Bay',
   description: 'Hire a Traverse City smallmouth bass fishing guide with local knowledge of Grand Traverse Bay. Focused trips designed for anglers of all skill levels.',
+  alternates: {
+    canonical: '/traverse-city-smallmouth-bass-fishing-guide',
+  },
 };
 
 export default function TraverseCityFishingGuidePage() {

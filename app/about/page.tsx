@@ -6,6 +6,9 @@ import { ShieldCheck, Map, Anchor, Zap, Gauge, Award } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'About Captain Butch Derickson',
   description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 10+ years experience on Grand Traverse Bay. Learn about our boat and fishing expertise.',
+  alternates: {
+    canonical: '/about',
+  },
   openGraph: {
     title: 'About Captain Butch Derickson | Traverse City Bass Destination Charters',
     description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 10+ years experience on Grand Traverse Bay.',
