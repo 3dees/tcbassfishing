@@ -85,7 +85,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <div className="text-cyan-600 font-bold uppercase tracking-widest text-sm mb-2">Rates & Packages</div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900">Choose Your Adventure</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900">Charter Packages & Rates</h2>
             <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
               All trips are priced per group (max 2 anglers). No hidden fees.
             </p>
@@ -261,7 +261,7 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Got Questions?</h2>
+          <h3 className="font-serif text-3xl font-bold text-navy-900 mb-4">Got Questions?</h3>
           <p className="text-gray-600 mb-8">Check our FAQ or contact us directly.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

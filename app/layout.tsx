@@ -9,10 +9,10 @@ import './silktide-consent-manager.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://tcbassdestinationcharters.com'),
   title: {
-    default: 'Traverse City Bass Destination Charters | Traverse City Bass Fishing',
+    default: 'Traverse City Bass Fishing Charters',
     template: '%s | Traverse City Bass Destination Charters',
   },
-  description: 'Experience world-class smallmouth bass fishing on Grand Traverse Bay with Captain Butch Derickson. Premier bass fishing charters in Traverse City, Michigan.',
+  description: 'Experience world-class smallmouth bass fishing on Grand Traverse Bay with Captain Butch Derickson. Bass fishing charters in Traverse City, Michigan.',
   keywords: ['bass fishing', 'Traverse City', 'fishing charter', 'Grand Traverse Bay', 'smallmouth bass', 'Michigan fishing', 'Captain Butch'],
   authors: [{ name: 'Traverse City Bass Destination Charters' }],
   creator: 'Traverse City Bass Destination Charters',

@@ -15,7 +15,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Grand Traverse Bay Smallmouth Bass Fishing | Traverse City, MI',
+  title: 'Grand Traverse Bay Smallmouth Bass Fishing',
   description: 'Grand Traverse Bay smallmouth bass fishing with a Traverse City guide. Learn why the bay is one of Michigan\'s best destinations for smallmouth bass.',
   alternates: {
     canonical: '/grand-traverse-bay-smallmouth-bass-fishing',
@@ -40,7 +40,7 @@ export default function GrandTraverseBaySmallmouthPage() {
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Grand Traverse Bay Smallmouth Bass Fishing
+            Smallmouth Bass Fishing on Grand Traverse Bay
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             One of Northern Michigan&apos;s most respected smallmouth bass fisheries
@@ -121,7 +121,7 @@ export default function GrandTraverseBaySmallmouthPage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Fish Grand Traverse Bay</h2>
+          <h3 className="font-serif text-3xl font-bold text-navy-900 mb-4">Fish Grand Traverse Bay</h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Ready to experience world-class smallmouth bass fishing on Grand Traverse Bay?
           </p>

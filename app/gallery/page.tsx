@@ -51,6 +51,22 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* Intro Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-6">Fishing Memories on Grand Traverse Bay</h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-4">
+            Every trip with Captain Butch is an opportunity to land a trophy smallmouth bass on one of Michigan&apos;s most scenic waterways. Grand Traverse Bay produces hard-fighting fish in crystal-clear water — the kind of catches worth photographing.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Our guests range from first-time anglers trying bass fishing for the first time to experienced fishermen chasing a personal best. Families, couples, father-and-son duos, and solo anglers all find their way onto the boat — and most leave with a photo they&apos;re proud of.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            The images below are real catches from real clients. No staged photos — just honest fishing results from a day on the bay with a dedicated smallmouth specialist.
+          </p>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <section className="py-24 bg-navy-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -89,7 +105,7 @@ export default function GalleryPage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Want to Be in the Gallery?</h2>
+          <h3 className="font-serif text-3xl font-bold text-navy-900 mb-4">Want to Be in the Gallery?</h3>
           <p className="text-gray-600 mb-8">Book your trip and create your own fishing memories on Grand Traverse Bay.</p>
           <Link
             href="/trips"
