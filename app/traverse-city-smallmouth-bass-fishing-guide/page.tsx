@@ -23,7 +23,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Traverse City Smallmouth Bass Fishing Guide | Grand Traverse Bay',
+  title: 'Traverse City Smallmouth Bass Fishing Guide',
   description: 'Hire a Traverse City smallmouth bass fishing guide with local knowledge of Grand Traverse Bay. Focused trips designed for anglers of all skill levels.',
   alternates: {
     canonical: '/traverse-city-smallmouth-bass-fishing-guide',
@@ -120,7 +120,7 @@ export default function TraverseCityFishingGuidePage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Book Your Guided Trip</h2>
+          <h3 className="font-serif text-3xl font-bold text-navy-900 mb-4">Book Your Guided Trip</h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Ready to fish with a dedicated Traverse City smallmouth bass guide?
           </p>

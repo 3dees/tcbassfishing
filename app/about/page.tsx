@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ShieldCheck, Map, Anchor, Zap, Gauge, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Captain Butch Derickson',
+  title: 'About Captain Butch',
   description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 10+ years experience on Grand Traverse Bay. Learn about our boat and fishing expertise.',
   alternates: {
     canonical: '/about',
@@ -148,7 +148,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Ready to Fish with Captain Butch?</h2>
+          <h3 className="font-serif text-3xl font-bold text-navy-900 mb-4">Ready to Fish with Captain Butch?</h3>
           <p className="text-gray-600 mb-8">Book your trip today and experience world-class bass fishing on Grand Traverse Bay.</p>
           <Link
             href="/trips"

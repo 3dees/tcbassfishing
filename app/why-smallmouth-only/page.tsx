@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Why We Specialize in Smallmouth Bass Fishing | Traverse City, MI',
+  title: 'Why We Specialize in Smallmouth Bass',
   description: 'Discover why we specialize exclusively in smallmouth bass fishing in Traverse City and Grand Traverse Bay. Focused charters, better results.',
   alternates: {
     canonical: '/why-smallmouth-only',
@@ -50,15 +50,28 @@ export default function WhySmallmouthOnlyPage() {
             <h2 className="font-serif text-3xl font-bold text-navy-900 mt-12 mb-6">
               Benefits of a Specialized Charter
             </h2>
+            <p className="text-gray-600 mb-4">
+              When a guide focuses on one species, every decision — where to anchor, what lures to rig, when to move — is made with that fish in mind. There&apos;s no splitting attention between salmon runs and bass structure, no switching techniques mid-day, no generic approach that works &quot;well enough&quot; for everything.
+            </p>
+            <p className="text-gray-600 mb-4">
+              Butch knows Grand Traverse Bay&apos;s smallmouth bass habitat intimately: the rocky points they hold on in spring, the deep drop-offs they move to in summer, and the mid-depth structure that produces fish throughout the season. That local knowledge, paired with species-specific gear and techniques, translates directly into more fish for his clients.
+            </p>
             <ul className="list-disc pl-6 text-gray-600 mb-8 space-y-2">
-              <li>Trips tailored specifically to bass behavior</li>
-              <li>Gear selected for smallmouth fishing</li>
-              <li>No compromise in strategy or focus</li>
+              <li>Trips tailored specifically to bass behavior and seasonal patterns</li>
+              <li>Rods, reels, and lures selected for smallmouth fishing — not a general kit</li>
+              <li>No compromise in strategy or focus throughout the day</li>
+              <li>Consistent results from a guide who fishes these waters year-round</li>
             </ul>
 
             <h2 className="font-serif text-3xl font-bold text-navy-900 mt-12 mb-6">
               Clear Expectations
             </h2>
+            <p className="text-gray-600 mb-4">
+              Part of specializing means being upfront about what we offer. Booking the right charter starts with knowing what to expect — and what not to expect. Butch&apos;s trips are built around one thing: catching smallmouth bass on Grand Traverse Bay.
+            </p>
+            <p className="text-gray-600 mb-4">
+              This focus allows him to consistently put his clients on fish and give them a high-quality experience. It also means he&apos;s not the right guide if you&apos;re looking for a mixed-species trip or a different target species.
+            </p>
 
             {/* Important disclaimer */}
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 my-8">
@@ -68,7 +81,7 @@ export default function WhySmallmouthOnlyPage() {
             </div>
 
             <p className="text-gray-600 mb-8">
-              Butch&apos;s charters are designed for anglers who want to focus on smallmouth bass fishing only.
+              Smallmouth bass fishing on Grand Traverse Bay is world-class. The water is exceptionally clear, the fish are aggressive, and the setting — surrounded by the hills and shoreline of northern Michigan — is hard to beat. If smallmouth bass is your target, you&apos;re in the right place.
             </p>
           </div>
 

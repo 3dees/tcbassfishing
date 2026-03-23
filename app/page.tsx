@@ -235,7 +235,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-24 bg-navy-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Ready to Cast Off?</h2>
+          <h3 className="font-serif text-4xl md:text-5xl font-bold mb-6">Ready to Cast Off?</h3>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
             Dates fill up fast, especially during the spring spawn (May/June). Reach out today to secure your spot on the boat.
           </p>

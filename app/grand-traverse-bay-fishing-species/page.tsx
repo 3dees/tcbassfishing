@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Fishing in Grand Traverse Bay | Species Overview',
+  title: 'Grand Traverse Bay Fishing Species',
   description: 'Learn about the fish species found in Grand Traverse Bay, including smallmouth bass. Informational overview of the bay\'s diverse fishery.',
   alternates: {
     canonical: '/grand-traverse-bay-fishing-species',
@@ -41,41 +41,45 @@ export default function GrandTraverseBaySpeciesPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Grand Traverse Bay is home to a wide variety of fish species, making it a popular destination for anglers throughout the year.
+              Grand Traverse Bay is home to a wide variety of fish species, making it a popular destination for anglers throughout the year. The bay&apos;s cold, clear water — fed by Lake Michigan and surrounded by the hills of northern Michigan — creates diverse habitat that supports multiple fisheries across different seasons.
             </p>
 
             <h2 className="font-serif text-3xl font-bold text-navy-900 mt-12 mb-6">
               Common Species in Grand Traverse Bay
             </h2>
-            <ul className="list-disc pl-6 text-gray-600 mb-8 space-y-2">
-              <li><strong>Smallmouth bass</strong> – Known for aggressive strikes and hard fights</li>
-              <li><strong>Salmon</strong> (seasonal) – Chinook and Coho runs</li>
-              <li><strong>Lake trout</strong> – Deep water cold-water species</li>
-              <li><strong>Other cold-water species</strong> – Including whitefish and steelhead</li>
+            <p className="text-gray-600 mb-4">
+              The bay&apos;s combination of depth, temperature, and water clarity supports a broad range of cold-water and warm-water species. Here is a general overview of what anglers target in these waters:
+            </p>
+            <ul className="list-disc pl-6 text-gray-600 mb-8 space-y-3">
+              <li><strong>Smallmouth bass</strong> – Grand Traverse Bay is widely regarded as one of the top smallmouth bass fisheries in Michigan. The rocky structure, clear water, and abundant forage produce aggressive, hard-fighting fish in the 2–5 pound range. Smallmouth are available throughout the season, from the spring spawn through fall.</li>
+              <li><strong>Salmon</strong> (seasonal) – Chinook and Coho salmon are present in the bay, particularly during their seasonal runs. These fish attract dedicated charter operations that specialize in trolling and downrigger techniques.</li>
+              <li><strong>Lake trout</strong> – A cold-water species that inhabits the deeper sections of the bay. Lake trout fishing typically requires specialized deep-water equipment and technique.</li>
+              <li><strong>Steelhead</strong> – Seasonal runs bring steelhead into the area, particularly in tributaries connected to the bay.</li>
+              <li><strong>Whitefish</strong> – Another cold-water species found in the deeper portions of the bay, often targeted in winter and early spring.</li>
             </ul>
 
             {/* Important disclaimer */}
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 my-8">
               <h3 className="font-bold text-navy-900 mb-2">Our Focus</h3>
               <p className="text-gray-700 mb-0">
-                While Grand Traverse Bay supports multiple fisheries, <strong>Butch specializes exclusively in smallmouth bass fishing charters and does not offer salmon or lake trout charters.</strong>
+                While Grand Traverse Bay supports multiple fisheries, <strong>Butch specializes exclusively in smallmouth bass fishing charters and does not offer salmon or lake trout charters.</strong> This page is intended to provide general information about the bay&apos;s fishery — not to advertise mixed-species trips.
               </p>
             </div>
-
-            <p className="text-gray-600 mb-8">
-              This page is intended to provide general information about the bay—not to advertise mixed-species trips.
-            </p>
 
             <h2 className="font-serif text-3xl font-bold text-navy-900 mt-12 mb-6">
               Why Specialization Matters
             </h2>
             <p className="text-gray-600 mb-4">
-              By focusing on one species, anglers benefit from:
+              Traverse City has no shortage of charter options. Many offer a broad menu of species and techniques. What sets a specialized charter apart is depth of knowledge — knowing exactly where the fish are holding, how they&apos;re behaving at a given time of year, and which techniques produce results under current conditions.
+            </p>
+            <p className="text-gray-600 mb-4">
+              For smallmouth bass specifically, that knowledge includes understanding seasonal movement patterns on Grand Traverse Bay, the rocky structure and drop-offs that hold fish, water temperature influences on feeding behavior, and the light tackle techniques that make the most of what smallmouth have to offer as a sport fish.
             </p>
             <ul className="list-disc pl-6 text-gray-600 mb-8 space-y-2">
-              <li>Better techniques</li>
-              <li>Better timing</li>
-              <li>A more refined fishing experience</li>
+              <li>More consistent results from a guide who focuses on one species year-round</li>
+              <li>Tackle and techniques dialed in specifically for smallmouth bass</li>
+              <li>Seasonal knowledge of when and where fish are most active</li>
+              <li>A refined experience designed around one target fish</li>
             </ul>
           </div>
 
