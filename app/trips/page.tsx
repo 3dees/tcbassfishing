@@ -3,6 +3,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Check, Clock, Anchor, Users } from 'lucide-react';
+import { FAQSection } from '@/components/FAQSection';
+
+const tripFaqs = [
+  {
+    question: "What happens if the weather is bad?",
+    answer: "Safety comes first. If the Captain determines conditions are unsafe, your trip will be rescheduled at no additional cost. Deposits are non-refundable, but we always work with you to find an alternative date."
+  },
+  {
+    question: "Do you offer gift cards?",
+    answer: "Yes, fishing charter gift cards make excellent gifts for birthdays, Father's Day, or any special occasion. Contact us to purchase a gift card for any trip package."
+  }
+];
 
 // Fallback booking URL if service-specific links fail
 const FALLBACK_BOOKING_URL = 'https://app.squareup.com/appointments/book/pebgn714i2rt4n/CQ9KNFFD22GG7/start';
@@ -16,6 +28,7 @@ const packages = [
     description: 'A great option for the morning bite or a family outing. We hit the prime spots quickly to maximize your fishing time.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/04_kid_huge_bass.jpg',
+    imageAlt: 'Young angler holding a trophy smallmouth bass caught on a 4-hour fishing charter',
     bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/DMH2VM6ZW7OXDHILXA6RUHGE'
   },
   {
@@ -26,6 +39,7 @@ const packages = [
     description: 'Our most popular option. Gives us more time to try different techniques and locations across Grand Traverse Bay.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/03_customer_bigfish_captain.jpg',
+    imageAlt: 'Customer and Captain Butch with a large smallmouth bass on Grand Traverse Bay',
     bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/PZN2WNKIXHYPNSVVZTLJPVNU'
   },
   {
@@ -36,6 +50,7 @@ const packages = [
     description: 'The full day experience. Perfect for serious anglers hunting for that trophy smallmouth or personal best.',
     features: ['Start time: 7:00 AM', 'Up to 2 Anglers', 'Rods, Reels & Tackle Provided', 'Drinks & Snacks Included'],
     image: '/images/hero/05_sunset_bay.jpg',
+    imageAlt: 'Sunset over Grand Traverse Bay after a full-day smallmouth bass fishing charter',
     bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/GFESJPUGAOBRTWUWGDSAR7BP'
   }
 ];
@@ -53,6 +68,9 @@ export default function ServicesPage() {
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
+            sizes="100vw"
+            quality={85}
           />
           <div className="absolute inset-0 bg-navy-900/70"></div>
         </div>
@@ -67,7 +85,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <div className="text-cyan-600 font-bold uppercase tracking-widest text-sm mb-2">Rates & Packages</div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900">Choose Your Adventure</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900">Charter Packages & Rates</h2>
             <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
               All trips are priced per group (max 2 anglers). No hidden fees.
             </p>
@@ -79,9 +97,12 @@ export default function ServicesPage() {
                 <div className="relative h-64 overflow-hidden group">
                   <Image
                     src={pkg.image}
-                    alt={pkg.name}
+                    alt={pkg.imageAlt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    loading="lazy"
+                    quality={80}
                   />
                   <div className="absolute top-4 right-4 bg-navy-900/90 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
                     <Clock className="h-3 w-3 text-cyan-400" /> {pkg.duration}
@@ -179,17 +200,83 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* How to Book Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy-900">How to Book Your Fishing Charter</h2>
+            <p className="mt-4 text-gray-600">Simple steps to get you on the water</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                step: 1,
+                title: "Choose Your Trip Length",
+                desc: "Select from 4-hour ($440), 6-hour ($550), or 8-hour ($660) charters. All include gear, tackle, snacks, and drinks."
+              },
+              {
+                step: 2,
+                title: "Check Availability",
+                desc: "Use our online booking system above or call (231) 883-2200. Peak season runs April through October."
+              },
+              {
+                step: 3,
+                title: "Book and Pay Deposit",
+                desc: "Reserve your date through our online booking system. A non-refundable deposit secures your trip."
+              },
+              {
+                step: 4,
+                title: "Get Your Fishing License",
+                desc: "All anglers 17+ need a valid Michigan license. Purchase online at mdnr-elicense.com."
+              },
+              {
+                step: 5,
+                title: "Prepare for Your Trip",
+                desc: "Bring sunscreen, sunglasses, layered clothing, and your license. We provide everything else."
+              },
+              {
+                step: 6,
+                title: "Meet at the Boat Launch",
+                desc: "Arrive at the designated Grand Traverse Bay location. Captain Butch confirms the spot when you book."
+              }
+            ].map((item) => (
+              <div key={item.step} className="bg-slate-50 rounded-xl p-6 border border-gray-100">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="flex items-center justify-center w-8 h-8 bg-cyan-600 text-white rounded-full font-bold text-sm">
+                    {item.step}
+                  </span>
+                  <h3 className="font-bold text-navy-900">{item.title}</h3>
+                </div>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FAQSection faqs={tripFaqs} title="Booking & Policy FAQs" />
+
       {/* CTA Section */}
-      <section className="py-16 bg-navy-900 text-white">
+      <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-4">Got Questions?</h2>
-          <p className="text-gray-300 mb-8">We&apos;d love to hear from you.</p>
-          <Link
-            href="/contact"
-            className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
-          >
-            Contact Us
-          </Link>
+          <h3 className="font-serif text-3xl font-bold text-navy-900 mb-4">Got Questions?</h3>
+          <p className="text-gray-600 mb-8">Check our FAQ or contact us directly.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/faq"
+              className="inline-block bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-4 rounded-full font-semibold transition-all"
+            >
+              View FAQ
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-block bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-full font-semibold transition-all"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
 

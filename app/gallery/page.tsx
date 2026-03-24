@@ -6,10 +6,13 @@ import { Camera } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Photo Gallery',
   description: 'View photos from our bass fishing trips on Grand Traverse Bay. See real catches from real clients fishing with Captain Butch.',
+  alternates: {
+    canonical: '/gallery',
+  },
   openGraph: {
     title: 'Photo Gallery | Traverse City Bass Destination Charters',
     description: 'View photos from our bass fishing trips on Grand Traverse Bay. See real catches from real clients.',
-    images: ['/images/hero/collage_hero.png'],
+    images: ['/images/hero/collage_hero.jpg'],
   },
 };
 
@@ -38,12 +41,32 @@ export default function GalleryPage() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-navy-900/70"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">Photo Gallery</h1>
           <p className="text-xl text-gray-200">Real Catches, Real Memories</p>
+        </div>
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-6">Fishing Memories on Grand Traverse Bay</h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-4">
+            Every trip with Captain Butch is an opportunity to land a trophy smallmouth bass on one of Michigan&apos;s most scenic waterways. Grand Traverse Bay produces hard-fighting fish in crystal-clear water — the kind of catches worth photographing.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Our guests range from first-time anglers trying bass fishing for the first time to experienced fishermen chasing a personal best. Families, couples, father-and-son duos, and solo anglers all find their way onto the boat — and most leave with a photo they&apos;re proud of.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            The images below are real catches from real clients. No staged photos — just honest fishing results from a day on the bay with a dedicated smallmouth specialist.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            Grand Traverse Bay smallmouth bass are known for their size and fight. The clear, cold water and rocky structure of both the East and West Arms hold healthy populations of fish throughout the season — April through October. Whether you&apos;re visiting Traverse City for the weekend or making a dedicated fishing trip, the bite on the bay gives you a real shot at double-digit fish counts and bass pushing 20 inches. Every photo in this gallery represents a day that was worth the trip.
+          </p>
         </div>
       </section>
 
@@ -85,7 +108,7 @@ export default function GalleryPage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Want to Be in the Gallery?</h2>
+          <h3 className="font-serif text-3xl font-bold text-navy-900 mb-4">Want to Be in the Gallery?</h3>
           <p className="text-gray-600 mb-8">Book your trip and create your own fishing memories on Grand Traverse Bay.</p>
           <Link
             href="/trips"

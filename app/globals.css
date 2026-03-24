@@ -9,3 +9,18 @@ html {
 body {
   font-family: 'Inter', sans-serif;
 }
+
+/* GPU-accelerated bounce animation to prevent forced reflow */
+@keyframes bounce-gpu {
+  0%, 100% {
+    transform: translateY(-25%) translateX(-50%);
+  }
+  50% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+.animate-bounce-gpu {
+  animation: bounce-gpu 1s infinite;
+  will-change: transform;
+}

@@ -4,8 +4,11 @@ import Link from 'next/link';
 import { ShieldCheck, Map, Anchor, Zap, Gauge, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Captain Butch Derickson',
+  title: 'About Capt Butch',
   description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 10+ years experience on Grand Traverse Bay. Learn about our boat and fishing expertise.',
+  alternates: {
+    canonical: '/about',
+  },
   openGraph: {
     title: 'About Captain Butch Derickson | Traverse City Bass Destination Charters',
     description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 10+ years experience on Grand Traverse Bay.',
@@ -25,6 +28,7 @@ export default function AboutPage() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-navy-900/70"></div>
         </div>
@@ -61,14 +65,18 @@ export default function AboutPage() {
             {/* Text Side */}
             <div className="lg:w-1/2">
               <div className="mb-2 text-cyan-600 font-bold uppercase tracking-widest text-sm">Meet Your Guide</div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-6">Captain Butch Derickson</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-6">About Butch Derickson</h2>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 After retiring as a mechanical engineer in the power industry, I turned my lifelong passion for bass fishing into Traverse City Bass Destination Charters. With over 10 years on these waters, I know every contour, ledge, and hiding spot in Grand Traverse Bay and the surrounding inland lakes.
               </p>
 
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Northwestern Michigan has earned a national reputation for exceptional smallmouth bass fishing—and I am ready to put you on the fish. Whether you&apos;re chasing numbers or hunting a trophy, your next personal best could be one cast away.
+              </p>
+
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                Grand Traverse Bay offers over 30 miles of shoreline and a mix of rocky points, gravel flats, and deep structure that holds smallmouth from ice-out through late fall. I fish the bay year-round and stay on the fish as conditions change — so when you step onto the boat, you&apos;re getting current, local knowledge that no app or chart can replace. All equipment is provided, all fish are catch-and-release, and every trip is tailored to your group&apos;s experience level.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
@@ -144,7 +152,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-4">Ready to Fish with Captain Butch?</h2>
+          <h3 className="font-serif text-3xl font-bold text-navy-900 mb-4">Ready to Fish with Captain Butch?</h3>
           <p className="text-gray-600 mb-8">Book your trip today and experience world-class bass fishing on Grand Traverse Bay.</p>
           <Link
             href="/trips"

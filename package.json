@@ -8,6 +8,12 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "browserslist": [
+    "Chrome >= 90",
+    "Firefox >= 90",
+    "Safari >= 14",
+    "Edge >= 90"
+  ],
   "dependencies": {
     "@portabletext/react": "^6.0.3",
     "@sanity/image-url": "^2.0.3",

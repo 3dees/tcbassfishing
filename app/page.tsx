@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowDown, MapPin, ShieldCheck, Map, Star, Phone } from 'lucide-react';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default function HomePage() {
   return (
@@ -15,6 +22,9 @@ export default function HomePage() {
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
+            sizes="100vw"
+            quality={85}
           />
           {/* Gradient Overlay for text readability */}
           <div className="absolute inset-0 bg-navy-900/60 mix-blend-multiply"></div>
@@ -54,9 +64,11 @@ export default function HomePage() {
 
         <Link
           href="#about-preview"
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-colors animate-bounce"
+          className="absolute bottom-10 left-1/2 text-white/50 hover:text-white transition-colors animate-bounce-gpu"
+          aria-label="Scroll to about section"
         >
-          <ArrowDown className="h-8 w-8" />
+          <ArrowDown className="h-8 w-8" aria-hidden="true" />
+          <span className="sr-only">Scroll to about section</span>
         </Link>
       </section>
 
@@ -73,6 +85,8 @@ export default function HomePage() {
                   width={600}
                   height={500}
                   className="w-full h-[500px] object-cover object-center"
+                  loading="lazy"
+                  quality={80}
                 />
                 <div className="absolute bottom-0 left-0 bg-navy-900/90 p-8 backdrop-blur-md text-white w-full">
                   <p className="font-serif text-3xl font-bold">Captain Butch</p>
@@ -87,7 +101,11 @@ export default function HomePage() {
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-6">Captain Butch Derickson</h2>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                With over 10 years on these waters, Captain Butch knows every contour, ledge, and hiding spot in Grand Traverse Bay. Whether you&apos;re chasing numbers or hunting a trophy, your next personal best could be one cast away.
+                With over 10 years on these waters, Captain Butch knows every contour, ledge, and hiding spot in Grand Traverse Bay. As a dedicated{' '}
+                <Link href="/smallmouth-bass-charters-traverse-city" className="text-cyan-600 hover:text-cyan-700 font-medium">
+                  smallmouth bass fishing guide
+                </Link>
+                , whether you&apos;re chasing numbers or hunting a trophy, your next personal best could be one cast away.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -96,7 +114,7 @@ export default function HomePage() {
                     <ShieldCheck className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-navy-900">Safety First</h4>
+                    <h3 className="font-bold text-navy-900">Safety First</h3>
                     <p className="text-sm text-gray-500">USCG Licensed & Fully Insured.</p>
                   </div>
                 </div>
@@ -106,7 +124,7 @@ export default function HomePage() {
                     <Map className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-navy-900">Local Expert</h4>
+                    <h3 className="font-bold text-navy-900">Local Expert</h3>
                     <p className="text-sm text-gray-500">Specializing in Grand Traverse Bay.</p>
                   </div>
                 </div>
@@ -136,17 +154,20 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { name: '4-Hour Trip', price: 440, desc: 'Perfect for the morning bite or a family outing.', image: '/images/hero/04_kid_huge_bass.jpg', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/DMH2VM6ZW7OXDHILXA6RUHGE' },
-              { name: '6-Hour Trip', price: 550, desc: 'Our most popular option with more time to explore.', image: '/images/hero/03_customer_bigfish_captain.jpg', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/PZN2WNKIXHYPNSVVZTLJPVNU' },
-              { name: '8-Hour Trip', price: 660, desc: 'The full day experience for serious anglers.', image: '/images/hero/05_sunset_bay.jpg', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/GFESJPUGAOBRTWUWGDSAR7BP' },
+              { name: '4-Hour Trip', price: 440, desc: 'Perfect for the morning bite or a family outing.', image: '/images/hero/04_kid_huge_bass.jpg', imageAlt: 'Young angler holding a trophy smallmouth bass caught on a 4-hour fishing charter', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/DMH2VM6ZW7OXDHILXA6RUHGE' },
+              { name: '6-Hour Trip', price: 550, desc: 'Our most popular option with more time to explore.', image: '/images/hero/03_customer_bigfish_captain.jpg', imageAlt: 'Customer and Captain Butch with a large smallmouth bass on Grand Traverse Bay', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/PZN2WNKIXHYPNSVVZTLJPVNU' },
+              { name: '8-Hour Trip', price: 660, desc: 'The full day experience for serious anglers.', image: '/images/hero/05_sunset_bay.jpg', imageAlt: 'Sunset over Grand Traverse Bay after a full-day smallmouth bass fishing charter', bookingUrl: 'https://book.squareup.com/appointments/pebgn714i2rt4n/location/CQ9KNFFD22GG7/services/GFESJPUGAOBRTWUWGDSAR7BP' },
             ].map((pkg) => (
               <div key={pkg.name} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={pkg.image}
-                    alt={pkg.name}
+                    alt={pkg.imageAlt}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    loading="lazy"
+                    quality={80}
                   />
                 </div>
                 <div className="p-8 text-center">
@@ -215,7 +236,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-24 bg-navy-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Ready to Cast Off?</h2>
+          <h3 className="font-serif text-4xl md:text-5xl font-bold mb-6">Ready to Cast Off?</h3>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
             Dates fill up fast, especially during the spring spawn (May/June). Reach out today to secure your spot on the boat.
           </p>

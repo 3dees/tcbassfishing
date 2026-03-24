@@ -65,12 +65,25 @@ export default function ContactPage() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-navy-900/70"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl text-gray-200">Book Your Trip Today</p>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
+          <p className="text-gray-600 text-lg leading-relaxed mb-4">
+            Ready to book a smallmouth bass fishing charter on Grand Traverse Bay? Captain Butch runs trips April through October, with the hottest bite during the spring spawn in May and June. Slots are limited — most dates book weeks in advance, especially on weekends.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            Whether you&apos;re planning a solo trip, a father-son outing, a couple&apos;s getaway, or a group adventure, we&apos;ll get you on the water and put you on the fish. Fill out the form below or call or text Captain Butch directly at <a href="tel:231-883-2200" className="text-cyan-600 hover:text-cyan-500 font-medium">(231) 883-2200</a> between 8am and 8pm. We typically respond within one business day.
+          </p>
         </div>
       </section>
 
@@ -83,7 +96,7 @@ export default function ContactPage() {
             <div className="lg:w-2/5 bg-navy-900 text-white p-10 md:p-14 flex flex-col justify-between">
               <div>
                 <div className="text-cyan-400 font-bold uppercase tracking-widest text-sm mb-2">Get in Touch</div>
-                <h2 className="font-serif text-4xl font-bold mb-6">Ready to Cast Off?</h2>
+                <h2 className="font-serif text-4xl font-bold mb-6">Book Your Trip Today</h2>
                 <p className="text-gray-300 mb-10 leading-relaxed">
                   Dates fill up fast, especially during the spring spawn (May/June). Reach out today to secure your spot on the boat.
                 </p>

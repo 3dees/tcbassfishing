@@ -8,14 +8,11 @@ import './silktide-consent-manager.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tcbassdestinationcharters.com'),
-  alternates: {
-    canonical: '/',
-  },
   title: {
-    default: 'Traverse City Bass Destination Charters | Traverse City Bass Fishing',
+    default: 'Traverse City Bass Destination Charters',
     template: '%s | Traverse City Bass Destination Charters',
   },
-  description: 'Experience world-class smallmouth bass fishing on Grand Traverse Bay with Captain Butch Derickson. Premier bass fishing charters in Traverse City, Michigan.',
+  description: 'Experience world-class smallmouth bass fishing on Grand Traverse Bay with Captain Butch Derickson. Bass fishing charters in Traverse City, Michigan.',
   keywords: ['bass fishing', 'Traverse City', 'fishing charter', 'Grand Traverse Bay', 'smallmouth bass', 'Michigan fishing', 'Captain Butch'],
   authors: [{ name: 'Traverse City Bass Destination Charters' }],
   creator: 'Traverse City Bass Destination Charters',
@@ -51,9 +48,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
   },
 };
 
@@ -220,76 +214,6 @@ const jsonLd = {
       }
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://tcbassdestinationcharters.com/faq#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What are your fishing charter rates?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We offer three trip options: 4-hour trips for $440, 6-hour trips for $550, and 8-hour trips for $660. All prices are per group (up to 2 anglers) and include all gear, tackle, snacks, and drinks."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is included in the fishing trip?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Everything you need is provided: rods, reels, tackle, lures, Kind snack bars, and bottled water on ice. Just bring your Michigan fishing license, sunscreen, and layered clothing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need a fishing license?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, all anglers 17 and older need a valid Michigan fishing license. You can purchase one online at Michigan.gov/DNR or at local sporting goods stores."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is this charter good for beginners or kids?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely! Captain Butch welcomes anglers of all skill levels, including children. He'll teach you the techniques and help you catch fish regardless of your experience."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What fish will we catch?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We target smallmouth bass, which Grand Traverse Bay is nationally known for. The bay holds excellent numbers of bass and trophy-sized fish are caught regularly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the cancellation policy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Deposits are non-refundable. However, if we need to cancel due to weather, you can reschedule for free to any available date."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where do we meet for the charter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The meeting location will be confirmed when you book. It's typically a boat launch in the Traverse City area on Grand Traverse Bay."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When is the best time of year to fish?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our season runs April through October. Early summer (May-June) and fall (September-October) often produce the best smallmouth bass fishing, but we catch fish all season long."
-          }
-        }
-      ]
-    },
-    {
       "@type": "BoatTrip",
       "name": "Smallmouth Bass Fishing Charter",
       "description": "Guided bass fishing trip on Grand Traverse Bay aboard a 21' Ranger Z521 bass boat",
@@ -325,6 +249,119 @@ const jsonLd = {
           }
         ]
       }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://tcbassdestinationcharters.com/#touristtrip",
+      "name": "Smallmouth Bass Fishing Charter in Traverse City",
+      "description": "Guided smallmouth bass fishing trip on Grand Traverse Bay with Captain Butch Derickson. Experience world-class bass fishing in Northern Michigan's clearest waters.",
+      "touristType": ["Fishing Enthusiasts", "Anglers", "Families", "Outdoor Adventurers"],
+      "provider": {
+        "@id": "https://tcbassdestinationcharters.com/#business"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "4-Hour Fishing Charter",
+          "price": "440",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "6-Hour Fishing Charter",
+          "price": "550",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "8-Hour Fishing Charter",
+          "price": "660",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Meet at Grand Traverse Bay boat launch"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Target smallmouth bass on rocky structure and drop-offs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Learn techniques from an experienced local guide"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Return to dock with photos and memories"
+          }
+        ]
+      },
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "abstract": "Catch trophy smallmouth bass on Grand Traverse Bay, one of Michigan's premier bass fishing destinations."
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://tcbassdestinationcharters.com/#howtobook",
+      "name": "How to Book a Smallmouth Bass Fishing Charter in Traverse City",
+      "description": "Step-by-step guide to booking a guided smallmouth bass fishing trip on Grand Traverse Bay with Captain Butch Derickson.",
+      "totalTime": "PT10M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "minValue": "440",
+        "maxValue": "660"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Choose Your Trip Length",
+          "text": "Select from 4-hour ($440), 6-hour ($550), or 8-hour ($660) fishing charters. All trips include gear, tackle, snacks, and drinks for up to 2 anglers."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Check Availability",
+          "text": "Visit our Trips & Rates page or contact Captain Butch directly at (231) 883-2200 to check available dates. Peak season is April through October."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Book and Pay Deposit",
+          "text": "Reserve your date through our online booking system. A non-refundable deposit secures your trip."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Get Your Michigan Fishing License",
+          "text": "All anglers 17 and older need a valid Michigan fishing license. Purchase online at mdnr-elicense.com before your trip."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Prepare for Your Trip",
+          "text": "Bring sunscreen, sunglasses, layered clothing, and your fishing license. We provide all rods, reels, tackle, snacks, and bottled water."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Meet at the Boat Launch",
+          "text": "Arrive at the designated Grand Traverse Bay boat launch at your scheduled time. Captain Butch will confirm the exact location when you book."
+        }
+      ]
     }
   ]
 };
@@ -337,6 +374,80 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preconnect FIRST for fastest connection establishment */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+        {/* DNS prefetch as fallback */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+        {/* Preload critical resources */}
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+          as="style"
+        />
+
+        {/* Load fonts */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
+        {/* Google Consent Mode v2 - MUST load before GTM */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = function(){dataLayer.push(arguments);}
+
+              // Set default consent - denied until user makes a choice
+              // This is required for GDPR/CCPA compliance with Google
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'functionality_storage': 'denied',
+                'personalization_storage': 'denied',
+                'security_storage': 'granted'
+              });
+
+              // Check if user has already made consent choices
+              if (typeof localStorage !== 'undefined') {
+                var analyticsConsent = localStorage.getItem('silktideCookieChoice_analytics');
+                var advertisingConsent = localStorage.getItem('silktideCookieChoice_advertising');
+
+                if (analyticsConsent === 'true') {
+                  gtag('consent', 'update', {
+                    'analytics_storage': 'granted',
+                    'functionality_storage': 'granted',
+                    'personalization_storage': 'granted'
+                  });
+                }
+
+                if (advertisingConsent === 'true') {
+                  gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted'
+                  });
+                }
+              }
+            `,
+          }}
+        />
+      </head>
+      <body className="font-sans antialiased">
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
@@ -348,18 +459,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-          rel="stylesheet"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className="font-sans antialiased">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -376,73 +475,99 @@ export default function RootLayout({
         <SpeedInsights />
 
         {/* Silktide Cookie Consent Manager */}
-        <Script src="/silktide-consent-manager.js" strategy="afterInteractive" />
-        <Script id="silktide-config" strategy="afterInteractive">
-          {`
-            if (typeof silktideCookieBannerManager !== 'undefined') {
-              silktideCookieBannerManager.updateCookieBannerConfig({
-                background: {
-                  showBackground: true
-                },
-                cookieIcon: {
-                  position: "bottomLeft"
-                },
-                cookieTypes: [
-                  {
-                    id: "necessary",
-                    name: "Necessary",
-                    description: "<p>These cookies are necessary for the website to function properly and cannot be switched off.</p>",
-                    required: true,
-                    onAccept: function() {}
-                  },
-                  {
-                    id: "analytics",
-                    name: "Analytics",
-                    description: "<p>These cookies help us improve the site by tracking which pages are most popular.</p>",
-                    defaultValue: true,
-                    onAccept: function() {
-                      if (typeof gtag !== 'undefined') {
-                        gtag('consent', 'update', { analytics_storage: 'granted' });
+        <Script
+          id="silktide-consent-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var script = document.createElement('script');
+                script.src = '/silktide-consent-manager.js';
+                script.onload = function() {
+                  if (typeof silktideCookieBannerManager !== 'undefined') {
+                    silktideCookieBannerManager.updateCookieBannerConfig({
+                      background: {
+                        showBackground: true
+                      },
+                      cookieIcon: {
+                        position: "bottomLeft"
+                      },
+                      cookieTypes: [
+                        {
+                          id: "necessary",
+                          name: "Necessary",
+                          description: "<p>These cookies are necessary for the website to function properly and cannot be switched off.</p>",
+                          required: true,
+                          onAccept: function() {}
+                        },
+                        {
+                          id: "analytics",
+                          name: "Analytics",
+                          description: "<p>These cookies help us improve the site by tracking which pages are most popular.</p>",
+                          defaultValue: true,
+                          onAccept: function() {
+                            if (typeof window.gtag !== 'undefined') {
+                              window.gtag('consent', 'update', {
+                                analytics_storage: 'granted',
+                                functionality_storage: 'granted',
+                                personalization_storage: 'granted'
+                              });
+                            }
+                          },
+                          onReject: function() {
+                            if (typeof window.gtag !== 'undefined') {
+                              window.gtag('consent', 'update', {
+                                analytics_storage: 'denied',
+                                functionality_storage: 'denied',
+                                personalization_storage: 'denied'
+                              });
+                            }
+                          }
+                        },
+                        {
+                          id: "advertising",
+                          name: "Advertising",
+                          description: "<p>These cookies provide extra features and personalization.</p>",
+                          onAccept: function() {
+                            if (typeof window.gtag !== 'undefined') {
+                              window.gtag('consent', 'update', {
+                                ad_storage: 'granted',
+                                ad_user_data: 'granted',
+                                ad_personalization: 'granted'
+                              });
+                            }
+                          },
+                          onReject: function() {
+                            if (typeof window.gtag !== 'undefined') {
+                              window.gtag('consent', 'update', {
+                                ad_storage: 'denied',
+                                ad_user_data: 'denied',
+                                ad_personalization: 'denied'
+                              });
+                            }
+                          }
+                        }
+                      ],
+                      text: {
+                        banner: {
+                          description: "<p>We use cookies to enhance your experience and analyze traffic. <a href='/privacy' target='_blank'>Cookie Policy.</a></p>",
+                          acceptAllButtonText: "Accept all",
+                          rejectNonEssentialButtonText: "Reject non-essential",
+                          preferencesButtonText: "Preferences"
+                        },
+                        preferences: {
+                          title: "Customize your cookie preferences",
+                          description: "<p>You can choose not to allow some types of cookies.</p>"
+                        }
                       }
-                    },
-                    onReject: function() {
-                      if (typeof gtag !== 'undefined') {
-                        gtag('consent', 'update', { analytics_storage: 'denied' });
-                      }
-                    }
-                  },
-                  {
-                    id: "advertising",
-                    name: "Advertising",
-                    description: "<p>These cookies provide extra features and personalization.</p>",
-                    onAccept: function() {
-                      if (typeof gtag !== 'undefined') {
-                        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
-                      }
-                    },
-                    onReject: function() {
-                      if (typeof gtag !== 'undefined') {
-                        gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
-                      }
-                    }
+                    });
                   }
-                ],
-                text: {
-                  banner: {
-                    description: "<p>We use cookies to enhance your experience and analyze traffic. <a href='/privacy' target='_blank'>Cookie Policy.</a></p>",
-                    acceptAllButtonText: "Accept all",
-                    rejectNonEssentialButtonText: "Reject non-essential",
-                    preferencesButtonText: "Preferences"
-                  },
-                  preferences: {
-                    title: "Customize your cookie preferences",
-                    description: "<p>You can choose not to allow some types of cookies.</p>"
-                  }
-                }
-              });
-            }
-          `}
-        </Script>
+                };
+                document.head.appendChild(script);
+              })();
+            `
+          }}
+        />
       </body>
     </html>
   );

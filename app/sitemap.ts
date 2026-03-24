@@ -10,6 +10,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
     },
+    // Primary smallmouth sales page
+    {
+      url: `${baseUrl}/smallmouth-bass-charters-traverse-city`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    // Supporting smallmouth pages
+    {
+      url: `${baseUrl}/grand-traverse-bay-smallmouth-bass-fishing`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/traverse-city-smallmouth-bass-fishing-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/trips`,
       lastModified: new Date(),
@@ -39,6 +59,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+    },
+    // Informational SEO pages
+    {
+      url: `${baseUrl}/grand-traverse-bay-fishing-species`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/why-smallmouth-only`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/terms`,
