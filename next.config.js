@@ -28,7 +28,8 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/:path*',
+        // Apply strict CSP to all routes except /studio
+        source: '/((?!studio).*)',
         headers: [
           {
             key: 'Link',
