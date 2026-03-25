@@ -58,10 +58,10 @@ export default function SmallmouthBassChartersPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Traverse City is widely regarded as one of Michigan&apos;s premier destinations for smallmouth bass fishing, and Grand Traverse Bay consistently produces some of the hardest-fighting bass in the region. Butch specializes exclusively in smallmouth bass fishing charters, offering focused, hands-on trips for anglers who want to experience this fishery the right way.
+              Traverse City is widely regarded as one of Michigan&apos;s premier destinations for bass fishing, and Grand Traverse Bay consistently produces some of the hardest-fighting bronzebacks in the region. Butch specializes exclusively in smallmouth bass fishing charters, offering focused, hands-on trips for anglers who want to experience this fishery the right way.
             </p>
             <p className="text-gray-600 mb-8">
-              This is not a &quot;catch-everything&quot; charter. Every trip is built around targeting smallmouth bass in the clear waters of Grand Traverse Bay and surrounding areas.
+              This is not a &quot;catch-everything&quot; charter. Every trip is built around targeting smallies in the clear waters of Grand Traverse Bay and surrounding areas.
             </p>
 
             <h2 className="font-serif text-3xl font-bold text-navy-900 mt-12 mb-6">
@@ -83,7 +83,7 @@ export default function SmallmouthBassChartersPage() {
               A Specialized Smallmouth Charter
             </h2>
             <p className="text-gray-600 mb-4">
-              Butch focuses only on smallmouth bass fishing. That means:
+              Butch focuses only on targeting bronzebacks. That means:
             </p>
             <ul className="list-disc pl-6 text-gray-600 mb-8 space-y-2">
               <li>No mixed-species trips</li>
@@ -98,7 +98,7 @@ export default function SmallmouthBassChartersPage() {
               What to Expect on Your Trip
             </h2>
             <ul className="list-disc pl-6 text-gray-600 mb-8 space-y-2">
-              <li>Fully guided smallmouth bass charter</li>
+              <li>Fully guided smallmouth charter</li>
               <li>Quality rods, reels, and tackle provided</li>
               <li>Instruction for beginners and experienced anglers</li>
               <li>A relaxed, safety-first experience on Grand Traverse Bay</li>
