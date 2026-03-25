@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fishing Reports & Bass Tips - Traverse City, Grand Traverse Bay',
+  title: { absolute: 'Fishing Reports & Tips | Grand Traverse Bay' },
   description:
-    'Weekly fishing reports, smallmouth bass tips, and seasonal guides from Captain Butch on Grand Traverse Bay. Real advice from 20+ years on the water.',
+    'Weekly fishing reports, smallmouth bass tips, and seasonal guides from Captain Butch on Grand Traverse Bay. 20+ years of expertise.',
   openGraph: {
     title: 'Fishing Reports & Tips | TC Bass Destination Charters',
     description:
