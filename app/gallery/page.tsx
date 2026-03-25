@@ -4,14 +4,14 @@ import Link from 'next/link';
 import { Camera } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Bass Fishing Photos - Grand Traverse Bay Charter Gallery',
+  title: { absolute: 'Fishing Photos | Grand Traverse Bay Charters' },
   description:
-    'Real catches from real clients. Browse photos from our smallmouth bass charters on Grand Traverse Bay with Captain Butch. Families, trophies, and big smiles.',
+    'Real catches from real clients. Browse photos from our smallmouth bass charters on Grand Traverse Bay with Captain Butch Derickson.',
   alternates: {
     canonical: '/gallery',
   },
   openGraph: {
-    title: 'Bass Fishing Photos | Grand Traverse Bay Charter Gallery',
+    title: 'Fishing Photos | Grand Traverse Bay Charters',
     description:
       'Real catches from real clients on Grand Traverse Bay with Captain Butch.',
     images: ['/images/hero/collage_hero.jpg'],

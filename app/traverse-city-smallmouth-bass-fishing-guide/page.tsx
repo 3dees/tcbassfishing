@@ -23,9 +23,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Traverse City Bass Fishing Guide - Captain Butch Derickson',
+  title: { absolute: 'Traverse City Bass Fishing Guide | Capt. Butch' },
   description:
-    'Hire Captain Butch, a USCG-licensed Traverse City bass fishing guide with 20+ years on Grand Traverse Bay. Trips for beginners through experienced anglers.',
+    'Hire Captain Butch, a USCG-licensed Traverse City bass fishing guide with 20+ years on Grand Traverse Bay. Beginners to experienced anglers.',
   alternates: {
     canonical: '/traverse-city-smallmouth-bass-fishing-guide',
   },

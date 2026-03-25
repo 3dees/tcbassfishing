@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Bass Fishing Charter Rates - 4, 6, 8-Hour Trips',
+  title: { absolute: 'Bass Fishing Charter Rates | Traverse City, MI' },
   description:
-    'Smallmouth bass charter packages from $440. Choose 4, 6, or 8-hour trips on Grand Traverse Bay. Premium gear, snacks, and expert guiding included.',
+    'Smallmouth bass charter packages from $440. Choose 4, 6, or 8-hour trips on Grand Traverse Bay. Premium gear and expert guiding included.',
   alternates: {
     canonical: '/trips',
   },
