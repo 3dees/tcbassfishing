@@ -77,7 +77,7 @@ export default function AboutPage() {
               </p>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Grand Traverse Bay offers over 30 miles of shoreline and a mix of rocky points, gravel flats, and deep structure that holds smallmouth from ice-out through late fall. I fish the bay year-round and stay on the fish as conditions change — so when you step onto the boat, you&apos;re getting current, local knowledge that no app or chart can replace. All equipment is provided, all fish are catch-and-release, and every trip is tailored to your group&apos;s experience level.
+                Grand Traverse Bay offers over 30 miles of shoreline and a mix of rocky points, gravel flats, and deep structure that holds smallmouth from ice-out through late fall. I fish the bay year-round and stay on the fish as conditions change — so when you step onto the boat, you&apos;re getting current, local knowledge that no app or chart can replace. All equipment is provided, all fish are catch-and-release per <a href="https://www.michigan.gov/dnr/things-to-do/fishing" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-500 underline">Michigan DNR</a> regulations, and every trip is tailored to your group&apos;s experience level.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
@@ -87,7 +87,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy-900">Safety First</h4>
-                    <p className="text-sm text-gray-500">USCG Licensed & Fully Insured.</p>
+                    <p className="text-sm text-gray-500"><a href="https://www.dco.uscg.mil/national_maritime_center/" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-500 underline">USCG-licensed</a> & Fully Insured.</p>
                   </div>
                 </div>
 
