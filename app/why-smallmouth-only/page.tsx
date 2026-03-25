@@ -3,8 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Why We Fish Smallmouth Only | Traverse City' },
-  description: 'Discover why we specialize exclusively in smallmouth bass fishing in Traverse City and Grand Traverse Bay. Focused charters, better results.',
+  title: 'Why We Fish Smallmouth Bass Only - Traverse City Charter',
+  description:
+    'We only target smallmouth bass, and here\'s why. Specializing in one species means better gear, better spots, and better results on Grand Traverse Bay.',
   alternates: {
     canonical: '/why-smallmouth-only',
   },

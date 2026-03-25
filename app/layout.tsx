@@ -9,11 +9,22 @@ import './silktide-consent-manager.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://tcbassdestinationcharters.com'),
   title: {
-    default: 'Traverse City Bass Destination Charters',
+    default: 'Traverse City Bass Fishing Charters | Grand Traverse Bay',
     template: '%s | Traverse City Bass Destination Charters',
   },
-  description: 'Experience world-class smallmouth bass fishing on Grand Traverse Bay with Captain Butch Derickson. Bass fishing charters in Traverse City, Michigan.',
-  keywords: ['bass fishing', 'Traverse City', 'fishing charter', 'Grand Traverse Bay', 'smallmouth bass', 'Michigan fishing', 'Captain Butch'],
+  description:
+    'Fish Grand Traverse Bay with Captain Butch Derickson. Smallmouth bass charters in Traverse City, MI. All gear included. Book your 2026 trip today.',
+  keywords: [
+    'bass fishing',
+    'Traverse City',
+    'fishing charter',
+    'Grand Traverse Bay',
+    'smallmouth bass',
+    'Michigan fishing',
+    'Captain Butch',
+    'traverse city fishing guide',
+    'smallmouth bass charter',
+  ],
   authors: [{ name: 'Traverse City Bass Destination Charters' }],
   creator: 'Traverse City Bass Destination Charters',
   openGraph: {
@@ -21,21 +32,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://tcbassdestinationcharters.com',
     siteName: 'Traverse City Bass Destination Charters',
-    title: 'Traverse City Bass Destination Charters | Traverse City Bass Fishing',
-    description: 'Experience world-class smallmouth bass fishing on Grand Traverse Bay with Captain Butch Derickson.',
+    title: 'Traverse City Bass Fishing Charters | Grand Traverse Bay Guided Trips',
+    description:
+      'Fish Grand Traverse Bay with Captain Butch Derickson. Smallmouth bass charters in Traverse City, MI. All gear included. Book your 2026 trip today.',
     images: [
       {
         url: '/images/hero/header-bg.jpg',
         width: 1200,
         height: 630,
-        alt: 'Traverse City Bass Destination Charters - Traverse City Bass Fishing',
+        alt: 'Smallmouth bass fishing charter on Grand Traverse Bay with Captain Butch',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Traverse City Bass Destination Charters | Traverse City Bass Fishing',
-    description: 'Experience world-class smallmouth bass fishing on Grand Traverse Bay with Captain Butch Derickson.',
+    title: 'Traverse City Bass Fishing Charters | Grand Traverse Bay Guided Trips',
+    description:
+      'Fish Grand Traverse Bay with Captain Butch Derickson. Smallmouth bass charters in Traverse City, MI. All gear included.',
     images: ['/images/hero/header-bg.jpg'],
   },
   robots: {
