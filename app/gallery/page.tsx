@@ -19,16 +19,16 @@ export const metadata: Metadata = {
 };
 
 const images = [
-  { id: '1', url: '/images/gallery/01_captain_kid_fish.jpg', alt: 'Captain with young angler and catch', caption: 'Young Angler Success' },
-  { id: '2', url: '/images/gallery/02_couple_michigan.jpg', alt: 'Couple fishing in Michigan', caption: 'Michigan Memories' },
-  { id: '3', url: '/images/gallery/03_woman_catch_calmwater.jpg', alt: 'Woman with bass catch on calm water', caption: 'Calm Water Catch' },
-  { id: '4', url: '/images/gallery/04_cmu_angler.jpg', alt: 'CMU angler with bass', caption: 'Fire Up The Grill!' },
-  { id: '5', url: '/images/gallery/05_customer_rod_lowrance.jpg', alt: 'Customer fishing with Lowrance electronics', caption: 'Dialed In' },
-  { id: '6', url: '/images/gallery/06_woman_bass.jpg', alt: 'Woman holding bass', caption: 'Personal Best' },
-  { id: '7', url: '/images/gallery/07_captain_fullboat_sky.jpg', alt: 'Captain on the boat with beautiful sky', caption: 'Perfect Day on the Bay' },
-  { id: '8', url: '/images/gallery/08_three_boys_bigbass.jpg', alt: 'Three boys with big bass catches', caption: 'Triple Threat' },
-  { id: '9', url: '/images/gallery/09_teen_dad_catch.jpg', alt: 'Teen and dad with catch', caption: 'Father & Son Trip' },
-  { id: '10', url: '/images/gallery/10_teen_bass_yamaha.jpg', alt: 'Teen with bass by Yamaha motor', caption: 'Next Generation Angler' },
+  { id: '1', url: '/images/gallery/01_captain_kid_fish.jpg', alt: 'Captain Butch with young angler holding smallmouth bass on Grand Traverse Bay', caption: 'Young Angler Success' },
+  { id: '2', url: '/images/gallery/02_couple_michigan.jpg', alt: 'Couple on a smallmouth bass fishing charter in Traverse City Michigan', caption: 'Michigan Memories' },
+  { id: '3', url: '/images/gallery/03_woman_catch_calmwater.jpg', alt: 'Woman holding smallmouth bass caught on Grand Traverse Bay charter', caption: 'Calm Water Catch' },
+  { id: '4', url: '/images/gallery/04_cmu_angler.jpg', alt: 'CMU student with smallmouth bass caught on Grand Traverse Bay', caption: 'Fire Up The Grill!' },
+  { id: '5', url: '/images/gallery/05_customer_rod_lowrance.jpg', alt: 'Angler fishing with Lowrance electronics on Grand Traverse Bay bass charter', caption: 'Dialed In' },
+  { id: '6', url: '/images/gallery/06_woman_bass.jpg', alt: 'Woman holding smallmouth bass on a Traverse City fishing charter', caption: 'Personal Best' },
+  { id: '7', url: '/images/gallery/07_captain_fullboat_sky.jpg', alt: 'Captain Butch Derickson on the Ranger Z521 bass boat on Grand Traverse Bay', caption: 'Perfect Day on the Bay' },
+  { id: '8', url: '/images/gallery/08_three_boys_bigbass.jpg', alt: 'Three young anglers with trophy smallmouth bass on Grand Traverse Bay', caption: 'Triple Threat' },
+  { id: '9', url: '/images/gallery/09_teen_dad_catch.jpg', alt: 'Father and son with smallmouth bass on a Traverse City charter trip', caption: 'Father & Son Trip' },
+  { id: '10', url: '/images/gallery/10_teen_bass_yamaha.jpg', alt: 'Teen angler with smallmouth bass next to Yamaha outboard on Grand Traverse Bay', caption: 'Next Generation Angler' },
 ];
 
 export default function GalleryPage() {
@@ -39,7 +39,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero/05_sunset_bay.jpg"
-            alt="Sunset on Grand Traverse Bay"
+            alt="Sunset over Grand Traverse Bay after a bass fishing charter"
             fill
             className="object-cover"
             priority
