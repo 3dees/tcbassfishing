@@ -107,6 +107,26 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* Stories From the Water */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-6">Who Fishes with Captain Butch</h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-6">
+            One of the best parts of running charters on Grand Traverse Bay is the variety of people who step onto the boat. Families visiting Traverse City on vacation often book a half-day trip as the highlight of their week. Fathers and sons, mothers and daughters, grandparents and grandkids — the bay has a way of creating memories that last well beyond the trip itself. Experienced bass anglers travel from across the Midwest to test their skills against Grand Traverse Bay smallmouth, drawn by the clear water and the quality of the fishery. Corporate groups and friends use a charter as a way to unwind, compete, and share a few hours away from screens and schedules. First-timers are always welcome, too. Captain Butch provides all the instruction needed, from casting technique to setting the hook, so even someone who has never held a rod can have a successful day on the water.
+          </p>
+
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-6">Seasonal Highlights on the Bay</h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-6">
+            The photos in this gallery span the full season, April through October, and each month brings something different to Grand Traverse Bay. In spring, smallmouth bass move shallow for the pre-spawn and spawn, making them accessible and aggressive — perfect conditions for sight-fishing in the bay&apos;s famously clear water. Summer shifts the action to topwater and deeper structure. Early mornings produce explosive surface strikes, while midday fishing often means working drop-offs and rocky points where bass hold in cooler water. Fall is trophy season. As water temperatures drop, the biggest smallmouth of the year feed heavily to prepare for winter, and fish pushing four and five pounds become a realistic target on any given trip. Each season has its own character, and the gallery captures those moments — from calm spring mornings to golden fall sunsets over the bay.
+          </p>
+
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-6">Share Your Catch</h2>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            We love seeing our clients&apos; photos long after the trip is over. If you&apos;ve fished with Captain Butch and have a shot you&apos;re proud of, tag us on Instagram at <strong>@tcbassdestinationcharters</strong> and we may feature it right here in the gallery. Whether it&apos;s your first smallmouth, your personal best, or just a great photo of the bay at sunrise, your story is part of what makes this charter special. Every image on this page represents a real day on the water with a real angler — and the next one could be yours.
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
