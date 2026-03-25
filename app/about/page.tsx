@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { ShieldCheck, Map, Anchor, Zap, Gauge, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Capt Butch',
-  description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 10+ years experience on Grand Traverse Bay. Learn about our boat and fishing expertise.',
+  title: 'About Captain Butch Derickson - Traverse City Fishing Guide',
+  description:
+    'Meet Captain Butch Derickson, USCG-licensed guide with 20+ years targeting smallmouth bass on Grand Traverse Bay. Fishing from a 21\' Ranger Z521.',
   alternates: {
     canonical: '/about',
   },

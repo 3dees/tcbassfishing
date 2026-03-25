@@ -19,8 +19,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: 'Smallmouth Bass Charters | Traverse City, MI' },
-  description: 'Smallmouth bass fishing charters in Traverse City, MI. Fish Grand Traverse Bay with a local guide who specializes exclusively in smallmouth bass.',
+  title: 'Smallmouth Bass Charters Traverse City - Guided Fishing Trips',
+  description:
+    'Dedicated smallmouth bass charters on Grand Traverse Bay. Fish with a USCG-licensed captain who targets only smallmouth. All skill levels welcome.',
   alternates: {
     canonical: '/smallmouth-bass-charters-traverse-city',
   },

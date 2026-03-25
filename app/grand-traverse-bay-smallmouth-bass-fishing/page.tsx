@@ -15,8 +15,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: 'Grand Traverse Bay Smallmouth Fishing' },
-  description: 'Grand Traverse Bay smallmouth bass fishing with a Traverse City guide. Learn why the bay is one of Michigan\'s best destinations for smallmouth bass.',
+  title: { absolute: 'Grand Traverse Bay Smallmouth Bass Fishing | Charter Guide' },
+  description:
+    'Grand Traverse Bay is one of Michigan\'s top smallmouth bass fisheries. Fish with Captain Butch and experience world-class bass action. April-October.',
   alternates: {
     canonical: '/grand-traverse-bay-smallmouth-bass-fishing',
   },

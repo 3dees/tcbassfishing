@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Book your bass fishing charter on Grand Traverse Bay. Contact Captain Butch at (231) 883-2200 or fill out our booking form.',
+  title: 'Book a Charter or Contact Us - Traverse City Bass Fishing',
+  description:
+    'Book your Grand Traverse Bay bass fishing charter or ask Captain Butch a question. Call (231) 883-2200 or use our online form. Trips April through October.',
   alternates: {
     canonical: '/contact',
   },

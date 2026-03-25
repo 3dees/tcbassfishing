@@ -3,8 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Grand Traverse Bay Fishing Species' },
-  description: 'Learn about the fish species found in Grand Traverse Bay, including smallmouth bass. Informational overview of the bay\'s diverse fishery.',
+  title: 'Grand Traverse Bay Fish Species - What You Can Catch',
+  description:
+    'Explore the fish species of Grand Traverse Bay: smallmouth bass, lake trout, salmon, steelhead, and more. Learn why we target smallmouth exclusively.',
   alternates: {
     canonical: '/grand-traverse-bay-fishing-species',
   },

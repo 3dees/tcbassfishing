@@ -4,14 +4,16 @@ import Link from 'next/link';
 import { Camera } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Photo Gallery',
-  description: 'View photos from our bass fishing trips on Grand Traverse Bay. See real catches from real clients fishing with Captain Butch.',
+  title: 'Bass Fishing Photos - Grand Traverse Bay Charter Gallery',
+  description:
+    'Real catches from real clients. Browse photos from our smallmouth bass charters on Grand Traverse Bay with Captain Butch. Families, trophies, and big smiles.',
   alternates: {
     canonical: '/gallery',
   },
   openGraph: {
-    title: 'Photo Gallery | Traverse City Bass Destination Charters',
-    description: 'View photos from our bass fishing trips on Grand Traverse Bay. See real catches from real clients.',
+    title: 'Bass Fishing Photos | Grand Traverse Bay Charter Gallery',
+    description:
+      'Real catches from real clients on Grand Traverse Bay with Captain Butch.',
     images: ['/images/hero/collage_hero.jpg'],
   },
 };
