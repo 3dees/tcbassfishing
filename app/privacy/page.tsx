@@ -38,7 +38,7 @@ export default function PrivacyPage() {
 
           {/* Quick Links */}
           <div className="bg-slate-50 rounded-2xl p-6">
-            <h3 className="font-bold text-navy-900 mb-4 text-center">Quick Navigation</h3>
+            <h2 className="font-bold text-navy-900 mb-4 text-center">Quick Navigation</h2>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="#information" className="text-sm bg-white px-4 py-2 rounded-full text-cyan-600 hover:bg-cyan-50 transition-colors">Information We Collect</a>
               <a href="#how-we-use" className="text-sm bg-white px-4 py-2 rounded-full text-cyan-600 hover:bg-cyan-50 transition-colors">How We Use It</a>

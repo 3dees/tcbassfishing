@@ -38,7 +38,7 @@ export default function TermsPage() {
 
           {/* Company Info Card */}
           <div className="bg-slate-50 rounded-2xl p-8 text-center">
-            <h3 className="font-serif text-xl font-bold text-navy-900 mb-4">Company Information</h3>
+            <h2 className="font-serif text-xl font-bold text-navy-900 mb-4">Company Information</h2>
             <p className="text-gray-600">
               Traverse City Bass Destination Charters, LLC<br />
               Traverse City, Michigan<br />
