@@ -75,7 +75,7 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-navy-900/70"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">Trips & Rates</h1>
+          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">Bass Fishing Charter Trips & Rates</h1>
           <p className="text-xl text-gray-200">Choose Your Adventure on Grand Traverse Bay</p>
         </div>
       </section>
