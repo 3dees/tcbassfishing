@@ -2,10 +2,10 @@ import { createClient } from 'next-sanity';
 import imageUrlBuilder from '@sanity/image-url';
 
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  projectId: 'aatin0zb',
+  dataset: 'production',
   apiVersion: '2024-01-01',
-  useCdn: false,
+  useCdn: true,
 });
 
 const builder = imageUrlBuilder(client);
@@ -54,5 +54,3 @@ export const POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug][0
   seoTitle,
   seoDescription
 }`;
-
-export const POST_SLUGS_QUERY = `*[_type == "post"] { "slug": slug.current }`;
