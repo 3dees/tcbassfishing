@@ -6,7 +6,7 @@ import { client, POSTS_QUERY, urlFor, BlogPost } from '@/lib/sanity';
 export const dynamic = 'force-dynamic';
 
 export default async function BlogPage() {
-  const posts: BlogPost[] = await client.fetch(POSTS_QUERY, {}, { perspective: 'published' });
+  const posts: BlogPost[] = await client.fetch(POSTS_QUERY);
 
   return (
     <>

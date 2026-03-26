@@ -15,7 +15,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post: BlogPost | null = await client.fetch(POST_BY_SLUG_QUERY, { slug }, { perspective: 'published' });
+  const post: BlogPost | null = await client.fetch(POST_BY_SLUG_QUERY, { slug });
   if (!post) return {};
 
   const title = post.seoTitle || post.title;
@@ -41,7 +41,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post: BlogPost | null = await client.fetch(POST_BY_SLUG_QUERY, { slug }, { perspective: 'published' });
+  const post: BlogPost | null = await client.fetch(POST_BY_SLUG_QUERY, { slug });
 
   if (!post) notFound();
 
