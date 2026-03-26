@@ -6,7 +6,13 @@ import { client, POSTS_QUERY, urlFor, BlogPost } from '@/lib/sanity';
 export const dynamic = 'force-dynamic';
 
 export default async function BlogPage() {
-  const posts: BlogPost[] = await client.fetch(POSTS_QUERY);
+  let posts: BlogPost[] = [];
+  let fetchError = '';
+  try {
+    posts = await client.fetch(POSTS_QUERY);
+  } catch (e: any) {
+    fetchError = e?.message || String(e);
+  }
 
   return (
     <>
@@ -40,6 +46,12 @@ export default async function BlogPage() {
           </p>
         </div>
       </section>
+
+      {fetchError && (
+        <div className="bg-red-100 text-red-800 p-4 text-sm font-mono">
+          ERROR: {fetchError}
+        </div>
+      )}
 
       {/* Blog Posts Grid */}
       <section className="py-16 bg-white">
