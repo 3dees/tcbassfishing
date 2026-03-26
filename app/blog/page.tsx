@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { client, POSTS_QUERY, urlFor, BlogPost } from '@/lib/sanity';
 
-export const revalidate = 60; // ISR: revalidate every 60 seconds
+export const dynamic = 'force-dynamic';
 
 export default async function BlogPage() {
   const posts: BlogPost[] = await client.fetch(POSTS_QUERY);
