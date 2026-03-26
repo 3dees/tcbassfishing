@@ -6,12 +6,7 @@ import { Calendar, ArrowLeft } from 'lucide-react';
 import { client, POST_BY_SLUG_QUERY, POST_SLUGS_QUERY, urlFor, BlogPost } from '@/lib/sanity';
 import { PortableText } from '@/components/PortableText';
 
-export const revalidate = 60;
-
-export async function generateStaticParams() {
-  const slugs: { slug: string }[] = await client.fetch(POST_SLUGS_QUERY);
-  return slugs.map(({ slug }) => ({ slug }));
-}
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,
