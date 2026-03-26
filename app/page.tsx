@@ -100,12 +100,15 @@ export default function HomePage() {
               <div className="mb-2 text-cyan-600 font-bold uppercase tracking-widest text-sm">Meet Your Guide</div>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-6">Captain Butch Derickson</h2>
 
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                With over 10 years on these waters, Captain Butch knows every contour, ledge, and hiding spot in Grand Traverse Bay. As a dedicated{' '}
+              <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                With over 10 years on these waters, Captain Butch knows every contour, ledge, and structure in Grand Traverse Bay. As a dedicated{' '}
                 <Link href="/smallmouth-bass-charters-traverse-city" className="text-cyan-600 hover:text-cyan-700 font-medium">
                   smallmouth bass fishing guide
                 </Link>
                 , whether you&apos;re chasing numbers or hunting a trophy, your next personal best could be one cast away.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                All trips are private — just your group on the boat. We fish rocky points, deep ledges, and shallow flats depending on the season and conditions. Spring through fall produces consistent action, with the May and June spawn being some of the most exciting fishing of the year. All rods, reels, tackle, and lures are provided. No fishing experience necessary — all skill levels are welcome aboard.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -237,8 +240,11 @@ export default function HomePage() {
       <section className="py-24 bg-navy-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h3 className="font-serif text-4xl md:text-5xl font-bold mb-6">Ready to Cast Off?</h3>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-6">
             Dates fill up fast, especially during the spring spawn (May/June). Reach out today to secure your spot on the boat.
+          </p>
+          <p className="text-gray-400 text-base max-w-2xl mx-auto mb-10">
+            Grand Traverse Bay is one of Michigan&apos;s premier smallmouth fisheries — clear water, rocky structure, and fish that love to fight. Whether it&apos;s your first time or your twentieth, every trip brings something new. We operate out of Traverse City and fish both the East and West Arms of the bay depending on where the fish are biting.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

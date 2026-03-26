@@ -59,7 +59,6 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
     },
   },
 };
@@ -78,10 +77,13 @@ const jsonLd = {
       "image": "https://tcbassdestinationcharters.com/images/hero/header-bg.jpg",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Grand Traverse Bay",
         "addressLocality": "Traverse City",
         "addressRegion": "MI",
+        "postalCode": "49684",
         "addressCountry": "US"
       },
+      "openingHours": ["Mo-Su 07:00-17:00"],
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 44.7631,
@@ -104,6 +106,7 @@ const jsonLd = {
       "review": [
         {
           "@type": "Review",
+          "itemReviewed": { "@id": "https://tcbassdestinationcharters.com/#business" },
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5",
@@ -118,6 +121,7 @@ const jsonLd = {
         },
         {
           "@type": "Review",
+          "itemReviewed": { "@id": "https://tcbassdestinationcharters.com/#business" },
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5",
@@ -132,6 +136,7 @@ const jsonLd = {
         },
         {
           "@type": "Review",
+          "itemReviewed": { "@id": "https://tcbassdestinationcharters.com/#business" },
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5",
@@ -326,6 +331,24 @@ const jsonLd = {
       }
     },
     {
+      "@type": "WebSite",
+      "@id": "https://tcbassdestinationcharters.com/#website",
+      "url": "https://tcbassdestinationcharters.com",
+      "name": "Traverse City Bass Destination Charters",
+      "description": "Smallmouth bass fishing charters on Grand Traverse Bay, Traverse City, Michigan.",
+      "publisher": {
+        "@id": "https://tcbassdestinationcharters.com/#business"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://tcbassdestinationcharters.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
       "@type": "HowTo",
       "@id": "https://tcbassdestinationcharters.com/#howtobook",
       "name": "How to Book a Smallmouth Bass Fishing Charter in Traverse City",
@@ -410,6 +433,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
 
+        {/* AI/LLM discoverability */}
+        <link rel="llms" href="/llms.txt" />
+
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -482,8 +508,14 @@ export default function RootLayout({
           />
         </noscript>
 
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-navy-900 focus:px-4 focus:py-2 focus:rounded focus:font-medium"
+        >
+          Skip to main content
+        </a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <SpeedInsights />
 
