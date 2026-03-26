@@ -1,9 +1,24 @@
 import { MetadataRoute } from 'next';
+import { client } from '@/lib/sanity';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const dynamic = 'force-dynamic';
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://tcbassdestinationcharters.com';
 
+  const posts = await client.fetch<{ slug: string; publishedAt: string }[]>(
+    `*[_type == "post" && defined(slug.current)] | order(publishedAt desc) { "slug": slug.current, publishedAt }`
+  );
+
+  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
   return [
+    ...blogEntries,
     {
       url: baseUrl,
       lastModified: new Date(),
