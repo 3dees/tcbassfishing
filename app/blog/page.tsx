@@ -47,12 +47,6 @@ export default async function BlogPage() {
         </div>
       </section>
 
-      {fetchError && (
-        <div className="bg-red-100 text-red-800 p-4 text-sm font-mono">
-          ERROR: {fetchError}
-        </div>
-      )}
-
       {/* Blog Posts Grid */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
