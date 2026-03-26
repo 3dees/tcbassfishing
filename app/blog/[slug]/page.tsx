@@ -25,7 +25,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: {
+      url: `https://tcbassdestinationcharters.com/blog/${slug}`,
       title: `${title} | TC Bass Destination Charters`,
       description,
       images: [image],

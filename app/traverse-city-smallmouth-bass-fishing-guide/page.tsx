@@ -29,6 +29,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/traverse-city-smallmouth-bass-fishing-guide',
   },
+  openGraph: {
+    url: 'https://tcbassdestinationcharters.com/traverse-city-smallmouth-bass-fishing-guide',
+    title: 'Traverse City Bass Fishing Guide | Capt. Butch',
+    description: 'Hire Captain Butch, a USCG-licensed Traverse City bass fishing guide with 20+ years on Grand Traverse Bay. Beginners to experienced anglers.',
+    images: ['/images/hero/header-bg.jpg'],
+  },
 };
 
 export default function TraverseCityFishingGuidePage() {

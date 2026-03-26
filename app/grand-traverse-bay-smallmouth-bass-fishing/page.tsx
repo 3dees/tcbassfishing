@@ -21,6 +21,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/grand-traverse-bay-smallmouth-bass-fishing',
   },
+  openGraph: {
+    url: 'https://tcbassdestinationcharters.com/grand-traverse-bay-smallmouth-bass-fishing',
+    title: 'Grand Traverse Bay Smallmouth Bass Fishing Guide',
+    description: "Grand Traverse Bay is one of Michigan's top smallmouth fisheries. Fish with Captain Butch for world-class bass action. April through October.",
+    images: ['/images/hero/05_sunset_bay.jpg'],
+  },
 };
 
 export default function GrandTraverseBaySmallmouthPage() {

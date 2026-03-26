@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/smallmouth-bass-charters-traverse-city',
   },
+  openGraph: {
+    url: 'https://tcbassdestinationcharters.com/smallmouth-bass-charters-traverse-city',
+    title: 'Smallmouth Bass Charters | Traverse City Guide',
+    description: 'Dedicated smallmouth bass charters on Grand Traverse Bay. Fish with a USCG-licensed captain who targets only smallmouth. All levels welcome.',
+    images: ['/images/hero/header-bg.jpg'],
+  },
 };
 
 export default function SmallmouthBassChartersPage() {

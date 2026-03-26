@@ -85,7 +85,6 @@ export default function HomePage() {
                   width={600}
                   height={500}
                   className="w-full h-[500px] object-cover object-center"
-                  loading="lazy"
                   quality={80}
                 />
                 <div className="absolute bottom-0 left-0 bg-navy-900/90 p-8 backdrop-blur-md text-white w-full">

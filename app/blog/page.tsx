@@ -5,6 +5,18 @@ import { client, POSTS_QUERY, urlFor, hasAsset, BlogPost } from '@/lib/sanity';
 
 export const dynamic = 'force-dynamic';
 
+export const metadata = {
+  title: { absolute: 'Fishing Reports & Tips | TC Bass Destination Charters' },
+  description: 'Smallmouth bass fishing reports from Grand Traverse Bay. Captain Butch shares seasonal patterns, hot lures, and conditions updates April through October.',
+  alternates: { canonical: '/blog' },
+  openGraph: {
+    url: 'https://tcbassdestinationcharters.com/blog',
+    title: 'Fishing Reports & Tips | TC Bass Destination Charters',
+    description: 'Smallmouth bass fishing reports from Grand Traverse Bay. Seasonal patterns, hot lures, and conditions updates from Captain Butch.',
+    images: ['/images/hero/header-bg.jpg'],
+  },
+};
+
 export default async function BlogPage() {
   const posts: BlogPost[] = await client.fetch(POSTS_QUERY);
 

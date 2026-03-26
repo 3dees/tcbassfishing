@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/why-smallmouth-only',
   },
+  openGraph: {
+    url: 'https://tcbassdestinationcharters.com/why-smallmouth-only',
+    title: 'Why We Only Fish Smallmouth Bass | TC Charters',
+    description: 'We only target smallmouth bass. Specializing in one species means better gear, better spots, and better results on Grand Traverse Bay.',
+    images: ['/images/hero/header-bg.jpg'],
+  },
 };
 
 export default function WhySmallmouthOnlyPage() {

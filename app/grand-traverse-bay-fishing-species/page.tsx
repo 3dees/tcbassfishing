@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/grand-traverse-bay-fishing-species',
   },
+  openGraph: {
+    url: 'https://tcbassdestinationcharters.com/grand-traverse-bay-fishing-species',
+    title: 'Grand Traverse Bay Fish Species | What to Catch',
+    description: 'Explore Grand Traverse Bay fish species: smallmouth bass, lake trout, salmon, steelhead, and more. Learn why we target smallmouth exclusively.',
+    images: ['/images/hero/header-bg.jpg'],
+  },
 };
 
 export default function GrandTraverseBaySpeciesPage() {
