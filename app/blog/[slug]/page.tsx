@@ -7,6 +7,7 @@ import { client, POST_BY_SLUG_QUERY, urlFor, BlogPost } from '@/lib/sanity';
 import { PortableText } from '@/components/PortableText';
 
 export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export async function generateMetadata({
   params,
