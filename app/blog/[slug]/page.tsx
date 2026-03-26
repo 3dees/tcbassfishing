@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Calendar, ArrowLeft } from 'lucide-react';
-import { client, POST_BY_SLUG_QUERY, POST_SLUGS_QUERY, urlFor, BlogPost } from '@/lib/sanity';
+import { client, POST_BY_SLUG_QUERY, urlFor, BlogPost } from '@/lib/sanity';
 import { PortableText } from '@/components/PortableText';
 
 export const dynamic = 'force-dynamic';
