@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Calendar, ArrowLeft } from 'lucide-react';
-import { client, POST_BY_SLUG_QUERY, urlFor, BlogPost } from '@/lib/sanity';
+import { client, POST_BY_SLUG_QUERY, urlFor, hasAsset, BlogPost } from '@/lib/sanity';
 import { PortableText } from '@/components/PortableText';
 
 export const dynamic = 'force-dynamic';
@@ -20,7 +20,7 @@ export async function generateMetadata({
 
   const title = post.seoTitle || post.title;
   const description = post.seoDescription || post.excerpt;
-  const image = post.mainImage ? urlFor(post.mainImage).width(1200).height(630).url() : '/images/hero/header-bg.jpg';
+  const image = post.mainImage && hasAsset(post.mainImage) ? urlFor(post.mainImage).width(1200).height(630).url() : '/images/hero/header-bg.jpg';
 
   return {
     title,
@@ -50,7 +50,7 @@ export default async function BlogPostPage({
       {/* Hero */}
       <section className="relative h-[400px] flex items-end justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {post.mainImage ? (
+          {post.mainImage && hasAsset(post.mainImage) ? (
             <Image
               src={urlFor(post.mainImage).width(1600).height(800).url()}
               alt={post.mainImage.alt || post.title}

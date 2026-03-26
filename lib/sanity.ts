@@ -14,6 +14,10 @@ export function urlFor(source: any) {
   return builder.image(source);
 }
 
+export function hasAsset(image: any): boolean {
+  return !!(image?.asset?._ref || image?.asset?._id);
+}
+
 // Types
 export interface BlogPost {
   _id: string;
@@ -38,7 +42,7 @@ export const POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
   slug,
   publishedAt,
   excerpt,
-  mainImage,
+  mainImage { ..., asset-> },
   categories
 }`;
 
@@ -49,7 +53,7 @@ export const POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug][0
   publishedAt,
   excerpt,
   body,
-  mainImage,
+  mainImage { ..., asset-> },
   categories,
   seoTitle,
   seoDescription
