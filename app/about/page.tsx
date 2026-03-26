@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     canonical: '/about',
   },
   openGraph: {
+    url: 'https://tcbassdestinationcharters.com/about',
     title: 'About Captain Butch Derickson | Traverse City Bass Destination Charters',
     description: 'Meet Captain Butch Derickson, your licensed USCG fishing guide with 10+ years experience on Grand Traverse Bay.',
     images: ['/images/hero/captain-butch.jpg'],

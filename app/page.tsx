@@ -101,7 +101,7 @@ export default function HomePage() {
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy-900 mb-6">Captain Butch Derickson</h2>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                With over 10 years on these waters, Captain Butch knows every contour, ledge, and structure in Grand Traverse Bay. As a dedicated{' '}
+                With over 10 years on these waters, your guide knows every contour, ledge, and structure in Grand Traverse Bay. As a dedicated{' '}
                 <Link href="/smallmouth-bass-charters-traverse-city" className="text-cyan-600 hover:text-cyan-700 font-medium">
                   smallmouth bass fishing guide
                 </Link>

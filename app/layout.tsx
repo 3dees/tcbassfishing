@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: '%s | Traverse City Bass Destination Charters',
   },
   description:
-    'Fish Grand Traverse Bay with Captain Butch Derickson. Smallmouth bass charters in Traverse City, MI. All gear included. Book your 2026 trip today.',
+    'Smallmouth bass fishing charters on Grand Traverse Bay, Traverse City MI. All gear included. Book your 2026 trip — from $440.',
   keywords: [
     'bass fishing',
     'Traverse City',

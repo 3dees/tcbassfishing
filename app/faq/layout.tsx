@@ -8,8 +8,17 @@ export const metadata: Metadata = {
     canonical: '/faq',
   },
   openGraph: {
+    url: 'https://tcbassdestinationcharters.com/faq',
     title: 'FAQ | Traverse City Bass Destination Charters',
     description: 'Find answers to common questions about Traverse City Bass Destination Charters.',
+    images: [
+      {
+        url: '/images/hero/05_sunset_bay.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sunset over Grand Traverse Bay',
+      },
+    ],
   },
 };
 

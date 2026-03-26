@@ -8,8 +8,17 @@ export const metadata: Metadata = {
     canonical: '/contact',
   },
   openGraph: {
+    url: 'https://tcbassdestinationcharters.com/contact',
     title: 'Contact Us | Traverse City Bass Destination Charters',
     description: 'Book your bass fishing charter on Grand Traverse Bay. Contact Captain Butch today.',
+    images: [
+      {
+        url: '/images/hero/header-bg.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Grand Traverse Bay bass fishing charter',
+      },
+    ],
   },
 };
 

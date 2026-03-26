@@ -32,13 +32,22 @@ export default async function BlogPage() {
         </div>
       </section>
 
+      {/* Intro */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Stay up to date with the latest smallmouth bass fishing reports from Grand Traverse Bay. Captain Butch shares seasonal patterns, hot lures, productive structure, and conditions updates throughout the April–October season. Whether you&apos;re planning a trip or just keeping tabs on the bite, these reports give you a real-time look at what&apos;s happening on the water in Traverse City, Michigan.
+          </p>
+        </div>
+      </section>
+
       {/* Blog Posts Grid */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           {posts.length === 0 ? (
             <div className="text-center py-16">
               <p className="text-gray-500 text-lg">
-                Posts are on the way. Check back soon for fishing reports and tips!
+                Fishing reports are on the way. Check back soon for on-the-water updates and bass fishing tips from Grand Traverse Bay!
               </p>
             </div>
           ) : (

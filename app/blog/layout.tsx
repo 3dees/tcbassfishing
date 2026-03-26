@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     canonical: '/blog',
   },
   openGraph: {
+    url: 'https://tcbassdestinationcharters.com/blog',
     title: 'Fishing Reports & Tips | TC Bass Destination Charters',
     description:
       'Fishing reports, bass fishing tips, and seasonal updates from Captain Butch on Grand Traverse Bay.',

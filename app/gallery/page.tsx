@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     canonical: '/gallery',
   },
   openGraph: {
+    url: 'https://tcbassdestinationcharters.com/gallery',
     title: 'Fishing Photos | Grand Traverse Bay Charters',
     description:
       'Real catches from real clients on Grand Traverse Bay with Captain Butch.',
